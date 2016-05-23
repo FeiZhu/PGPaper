@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  20 MAY 2016 17:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  23 MAY 2016 14:55
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -319,15 +319,15 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 96.
 Here is how much of TeX's memory you used:
  5406 strings out of 495354
  78380 string characters out of 3183858
- 161476 words of memory out of 3000000
+ 163474 words of memory out of 3000000
  8511 multiletter control sequences out of 15000+200000
  35819 words of font info for 49 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 32i,10n,24p,304b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,10n,24p,1292b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
 /urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX
 /MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (1 page, 46778 bytes).
+Output written on pg2016-sub.pdf (1 page, 48921 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)
