@@ -45,7 +45,7 @@
 \maketitle
 
 \begin{abstract}
-In this paper, we exploit the use of peridynamics theory for graphical animation of material deformation and fracture. We present a new meshless framework for elastoplastic constitutive modeling that contrasts with previous approaches in graphics. Our peridynamics-based elastoplasticity model represents deformation behaviors of materials with high realism. We validate our model using various material properties and comparisons with FEM simulations. Besides, the integral-based nature of peridynamics makes it trivial to model material discontinuities, which outweighs differential-based methods in both accuracy and ease of implementation. We propose a simple strategy to model fracture in the setting of peridynamics discretization. We demonstrate that the fracture criterion combined with our elastoplasticity model could realistically produce ductile fracture as well as brittle fracture. Our work is the first application of peridynamics in graphics that could create a wide range of material phenomena including elasticity, plasticity, and fracture. The complete framework provides an attractive alternative to existing methods for producing modern visual effects.
+In this paper, we exploit the use of peridynamics theory for graphical animation of material deformation and fracture. We present a new meshless framework for elastoplastic constitutive modeling that contrasts with previous approaches in graphics. Our peridynamics-based elastoplasticity model represents deformation behaviors of materials with high realism. We validate the model using various material properties and comparisons with FEM simulations. Besides, the integral-based nature of peridynamics makes it trivial to model material discontinuities, which outweighs differential-based methods in both accuracy and ease of implementation. We propose a simple strategy to model fracture in the setting of peridynamics discretization. We demonstrate that the fracture criterion combined with our elastoplasticity model could realistically produce ductile fracture as well as brittle fracture. Our work is the first application of peridynamics in graphics that could create a wide range of material phenomena including elasticity, plasticity, and fracture. The complete framework provides an attractive alternative to existing methods for producing modern visual effects.
 
 \begin{classification} % according to http://www.acm.org/class/1998/
 \CCScat{Computer Graphics}{I.3.7}{Three-Dimensional Graphics and Realism}{Animation}
@@ -59,6 +59,10 @@ In this paper, we exploit the use of peridynamics theory for graphical animation
 
 %-------------------------------------------------------------------------
 \section{Introduction}
+
+The simulation of deformable materials has been an important research topic in computer graphics for decades, since the early work by Terzopoulos and colleagues \cite{Terzopoulos:1987:EDM:37402.37427}. One of the strongest driving forces behind the active research is the persistently growing needs for higher realism from the visual effects industry. Materials in real-world exhibit complex behaviors, such as coupled elastoplastic deformations, fracture, etc. The complicated material behaviors are difficult to be virtually replicated by any single method despite the numerous ones that have been developed thus far. Existing approaches excel at some phenomena but would stumble (if not fail) at others. For instance, mesh-based methods (HERE CITE FEM PAPERS) are a good choice to simulate elastic deformations whereas a poor one for phenomena that involve topological changes. Particle-based methods (HERE CITE PARTICLE PAPERS) are generally considered suitable for modeling topological changes, however the inherent loss of connectivity information causes undesirable numerical fracture (HERE CITE MY PAPERS)while simulating large deformations.
+
+We build on recent developments of peridynamics (HERE CITE PERIDYNAMICS PAPER) in the computational physics community and propose a novel framework for graphical animation of varied deformation behaviors and fracture. 
 
 %-------------------------------------------------------------------------
 \section{Related Work}
@@ -82,13 +86,13 @@ In this paper, we exploit the use of peridynamics theory for graphical animation
 \section{Results}
 
 %-------------------------------------------------------------------------
-\section{Discussion}
+\section{Discussions}
 
 %-------------------------------------------------------------------------
-%\bibliographystyle{eg-alpha}
+\bibliographystyle{eg-alpha}
 %\bibliographystyle{eg-alpha-doi}
 
-%\bibliography{references}
+\bibliography{references}
 
 %-------------------------------------------------------------------------
 %\newpage
