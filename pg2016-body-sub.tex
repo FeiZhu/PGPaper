@@ -8,7 +8,7 @@
 
 % for anonymous conference submission please enter your SUBMISSION ID
 % instead of the author's name (and leave the affiliation blank) !!
-\author[paperID]{paperID}
+\author[paper1047]{paper1047}
 
 %\author[D. Fellner \& S. Behnke]
 %       {D.\,W. Fellner\thanks{Chairman Eurographics Publications Board}$^{1,2}$
@@ -35,17 +35,17 @@
 %-------------------------------------------------------------------------
 \begin{document}
 
-% \teaser{
-%  \includegraphics[width=\linewidth]{eg_new}
-%  \centering
-%   \caption{New EG Logo}
-% \label{fig:teaser}
-% }
+\teaser{
+ \includegraphics[width=\linewidth]{eg_new}
+ \centering
+  \caption{here is ball crack wall, brittle and ductile, isotropic and anisotropic}
+\label{fig:teaser}
+}
 
 \maketitle
 
 \begin{abstract}
-In this paper, we exploit the use of peridynamics theory for graphical animation of material deformation and fracture. We present a new meshless framework for elastoplastic constitutive modeling that contrasts with previous approaches in graphics. Our peridynamics-based elastoplasticity model represents deformation behaviors of materials with high realism. We validate the model using various material properties and comparisons with FEM simulations. Besides, the integral-based nature of peridynamics makes it trivial to model material discontinuities, which outweighs differential-based methods in both accuracy and ease of implementation. We propose a simple strategy to model fracture in the setting of peridynamics discretization. We demonstrate that the fracture criterion combined with our elastoplasticity model could realistically produce ductile fracture as well as brittle fracture. Our work is the first application of peridynamics in graphics that could create a wide range of material phenomena including elasticity, plasticity, and fracture. The complete framework provides an attractive alternative to existing methods for producing modern visual effects.
+In this paper, we exploit the use of peridynamics theory for graphical animation of material deformation and fracture. We present a new meshless framework for elastoplastic constitutive modeling that contrasts with previous approaches in graphics. Our peridynamics-based elastoplasticity model represents deformation behaviors of materials with high realism. We validate the model by varying the material properties and performing comparisons with FEM simulations. Besides, the integral-based nature of peridynamics makes it trivial to model material discontinuities, which outweighs differential-based methods in both accuracy and ease of implementation. We propose a simple strategy to model fracture in the setting of peridynamics discretization. We demonstrate that the fracture criterion combined with our elastoplasticity model could realistically produce ductile fracture as well as brittle fracture. Our work is the first application of peridynamics in graphics that could create a wide range of material phenomena including elasticity, plasticity, and fracture. The complete framework provides an attractive alternative to existing methods for producing modern visual effects.
 
 \begin{classification} % according to http://www.acm.org/class/1998/
 \CCScat{Computer Graphics}{I.3.7}{Three-Dimensional Graphics and Realism}{Animation}
@@ -60,9 +60,9 @@ In this paper, we exploit the use of peridynamics theory for graphical animation
 %-------------------------------------------------------------------------
 \section{Introduction}
 
-The simulation of deformable materials has been an important research topic in computer graphics for decades, since the early work by Terzopoulos and colleagues \cite{Terzopoulos:1987:EDM:37402.37427}. One of the strongest driving forces behind the active research is the persistently growing needs for higher realism from the visual effects industry. Materials in real-world exhibit complex behaviors, such as coupled elastoplastic deformations, fracture, etc. The complicated material behaviors are difficult to be virtually replicated by any single method despite the numerous ones that have been developed thus far. Existing approaches generally excel at some phenomena but would stumble (if not fail) at others. For instance, mesh-based methods (HERE CITE FEM PAPERS) are a good choice to simulate elastic deformations whereas a poor one for phenomena that involve topological changes. Particle-based methods (HERE CITE PARTICLE PAPERS) are considered suitable for modeling topological changes, however the inherent loss of connectivity information would cause undesirable numerical fracture (HERE CITE MY PAPERS)while simulating large deformations.
+The simulation of deformable materials has been an important research topic in computer graphics for decades, since the early work by Terzopoulos and colleagues \cite{Terzopoulos:1987:EDM:37402.37427}. One of the strongest driving forces behind the active research is the persistently growing needs for higher realism from the visual effects industry. Materials in real-world exhibit complex behaviors, such as coupled elastoplastic deformations, fracture, etc. The complicated material behaviors are difficult to be virtually replicated by any single method despite the numerous ones that have been developed thus far. Existing approaches generally excel at some phenomena but would stumble (if not fail) at others. For instance, mesh-based methods \cite{Muller:2004:IVM:1006058.1006087,Irving:2004:IFE:1028523.1028541,Teran:2005:RQF:1073368.1073394,Sifakis:2012:FSD:2343483.2343501} are a good choice to simulate elastic deformations whereas not preferred for phenomena that involve topological changes. Particle-based methods \cite{Muller:2003:PFS:846276.846298,Pauly:2005:MAF:1073204.1073296,Stomakhin:2013:MPM:2461912.2461948} are considered suitable for modeling topological changes, however the inherent loss of connectivity information would cause undesirable numerical fracture \cite{Liu:2011:AKM:2065362.2066108, Zhu:2016MPM} while simulating large deformations.
 
-We build on recent developments of peridynamics (HERE CITE PERIDYNAMICS PAPER) in the computational physics community and propose a novel framework for graphical animation of varied deformation behaviors and fracture. Our aim is to enrich available options of simulation techniques for easier and better animation production. Peridynamics was first adopted to animation applications by Levine et al. \cite{Levine:2015:PPS:2849517.2849526}. They described a simple spring-mass system to handle brittle fracture of solids. In contrast, we handle elastoplasticiy, brittle fracture, and ductile fracture in a single framework. We present an elastoplastic constitutive model in the peridynamics-based framework with simple extension to anisotropy, and the model is validated against results produced by FEM. 
+We build on recent developments of peridynamics theory in the computational physics community \cite{Silling2000,silling2007peridynamic,mitchell2011nonlocal, emmrich2013peridynamics,madenci2014peridynamic} and propose a novel framework for graphical animation of varied deformation behaviors and fracture. Our aim is to enrich available options of simulation techniques for easier and better animation production. Peridynamics was first adopted to animation applications by Levine et al. \cite{Levine:2015:PPS:2849517.2849526}. They described a simple spring-mass system to handle brittle fracture of solids. In contrast, we handle elastoplasticiy, brittle fracture, and ductile fracture in a single framework. To this end, we propose several novel contributions in this work. We first present an elastoplastic constitutive model in the peridynamics-based framework with simple extension to anisotropy, and the model is validated against results produced by FEM. Furthermore, we show that both brittle and ductile fracture phenomena can be naturally represented with nearly no effort by integrating a simple fracture criterion into this material model. This is due to the integral-based formulation of peridynamics, in which forces at a material point are computed by gathering contributions from all material points in its interaction range through integration. On the other hand, methods based on classical continuum mechanics formulate force computations with partial differential equations that fail to be applicable directly on singularities such as a crack. This feature makes our peridynamics-based framework more attractive over existing approaches for producing animations that involve fracture. Lastly, our method is simple to implement and trivially parallelizable, providing a useful alternative to previous methods for animation production.
 
 %-------------------------------------------------------------------------
 \section{Related Work}
