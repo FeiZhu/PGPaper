@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  30 MAY 2016 16:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  30 MAY 2016 17:43
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -375,7 +375,7 @@ Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
 Here is how much of TeX's memory you used:
  5549 strings out of 495354
  82199 string characters out of 3183858
- 179754 words of memory out of 3000000
+ 178746 words of memory out of 3000000
  8617 multiletter control sequences out of 15000+200000
  46146 words of font info for 63 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -384,7 +384,7 @@ Here is how much of TeX's memory you used:
 /public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 sy7.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/
 type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (3 pages, 149388 bytes).
+Output written on pg2016-sub.pdf (3 pages, 149567 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  35 named destinations out of 1000 (max. 500000)
