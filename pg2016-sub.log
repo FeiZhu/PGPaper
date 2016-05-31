@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  31 MAY 2016 15:09
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  31 MAY 2016 16:39
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -316,11 +316,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
- <C:/Users/fei/docs/PGPaper/eg_new.jpg>] [2] (C:\Users\fei\docs\PGPaper\pg2016-
-sub.bbl
+ <C:/Users/fei/docs/PGPaper/eg_new.jpg>] (C:\Users\fei\docs\PGPaper\pg2016-sub.
+bbl
 (C:\Users\fei\docs\PGPaper\pg2016-sub.brf)
 \tf@brf=\write3
-
+ [2]
 Underfull \hbox (badness 1430) in paragraph at lines 33--33
 []\T1/ptm/m/sc/8 Forest C., Delingette H., Ay-ache N.\T1/ptm/m/n/8 :  Re-mov-in
 g
@@ -389,32 +389,32 @@ Underfull \hbox (badness 1484) in paragraph at lines 261--261
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
  [4
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
  (C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
-(rerunfilecheck)             Checksum: 771F04C47F9FB7ADAA338F90A8315A3D;2752.
+(rerunfilecheck)             Checksum: 2506D41E4E227E3533BFADBF0FCDB850;2784.
  ) ) 
 Here is how much of TeX's memory you used:
- 5670 strings out of 495354
- 85786 string characters out of 3183858
- 192509 words of memory out of 3000000
+ 5669 strings out of 495354
+ 85777 string characters out of 3183858
+ 194009 words of memory out of 3000000
  8713 multiletter control sequences out of 15000+200000
  46146 words of font info for 63 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 32i,10n,24p,3017b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,10n,24p,3016b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 sy7.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/
 type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (4 pages, 173598 bytes).
+Output written on pg2016-sub.pdf (4 pages, 173177 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 216 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
