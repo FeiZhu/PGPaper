@@ -80,7 +80,9 @@ In contrast to mesh-based approaches, meshless methods are generally considered 
 %-------------------------------------------------------------------------
 \section{Background}
 
-The peridynamics theory models a continuum with particles, where any particle \textbf{x} interacts with other particles within a distance $\delta$. The distance $\delta$ is called the \textbf{horizon} of \textbf{x}, and the particles within the horizon are referred as its \textbf{family}, $H_\textbf{x}$. The discretization of peridynamics is illustrated in Figure~\ref{fig:2}.
+The peridynamics theory models a continuum with particles, where any particle \textbf{x} interacts with other particles within a distance $\delta$. The distance $\delta$ is called the \textbf{horizon} of \textbf{x}, and the particles within the horizon are referred as its \textbf{family}, $H_\textbf{x}$. The discretization of peridynamics is illustrated in Figure~\ref{fig:2}. It seems analogous to other meshless methods based on classical theory \cite{Muller:2003:PFS:846276.846298,Muller:2004:PBA:1028523.1028542}, and the difference lies in the scale of interaction radius $\delta$. In the case of the classical (local) continuum model, the state of a particle is influenced by only particles in its immediate vicinity. In the case of the peridynamics theory, however, the state of a particle is influenced by particles within a region of finite radius. As the radius becomes infinitely large, the peridynamics theory becomes the continuous version of the molecular dynamics model. As the radius becomes smaller, it becomes the continuum mechanics model. Therefore, the peridynamics model establishes a connection between the continuum mechanics and molecular dynamics models.
+
+\emph{provide the governing equations, and brag about how trivial it is to handle discontinuities compared to classical theory.}
 
 \begin{figure}[t]
   \centering
