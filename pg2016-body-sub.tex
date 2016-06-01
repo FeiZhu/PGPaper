@@ -94,7 +94,7 @@ where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathb
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=0.8\linewidth]{./figs/peridynamics_circle.png}
+  \includegraphics[width=0.7\linewidth]{./figs/peridynamics_circle.png}
   \caption{\label{fig:2}
   Illustration of peridynamics discretization. A continuum is represented as particles (pink dots), and any particle (green dot) interacts with the particles within its horizon (green circle).
 }
@@ -103,26 +103,92 @@ where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathb
 %-------------------------------------------------------------------------
 \section{Elastoplastic Model}
 
-\emph{This section introduces the constitutive model. 1.5 page.}
+In this section we describe our constitutive model for peridynamics in detail. We start with the basic isotropic elastic model, then plasticity is incorporated, and finally we extend the model with anisotropy.
+
+\subsection{Isotropic Elasticity}
 
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_pull_armadillo_2.jpg}
   \caption{\label{fig:3}
-  test figure size.
+  pull armadillo figure.
 }
 \end{figure}
+
+\subsection{Plasticity}
+
+\begin{figure}[h]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./sampleFig.jpg}
+  \caption{\label{fig:4}
+  ball wall impact figure 1x3.
+}
+\end{figure}
+
+\subsection{Anisotropy}
+
+\emph{in this subsection, mention the teaser figure}
 
 %-------------------------------------------------------------------------
 \section{Fracture}
 
 \emph{This section describes the fracture criterion, and the mesh split strategy. 0.5 page.}
+\begin{figure*}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./figs/demo_tear_armadillo_7.jpg}
+  \caption{\label{fig:5}
+  tear armadillo figure.
+}
+\end{figure*}
+
+\begin{figure}[h]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./figs/demo_tear_armadillo_close_view_2.jpg}
+  \caption{\label{fig:6}
+  tear armadillo close view.
+}
+\end{figure}
 
 %-------------------------------------------------------------------------
 \section{Results}
 
 \emph{This section demonstrates some results. 1.5 page.}
+\begin{figure}[h]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./figs/compare_different_poisson_ratio_2.jpg}
+  \caption{\label{fig:7}
+  poisson ratio.
+}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./figs/demo_strip_vs_fem_2.jpg}
+  \caption{\label{fig:8}
+  FEM validation.
+}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./figs/demo_jello.jpg}
+  \caption{\label{fig:9}
+  jello.
+}
+\end{figure}
+\begin{figure*}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./figs/demo_fall_bunny_7.jpg}
+  \caption{\label{fig:10}
+  bunny fall.
+}
+\end{figure*}
 
 %-------------------------------------------------------------------------
 \section{Discussions}
