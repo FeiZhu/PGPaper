@@ -80,16 +80,23 @@ In contrast to mesh-based approaches, meshless methods are generally considered 
 %-------------------------------------------------------------------------
 \section{Background}
 
-The peridynamics theory models a continuum with particles, where any particle \textbf{x} interacts with other particles within a distance $\delta$. The distance $\delta$ is called the \textbf{horizon} of \textbf{x}, and the particles within the horizon are referred as its \textbf{family}, $H_\textbf{x}$. The discretization of peridynamics is illustrated in Figure~\ref{fig:2}. It seems analogous to other meshless methods based on classical theory \cite{Muller:2003:PFS:846276.846298,Muller:2004:PBA:1028523.1028542}, and the difference lies in the scale of interaction radius $\delta$. In the case of the classical (local) continuum model, the state of a particle is influenced by only particles in its immediate vicinity. In the case of the peridynamics theory, however, the state of a particle is influenced by particles within a region of finite radius. As the radius becomes infinitely large, the peridynamics theory becomes the continuous version of the molecular dynamics model. As the radius becomes smaller, it becomes the continuum mechanics model. Therefore, the peridynamics model establishes a connection between the continuum mechanics and molecular dynamics models.
+The peridynamics theory models a continuum with particles, where any particle $\mathbf{x}$ interacts with other particles within a distance $\delta$. The distance $\delta$ is called the \textbf{horizon} of $\mathbf{x}$, and the particles within the horizon are referred as its \textbf{family}, $H_\mathbf{x}$. See Figure~\ref{fig:2} for an illustration of the peridynamics discretization. It seems analogous to other meshless methods based on classical theory \cite{Muller:2003:PFS:846276.846298,Muller:2004:PBA:1028523.1028542}, and the difference lies in the scale of interaction radius $\delta$. In the case of the classical (local) continuum model, the state of a particle is influenced by only particles in its immediate vicinity. In the case of the peridynamics theory, however, the state of a particle is influenced by particles within a region of finite radius. The peridynamics theory is thus referred as a nonlocal theory. As the radius becomes infinitely large, the peridynamics theory becomes the continuous version of the molecular dynamics model. As the radius becomes smaller, it becomes the continuum mechanics model. Therefore, the peridynamics model establishes a connection between the continuum mechanics and molecular dynamics models.
 
-\emph{provide the governing equations, and brag about how trivial it is to handle discontinuities compared to classical theory.}
+Our motivation for choosing peridynamics is that it is better able to handle material discontinuities, such as cracks. This is due to its formulation of governing equations as spatial integral equations, which stands in contrast to the partial differential equations used in the classical formulations. As we know, spatial derivatives are not well defined at discontinuities. Therefore, special treatment is generally required for fracture modeling in existing methods that are based on classical continuum mechanics. For instance, the mesh-based methods \cite{O'Brien:1999:GMA:311535.311550,O'Brien:2002:GMA:566654.566579} employed re-meshing operations and the meshless method by Pauly et al. \cite{Pauly:2005:MAF:1073204.1073296} altered the particle weight functions. The peridynamics governing equations are well defined at discontinuities, and material damage is represented as part of the peridynamics constitutive model. These attributes permit fracture initiation and propagation to be modeled with arbitrary paths in the peridynamics framework.
+
+In peridynamics, the governing equation at any point $\mathbf{x}$ is \nobreak{formulated} as below:
+\begin{equation}
+\rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}}+\mathbf{b}(\mathbf{x}),
+\label{eq:1}
+\end{equation}
+where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density that is exerted on $\mathbf{x}$ by $\mathbf{x}'$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
 
 \begin{figure}[t]
   \centering
-  \mbox{} \hfill
-  \includegraphics[width=1.0\linewidth]{./figs/peridynamics_circle.png}
+  %\mbox{} \hfill
+  \includegraphics[width=0.8\linewidth]{./figs/peridynamics_circle.png}
   \caption{\label{fig:2}
-  Illustration of peridynamics discretization.
+  Illustration of peridynamics discretization. A continuum is represented as particles (pink dots), and any particle (green dot) interacts with the particles within its horizon (green circle).
 }
 \end{figure}
 
