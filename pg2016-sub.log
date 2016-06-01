@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  1 JUN 2016 09:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  1 JUN 2016 10:33
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -320,7 +320,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-(C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
+<./figs/peridynamics_circle.png, id=138, 480.3546pt x 429.7656pt>
+File: ./figs/peridynamics_circle.png Graphic file (type png)
+
+<use ./figs/peridynamics_circle.png>
+Package pdftex.def Info: ./figs/peridynamics_circle.png used on input line 88.
+(pdftex.def)             Requested size: 240.0pt x 214.72488pt.
+ (C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
 (C:\Users\fei\docs\PGPaper\pg2016-sub.brf)
 \tf@brf=\write3
 
@@ -346,7 +352,7 @@ Underfull \hbox (badness 2635) in paragraph at lines 95--95
  of the 2011 12th
  []
 
-
+[3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle.png>]
 Underfull \hbox (badness 3396) in paragraph at lines 146--146
 []\T1/ptm/m/sc/8 Müller M., Keis-er R., Nealen A., Pauly M.,
  []
@@ -369,7 +375,7 @@ Underfull \hbox (badness 2409) in paragraph at lines 146--146
 h-ic-s
  []
 
-[3]
+
 Underfull \hbox (badness 2521) in paragraph at lines 206--206
 \T1/ptm/m/it/8 crack-ing.  \T1/ptm/m/n/8 Tech. rep., San-di-a Na-tion-al Lab-o-
 ra-to-ries (SNL-NM),
@@ -398,30 +404,31 @@ Underfull \hbox (badness 1484) in paragraph at lines 289--289
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
  [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
  (C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
 (rerunfilecheck)             Checksum: 5DFAD519997116C26408A72C61DA6235;3199.
  ) ) 
 Here is how much of TeX's memory you used:
- 5694 strings out of 495354
- 86392 string characters out of 3183858
- 192323 words of memory out of 3000000
- 8733 multiletter control sequences out of 15000+200000
- 46146 words of font info for 63 fonts, out of 3000000 for 9000
+ 5704 strings out of 495354
+ 86586 string characters out of 3183858
+ 194523 words of memory out of 3000000
+ 8738 multiletter control sequences out of 15000+200000
+ 46835 words of font info for 65 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 32i,10n,24p,3016b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,10n,24p,3016b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/
-type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (4 pages, 179679 bytes).
+sy7.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/
+CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on pg2016-sub.pdf (4 pages, 238019 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
