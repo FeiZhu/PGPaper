@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  1 JUN 2016 16:09
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  1 JUN 2016 16:47
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -333,20 +333,30 @@ File: ./figs/peridynamics_circle.png Graphic file (type png)
 <use ./figs/peridynamics_circle.png>
 Package pdftex.def Info: ./figs/peridynamics_circle.png used on input line 97.
 (pdftex.def)             Requested size: 192.00073pt x 150.88414pt.
- (C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
+
+<./figs/demo_pull_armadillo_2.jpg, id=146, 1769.8923pt x 578.16pt>
+File: ./figs/demo_pull_armadillo_2.jpg Graphic file (type jpg)
+
+<use ./figs/demo_pull_armadillo_2.jpg>
+Package pdftex.def Info: ./figs/demo_pull_armadillo_2.jpg used on input line 11
+1.
+(pdftex.def)             Requested size: 240.0pt x 78.39229pt.
+
+(C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
 (C:\Users\fei\docs\PGPaper\pg2016-sub.brf)
 \tf@brf=\write3
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-
+ [3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle.png> <C:/Users/fei/docs
+/PGPaper/figs/demo_pull_armadillo_2.jpg>]
 Underfull \hbox (badness 1430) in paragraph at lines 45--45
 []\T1/ptm/m/sc/8 Forest C., Delingette H., Ay-ache N.\T1/ptm/m/n/8 :  Re-mov-in
 g
  []
 
-[3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle.png>]
+
 Underfull \hbox (badness 1342) in paragraph at lines 57--57
 []\T1/ptm/m/sc/8 Glondu L., Mar-chal M., Du-mon-t G.\T1/ptm/m/n/8 :  Real-time
  []
@@ -415,25 +425,25 @@ Underfull \hbox (badness 1484) in paragraph at lines 289--289
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
  [5
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
  (C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 141.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
 (rerunfilecheck)             Checksum: 3CB02C02A974335545A6835B30C81575;3515.
  ) ) 
 Here is how much of TeX's memory you used:
- 5721 strings out of 495354
- 86729 string characters out of 3183858
- 198855 words of memory out of 3000000
- 8744 multiletter control sequences out of 15000+200000
+ 5727 strings out of 495354
+ 86907 string characters out of 3183858
+ 198893 words of memory out of 3000000
+ 8749 multiletter control sequences out of 15000+200000
  51953 words of font info for 74 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,10n,24p,3016b,410s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,10n,24p,3016b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
 /public/amsfonts/cmextra/cmex9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX
@@ -442,9 +452,9 @@ blic/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type
 1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTE
 X/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (5 pages, 268972 bytes).
+Output written on pg2016-sub.pdf (5 pages, 3171259 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
+ 285 PDF objects out of 1000 (max. 8388607)
  67 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
