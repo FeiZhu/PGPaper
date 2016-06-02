@@ -53,10 +53,6 @@ In this paper, we exploit the use of peridynamics theory for graphical animation
 
 \end{abstract}
 
-
-
-
-
 %-------------------------------------------------------------------------
 \section{Introduction}
 
@@ -78,7 +74,7 @@ In contrast to mesh-based approaches, meshless methods are generally considered 
 \noindent{\textbf{Peridynamics}}~The peridynamics theory was first proposed by Silling \cite{Silling2000} as a nonlocal reformulation of classical solid mechanics. It contrasts with classical (local) theory in that the state of a material point is influenced by not necessarily the material points located in its immediate vicinity, but also those over long distances. The governing equations of the peridynamics theory are spatial integral equations instead of partial differential equations. The theory was further developed by subsequent works \cite{silling2007peridynamic,emmrich2013peridynamics}, and its applications to the engineering field such as multi-scale material modeling \cite{askari2008peridynamics,silling2014hierarchical} and fracture modeling \cite{askari2006peridynamic,silling2010crack,silling2014peridynamic} were studied. A comprehensive review of the research literature in the computational physics community is beyond our scope, we refer the readers to the book by Madenci and Oterkus \cite{madenci2014peridynamic}.  Levine et al. \cite{Levine:2015:PPS:2849517.2849526} first introduced peridynamics to graphics for fracture animation. Their method was limited to brittle fracture of isotropic elastic materials with a single Poisson ratio of 0.25. Our work, on the other hand, is a complete framework that models elastoplasticity and anisotropy under various parameter settings, representing brittle and ductile fracture with high realism.
 
 %-------------------------------------------------------------------------
-\section{Background}
+\section{Background}\label{section:3}
 
 The peridynamics theory models a continuum with particles, where any particle $\mathbf{x}$ interacts with other particles within a distance $\delta$. The distance $\delta$ is called the \textbf{horizon} of $\mathbf{x}$, and the particles within the horizon are referred as its \textbf{family}, $H_\mathbf{x}$. See Figure~\ref{fig:2} for an illustration of the peridynamics discretization. It seems analogous to other meshless methods based on classical theory \cite{Muller:2003:PFS:846276.846298,Muller:2004:PBA:1028523.1028542}, and the difference lies in the scale of interaction radius $\delta$. In the case of the classical (local) continuum model, the state of a particle is influenced by only particles in its immediate vicinity. In the case of the peridynamics theory, however, the state of a particle is influenced by particles within a region of finite radius. The peridynamics theory is thus referred as a nonlocal theory. As the radius becomes infinitely large, the peridynamics theory becomes the continuous version of the molecular dynamics model. As the radius becomes smaller, it becomes the continuum mechanics model. Therefore, the peridynamics model establishes a connection between the continuum mechanics and molecular dynamics models.
 
@@ -89,7 +85,7 @@ In peridynamics, the governing equation at any point $\mathbf{x}$ is \nobreak{fo
 \rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}}+\mathbf{b}(\mathbf{x}),
 \label{eq:1}
 \end{equation}
-where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density that is exerted on $\mathbf{x}$ by $\mathbf{x}'$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
+where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density that is exerted on $\mathbf{x}$ by $\mathbf{x}'$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
 
 \begin{figure}[t]
   \centering
@@ -107,6 +103,13 @@ In this section we describe our constitutive model for peridynamics in detail. W
 
 \subsection{Isotropic Elasticity}
 
+As is discussed in Section~\ref{section:3}, the key to peridynamics-based constitutive modeling is the design of proper internal force density $\nobreak{\mathbf{T}<\cdot>}$. Silling et al.\cite{silling2007peridynamic} showed that peridynamic constitutive models can be designed to match many hyperelastic constitutive models under the classical elasticity theory. Our model is built on the latest developments of peridynamics constitutive modeling \cite{madenci2014peridynamic}, and the elastic internal force density exerted by particle $j$ on particle $i$ is defined as below:
+\begin{equation}
+\mathbf{T}_i<\mathbf{x}_j-\mathbf{x}_i> = \frac{1}{2}A\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|},
+\label{eq:2}
+\end{equation}
+where $\mathbf{x}$ and $\mathbf{y}$ denote the positions of particles before and after deformation respectively. 
+
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
@@ -121,7 +124,7 @@ In this section we describe our constitutive model for peridynamics in detail. W
 \begin{figure}[h]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./sampleFig.jpg}
+  \includegraphics[width=\linewidth]{./figs/demo_impact_upside.jpg}
   \caption{\label{fig:4}
   ball wall impact figure 1x3.
 }
@@ -130,6 +133,14 @@ In this section we describe our constitutive model for peridynamics in detail. W
 \subsection{Anisotropy}
 
 \emph{in this subsection, mention the teaser figure}
+\begin{figure}[h]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./sampleFig.jpg}
+  \caption{\label{fig:5}
+  2d view.
+}
+\end{figure}
 
 %-------------------------------------------------------------------------
 \section{Fracture}
@@ -139,7 +150,7 @@ In this section we describe our constitutive model for peridynamics in detail. W
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_tear_armadillo_8.jpg}
-  \caption{\label{fig:5}
+  \caption{\label{fig:6}
   tear armadillo figure.
 }
 \end{figure*}
@@ -148,7 +159,7 @@ In this section we describe our constitutive model for peridynamics in detail. W
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_tear_armadillo_close_view_3.jpg}
-  \caption{\label{fig:6}
+  \caption{\label{fig:7}
   tear armadillo close view.
 }
 \end{figure}
@@ -160,14 +171,6 @@ In this section we describe our constitutive model for peridynamics in detail. W
 \begin{figure}[h]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/compare_different_poisson_ratio_2.jpg}
-  \caption{\label{fig:7}
-  poisson ratio.
-}
-\end{figure}
-\begin{figure}[h]
-  \centering
-  %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_strip_vs_fem_2.jpg}
   \caption{\label{fig:8}
   FEM validation.
@@ -176,8 +179,16 @@ In this section we describe our constitutive model for peridynamics in detail. W
 \begin{figure}[h]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_jello_3.jpg}
+  \includegraphics[width=\linewidth]{./figs/compare_different_poisson_ratio_2.jpg}
   \caption{\label{fig:9}
+  poisson ratio.
+}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{./figs/demo_jello_3.jpg}
+  \caption{\label{fig:10}
   jello.
 }
 \end{figure}
@@ -185,18 +196,10 @@ In this section we describe our constitutive model for peridynamics in detail. W
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_fall_bunny_7.jpg}
-  \caption{\label{fig:10}
+  \caption{\label{fig:11}
   bunny fall.
 }
 \end{figure*}
-\begin{figure}[h]
-  \centering
-  %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_impact_upside.jpg}
-  \caption{\label{fig:11}
-  impact upside
-}
-\end{figure}
 
 %-------------------------------------------------------------------------
 \section{Discussions}

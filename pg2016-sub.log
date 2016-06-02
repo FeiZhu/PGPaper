@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  1 JUN 2016 17:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  2 JUN 2016 13:38
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -318,85 +318,99 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  <C:/Users/fei/docs/PGPaper/eg_new.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-<./figs/peridynamics_circle.png, id=144, 443.256pt x 348.3414pt>
+<./figs/peridynamics_circle.png, id=145, 443.256pt x 348.3414pt>
 File: ./figs/peridynamics_circle.png Graphic file (type png)
 
 <use ./figs/peridynamics_circle.png>
-Package pdftex.def Info: ./figs/peridynamics_circle.png used on input line 97.
+Package pdftex.def Info: ./figs/peridynamics_circle.png used on input line 93.
 (pdftex.def)             Requested size: 167.99927pt x 132.0256pt.
 
-<./figs/demo_pull_armadillo_2.jpg, id=146, 1769.8923pt x 578.16pt>
-File: ./figs/demo_pull_armadillo_2.jpg Graphic file (type jpg)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use ./figs/demo_pull_armadillo_2.jpg>
-Package pdftex.def Info: ./figs/demo_pull_armadillo_2.jpg used on input line 11
-3.
-(pdftex.def)             Requested size: 240.0pt x 78.39229pt.
 
-<./sampleFig.jpg, id=147, 171.7617pt x 114.9093pt>
-File: ./sampleFig.jpg Graphic file (type jpg)
- <use ./sampleFig.jpg>
-Package pdftex.def Info: ./sampleFig.jpg used on input line 124.
-(pdftex.def)             Requested size: 240.0pt x 160.57033pt.
+<./figs/demo_pull_armadillo_4.jpg, id=150, 1528.2696pt x 455.42145pt>
+File: ./figs/demo_pull_armadillo_4.jpg Graphic file (type jpg)
 
-<./figs/demo_tear_armadillo_7.jpg, id=148, 1906.15295pt x 578.16pt>
-File: ./figs/demo_tear_armadillo_7.jpg Graphic file (type jpg)
+<use ./figs/demo_pull_armadillo_4.jpg>
+Package pdftex.def Info: ./figs/demo_pull_armadillo_4.jpg used on input line 11
+6.
+(pdftex.def)             Requested size: 240.0pt x 71.51382pt.
 
-<use ./figs/demo_tear_armadillo_7.jpg>
-Package pdftex.def Info: ./figs/demo_tear_armadillo_7.jpg used on input line 14
-1.
-(pdftex.def)             Requested size: 504.0pt x 152.8676pt.
+<./figs/demo_impact_upside.jpg, id=151, 1342.9831pt x 455.40424pt>
+File: ./figs/demo_impact_upside.jpg Graphic file (type jpg)
 
-<./figs/demo_tear_armadillo_close_view_2.jpg, id=149, 770.88pt x 1311.4596pt>
-File: ./figs/demo_tear_armadillo_close_view_2.jpg Graphic file (type jpg)
+<use ./figs/demo_impact_upside.jpg>
+Package pdftex.def Info: ./figs/demo_impact_upside.jpg used on input line 127.
+(pdftex.def)             Requested size: 240.0pt x 81.37856pt.
 
-<use ./figs/demo_tear_armadillo_close_view_2.jpg>
-Package pdftex.def Info: ./figs/demo_tear_armadillo_close_view_2.jpg used on in
-put line 150.
-(pdftex.def)             Requested size: 240.0pt x 408.28926pt.
- [3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle.png> <C:/Users/fei/docs
-/PGPaper/figs/demo_pull_armadillo_2.jpg> <C:/Users/fei/docs/PGPaper/sampleFig.j
-pg>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<./sampleFig.jpg, id=152, 171.7617pt x 114.9093pt>
+File: ./sampleFig.jpg Graphic file (type jpg)
+ <use ./sampleFig.jpg>
+Package pdftex.def Info: ./sampleFig.jpg used on input line 139.
+(pdftex.def)             Requested size: 240.0pt x 160.57033pt.
 
-<./figs/compare_different_poisson_ratio_2.jpg, id=169, 654.16396pt x 469.755pt>
-File: ./figs/compare_different_poisson_ratio_2.jpg Graphic file (type jpg)
-<use ./figs/compare_different_poisson_ratio_2.jpg>
-Package pdftex.def Info: ./figs/compare_different_poisson_ratio_2.jpg used on i
-nput line 163.
-(pdftex.def)             Requested size: 240.0pt x 172.34438pt.
 
-<./figs/demo_strip_vs_fem_2.jpg, id=170, 970.3452pt x 882.29625pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./figs/demo_tear_armadillo_8.jpg, id=153, 1906.0884pt x 497.6118pt>
+File: ./figs/demo_tear_armadillo_8.jpg Graphic file (type jpg)
+
+<use ./figs/demo_tear_armadillo_8.jpg>
+Package pdftex.def Info: ./figs/demo_tear_armadillo_8.jpg used on input line 15
+2.
+(pdftex.def)             Requested size: 504.0pt x 131.57037pt.
+
+<./figs/demo_tear_armadillo_close_view_3.jpg, id=154, 770.88pt x 1105.12875pt>
+File: ./figs/demo_tear_armadillo_close_view_3.jpg Graphic file (type jpg)
+
+<use ./figs/demo_tear_armadillo_close_view_3.jpg>
+Package pdftex.def Info: ./figs/demo_tear_armadillo_close_view_3.jpg used on in
+put line 161.
+(pdftex.def)             Requested size: 240.0pt x 344.05345pt.
+ [3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle.png> <C:/Users/fei/docs
+/PGPaper/figs/demo_pull_armadillo_4.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./figs/demo_strip_vs_fem_2.jpg, id=174, 970.3452pt x 882.29625pt>
 File: ./figs/demo_strip_vs_fem_2.jpg Graphic file (type jpg)
 
 <use ./figs/demo_strip_vs_fem_2.jpg>
-Package pdftex.def Info: ./figs/demo_strip_vs_fem_2.jpg used on input line 171.
+Package pdftex.def Info: ./figs/demo_strip_vs_fem_2.jpg used on input line 174.
 
 (pdftex.def)             Requested size: 240.0pt x 218.21754pt.
 
-<./figs/demo_jello.jpg, id=171, 770.88pt x 779.91376pt>
-File: ./figs/demo_jello.jpg Graphic file (type jpg)
+<./figs/compare_different_poisson_ratio_2.jpg, id=175, 654.16396pt x 469.755pt>
+File: ./figs/compare_different_poisson_ratio_2.jpg Graphic file (type jpg)
+<use ./figs/compare_different_poisson_ratio_2.jpg>
+Package pdftex.def Info: ./figs/compare_different_poisson_ratio_2.jpg used on i
+nput line 182.
+(pdftex.def)             Requested size: 240.0pt x 172.34438pt.
 
-<use ./figs/demo_jello.jpg>
-Package pdftex.def Info: ./figs/demo_jello.jpg used on input line 179.
-(pdftex.def)             Requested size: 240.0pt x 242.8061pt.
+<./figs/demo_jello_3.jpg, id=176, 654.16396pt x 864.95145pt>
+File: ./figs/demo_jello_3.jpg Graphic file (type jpg)
 
-<./figs/demo_fall_bunny_7.jpg, id=172, 2196.64665pt x 579.6054pt>
+<use ./figs/demo_jello_3.jpg>
+Package pdftex.def Info: ./figs/demo_jello_3.jpg used on input line 190.
+(pdftex.def)             Requested size: 240.0pt x 317.33461pt.
+
+<./figs/demo_fall_bunny_7.jpg, id=177, 2196.64665pt x 579.6054pt>
 File: ./figs/demo_fall_bunny_7.jpg Graphic file (type jpg)
 
 <use ./figs/demo_fall_bunny_7.jpg>
-Package pdftex.def Info: ./figs/demo_fall_bunny_7.jpg used on input line 187.
+Package pdftex.def Info: ./figs/demo_fall_bunny_7.jpg used on input line 198.
 (pdftex.def)             Requested size: 504.0pt x 132.9792pt.
 
 
@@ -415,7 +429,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-
+ [4 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo_8.jpg> <C:/Users/fei/do
+cs/PGPaper/figs/demo_impact_upside.jpg> <C:/Users/fei/docs/PGPaper/sampleFig.jp
+g> <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo_close_view_3.jpg>]
 Underfull \hbox (badness 1430) in paragraph at lines 45--45
 []\T1/ptm/m/sc/8 Forest C., Delingette H., Ay-ache N.\T1/ptm/m/n/8 :  Re-mov-in
 g
@@ -432,13 +448,15 @@ Underfull \hbox (badness 1655) in paragraph at lines 68--68
 frac-ture
  []
 
-
+[5 <C:/Users/fei/docs/PGPaper/figs/demo_fall_bunny_7.jpg> <C:/Users/fei/docs/PG
+Paper/figs/demo_strip_vs_fem_2.jpg> <C:/Users/fei/docs/PGPaper/figs/compare_dif
+ferent_poisson_ratio_2.jpg>]
 Underfull \hbox (badness 2635) in paragraph at lines 95--95
 \T1/ptm/m/n/8 for mesh-less e-las-tic solid-s.  In \T1/ptm/m/it/8 Pro-ceed-ings
  of the 2011 12th
  []
 
-[4 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo_7.jpg>]
+
 Underfull \hbox (badness 3396) in paragraph at lines 146--146
 []\T1/ptm/m/sc/8 Müller M., Keis-er R., Nealen A., Pauly M.,
  []
@@ -467,7 +485,7 @@ Underfull \hbox (badness 2521) in paragraph at lines 206--206
 ra-to-ries (SNL-NM),
  []
 
-
+[6 <C:/Users/fei/docs/PGPaper/figs/demo_jello_3.jpg>]
 Underfull \hbox (badness 3724) in paragraph at lines 271--271
 []\T1/ptm/m/sc/8 Terzopoulos D., Fleis-ch-er K.\T1/ptm/m/n/8 :  Mod-el-ing in-e
 las-tic
@@ -478,7 +496,7 @@ Underfull \hbox (badness 1009) in paragraph at lines 282--282
 \T1/ptm/m/it/8 the 2005 ACM SIG-GRAPH/Eurographics Sym-po-sium on Com-put-er
  []
 
-[5 <C:/Users/fei/docs/PGPaper/figs/demo_fall_bunny_7.jpg>]
+
 Underfull \hbox (badness 2913) in paragraph at lines 289--289
 \T1/ptm/m/n/8 adap-tive vir-tu-al n-ode al-go-rith-m with ro-bust mesh cut-ting
 .  In
@@ -490,24 +508,22 @@ Underfull \hbox (badness 1484) in paragraph at lines 289--289
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
- [6 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo_close_view_2.jpg> <C:/U
-sers/fei/docs/PGPaper/figs/compare_different_poisson_ratio_2.jpg> <C:/Users/fei
-/docs/PGPaper/figs/demo_strip_vs_fem_2.jpg>] [7
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+ [7
 
- <C:/Users/fei/docs/PGPaper/figs/demo_jello.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
-(rerunfilecheck)             Checksum: 3CB02C02A974335545A6835B30C81575;3515.
+(rerunfilecheck)             Checksum: D65834CD47700BF7B820D59FA8275EB0;3697.
  ) ) 
 Here is how much of TeX's memory you used:
- 5781 strings out of 495354
- 88222 string characters out of 3183858
- 192169 words of memory out of 3000000
- 8784 multiletter control sequences out of 15000+200000
+ 5791 strings out of 495354
+ 88435 string characters out of 3183858
+ 191336 words of memory out of 3000000
+ 8791 multiletter control sequences out of 15000+200000
  51953 words of font info for 74 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  34i,10n,24p,3016b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -519,9 +535,9 @@ blic/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type
 1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTE
 X/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (7 pages, 18556214 bytes).
+Output written on pg2016-sub.pdf (7 pages, 19620911 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
