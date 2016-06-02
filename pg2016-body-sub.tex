@@ -138,7 +138,14 @@ A_{distortion}=4\omega_{ij}b(|\mathbf{y}_j-\mathbf{y}_i|-|\mathbf{x}_j-\mathbf{x
 \end{equation}
 with $\omega_{ij}$ as the weight function and $b$ is the material parameter.
 
-The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the book\cite{madenci2014peridynamic} for elaborated derivation. Figure~\ref{fig:3} demonstrates an example of the hyperelastic deformations animated with our model.
+The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the book\cite{madenci2014peridynamic} for elaborated derivation. Here we directly provide the conversion between the material parameters in this model and those from continuum mechanics:
+\begin{equation}
+a = \frac{1}{2}(\kappa-\frac{5\mu}{3}) \qquad b = \frac{15\mu}{2\pi\delta^5} \qquad d=\frac{9}{4\pi\delta^4},
+\label{eq:7}
+\end{equation}
+where $\kappa$ and $\mu$ denote the bulk modulus and the shear modulus respectively.
+
+In Figure~\ref{fig:3} we demonstrate an example of the hyperelastic deformations animated with our model.
 
 \begin{figure}[t]
   \centering

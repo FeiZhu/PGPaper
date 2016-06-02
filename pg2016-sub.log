@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.1)  3 JUN 2016 01:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.1)  3 JUN 2016 02:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -430,7 +430,7 @@ o.pdf>
 (epstopdf)                    size: 138902 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_pull_armadillo-
 eps-converted-to.pdf ./figs/demo_pull_armadillo.eps>
-(epstopdf)             \includegraphics on input line 146.
+(epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/demo_pull_armadillo-eps-converted-to.pdf, id=164, 1269.74374pt x 412.54
@@ -438,7 +438,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: ./figs/demo_pull_armadillo-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_pull_armadillo-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_pull_armadillo-eps-converted-to.pdf used o
-n input line 146.
+n input line 153.
 (pdftex.def)             Requested size: 240.0pt x 77.97447pt.
 Package epstopdf Info: Source file: <./figs/demo_impact_upside.eps>
 (epstopdf)                    date: 2016-06-02 23:29:28
@@ -449,7 +449,7 @@ Package epstopdf Info: Source file: <./figs/demo_impact_upside.eps>
 (epstopdf)                    size: 169718 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_impact_upside-e
 ps-converted-to.pdf ./figs/demo_impact_upside.eps>
-(epstopdf)             \includegraphics on input line 157.
+(epstopdf)             \includegraphics on input line 164.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/demo_impact_upside-eps-converted-to.pdf, id=165, 871.255pt x 584.1825pt
@@ -457,7 +457,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: ./figs/demo_impact_upside-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_impact_upside-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_impact_upside-eps-converted-to.pdf used on
- input line 157.
+ input line 164.
 (pdftex.def)             Requested size: 240.0pt x 160.91364pt.
 
 
@@ -465,14 +465,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 170.
+(pdftex.def)                using `viewport' instead on input line 177.
 
 <./figs/demo_impact_color_map.png, id=166, 1402.48969pt x 697.10437pt>
 File: ./figs/demo_impact_color_map.png Graphic file (type png)
 
 <use ./figs/demo_impact_color_map.png>
 Package pdftex.def Info: ./figs/demo_impact_color_map.png used on input line 17
-0.
+7.
 (pdftex.def)             Requested size: 240.0pt x 119.99174pt.
 
 
@@ -487,7 +487,7 @@ o.pdf>
 (epstopdf)                    size: 218909 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_tear_armadillo-
 eps-converted-to.pdf ./figs/demo_tear_armadillo.eps>
-(epstopdf)             \includegraphics on input line 183.
+(epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/demo_tear_armadillo-eps-converted-to.pdf, id=167, 1906.12125pt x 497.86
@@ -495,7 +495,7 @@ pt>
 File: ./figs/demo_tear_armadillo-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_tear_armadillo-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_tear_armadillo-eps-converted-to.pdf used o
-n input line 183.
+n input line 190.
 (pdftex.def)             Requested size: 504.0pt x 131.63599pt.
 Package epstopdf Info: Source file: <./figs/demo_tear_armadillo_close_view.eps>
 
@@ -507,7 +507,7 @@ converted-to.pdf>
 (epstopdf)                    size: 227911 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_tear_armadillo_
 close_view-eps-converted-to.pdf ./figs/demo_tear_armadillo_close_view.eps>
-(epstopdf)             \includegraphics on input line 192.
+(epstopdf)             \includegraphics on input line 199.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf, id=168, 770.88pt x
@@ -516,7 +516,7 @@ File: ./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf Graphic file (
 type pdf)
  <use ./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_tear_armadillo_close_view-eps-converted-to
-.pdf used on input line 192.
+.pdf used on input line 199.
 (pdftex.def)             Requested size: 240.0pt x 322.4915pt.
 
 
@@ -531,7 +531,7 @@ pdf>
 (epstopdf)                    size: 182192 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_strip_vs_fem-ep
 s-converted-to.pdf ./figs/demo_strip_vs_fem.eps>
-(epstopdf)             \includegraphics on input line 205.
+(epstopdf)             \includegraphics on input line 212.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/demo_strip_vs_fem-eps-converted-to.pdf, id=169, 970.62625pt x 882.29625
@@ -539,7 +539,7 @@ pt>
 File: ./figs/demo_strip_vs_fem-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_strip_vs_fem-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_strip_vs_fem-eps-converted-to.pdf used on 
-input line 205.
+input line 212.
 (pdftex.def)             Requested size: 240.0pt x 218.15022pt.
 Package epstopdf Info: Source file: <./figs/compare_different_poisson_ratio.eps
 >
@@ -551,7 +551,7 @@ Package epstopdf Info: Source file: <./figs/compare_different_poisson_ratio.eps
 (epstopdf)                    size: 64577 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/compare_different_po
 isson_ratio-eps-converted-to.pdf ./figs/compare_different_poisson_ratio.eps>
-(epstopdf)             \includegraphics on input line 213.
+(epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/compare_different_poisson_ratio-eps-converted-to.pdf, id=170, 654.445pt
@@ -561,7 +561,7 @@ File: ./figs/compare_different_poisson_ratio-eps-converted-to.pdf Graphic file
 
 <use ./figs/compare_different_poisson_ratio-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/compare_different_poisson_ratio-eps-converted-t
-o.pdf used on input line 213.
+o.pdf used on input line 220.
 (pdftex.def)             Requested size: 240.0pt x 172.26553pt.
 Package epstopdf Info: Source file: <./figs/demo_jello.eps>
 (epstopdf)                    date: 2016-06-02 23:29:28
@@ -571,7 +571,7 @@ Package epstopdf Info: Source file: <./figs/demo_jello.eps>
 (epstopdf)                    size: 134945 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_jello-eps-conve
 rted-to.pdf ./figs/demo_jello.eps>
-(epstopdf)             \includegraphics on input line 221.
+(epstopdf)             \includegraphics on input line 228.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/demo_jello-eps-converted-to.pdf, id=171, 654.445pt x 865.2325pt>
@@ -579,7 +579,7 @@ File: ./figs/demo_jello-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/demo_jello-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_jello-eps-converted-to.pdf used on input l
-ine 221.
+ine 228.
 (pdftex.def)             Requested size: 240.0pt x 317.29251pt.
 Package epstopdf Info: Source file: <./figs/demo_fall_bunny.eps>
 (epstopdf)                    date: 2016-06-02 23:29:27
@@ -590,7 +590,7 @@ f>
 (epstopdf)                    size: 235288 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_fall_bunny-eps-
 converted-to.pdf ./figs/demo_fall_bunny.eps>
-(epstopdf)             \includegraphics on input line 229.
+(epstopdf)             \includegraphics on input line 236.
 Package epstopdf Info: Output file is already uptodate.
 
 <./figs/demo_fall_bunny-eps-converted-to.pdf, id=172, 2197.20876pt x 580.1675pt
@@ -598,7 +598,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: ./figs/demo_fall_bunny-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_fall_bunny-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_fall_bunny-eps-converted-to.pdf used on in
-put line 229.
+put line 236.
 (pdftex.def)             Requested size: 504.0pt x 133.07275pt.
 
 
@@ -614,14 +614,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 \tf@brf=\write3
 \openout3 = `pg2016-sub.brf'.
 
-
+ [4 <./figs/demo_pull_armadillo-eps-converted-to.pdf> <./figs/demo_impact_upsid
+e-eps-converted-to.pdf> <./figs/demo_impact_color_map.png>]
 Underfull \hbox (badness 1430) in paragraph at lines 33--33
 []\T1/ptm/m/sc/8 Forest C., Delingette H., Ay-ache N.\T1/ptm/m/n/8 :  Re-mov-in
 g
  []
 
-[4 <./figs/demo_pull_armadillo-eps-converted-to.pdf> <./figs/demo_impact_upside
--eps-converted-to.pdf> <./figs/demo_impact_color_map.png>]
+
 Underfull \hbox (badness 1342) in paragraph at lines 45--45
 []\T1/ptm/m/sc/8 Glondu L., Mar-chal M., Du-mont G.\T1/ptm/m/n/8 :  Real-time
  []
@@ -636,15 +636,15 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
-
+[5 <./figs/demo_tear_armadillo-eps-converted-to.pdf> <./figs/demo_tear_armadill
+o_close_view-eps-converted-to.pdf> <./figs/demo_strip_vs_fem-eps-converted-to.p
+df>]
 Underfull \hbox (badness 2635) in paragraph at lines 83--83
 \T1/ptm/m/n/8 for mesh-less elas-tic solids.  In \T1/ptm/m/it/8 Pro-ceed-ings o
 f the 2011 12th
  []
 
-[5 <./figs/demo_tear_armadillo-eps-converted-to.pdf> <./figs/demo_tear_armadill
-o_close_view-eps-converted-to.pdf> <./figs/demo_strip_vs_fem-eps-converted-to.p
-df>]
+
 Underfull \hbox (badness 3396) in paragraph at lines 134--134
 []\T1/ptm/m/sc/8 Müller M., Keiser R., Nealen A., Pauly M.,
  []
@@ -691,12 +691,12 @@ Underfull \hbox (badness 1484) in paragraph at lines 261--261
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
  [7 <./figs/demo_fall_bunny-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
  (./pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
 (rerunfilecheck)             Checksum: F39BBC2E86C8C7A9375EB1B337BA270D;3706.
 
@@ -706,13 +706,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
  ) ) 
 Here is how much of TeX's memory you used:
- 6139 strings out of 493089
- 96802 string characters out of 6134843
- 187460 words of memory out of 5000000
- 9423 multiletter control sequences out of 15000+600000
+ 6141 strings out of 493089
+ 96820 string characters out of 6134843
+ 187597 words of memory out of 5000000
+ 9424 multiletter control sequences out of 15000+600000
  55156 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,10n,24p,2990b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -727,10 +727,10 @@ ve/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (7 pages, 3048305 bytes).
+Output written on pg2016-sub.pdf (7 pages, 3049720 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 81 named destinations out of 1000 (max. 500000)
+ 367 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
