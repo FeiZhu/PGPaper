@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  2 JUN 2016 14:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  2 JUN 2016 18:20
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -369,25 +369,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Package epstopdf Info: Source file: <./figs/peridynamics_circle.eps>
-(epstopdf)                    date: 2016-06-02 14:37:30
-(epstopdf)                    size: 439781 bytes
-(epstopdf)             Output file: <./figs/peridynamics_circle-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2016-06-02 14:40:28
-(epstopdf)                    size: 101914 bytes
-(epstopdf)             Command: <epstopdf --outfile=./figs/peridynamics_circle-
-eps-converted-to.pdf ./figs/peridynamics_circle.eps>
-(epstopdf)             \includegraphics on input line 93.
-Package epstopdf Info: Output file is already uptodate.
+<./figs/peridynamics_circle.png, id=154, 443.256pt x 348.3414pt>
+File: ./figs/peridynamics_circle.png Graphic file (type png)
 
-<./figs/peridynamics_circle-eps-converted-to.pdf, id=154, 480.79625pt x 430.608
-75pt>
-File: ./figs/peridynamics_circle-eps-converted-to.pdf Graphic file (type pdf)
- <use ./figs/peridynamics_circle-eps-converted-to.pdf>
-Package pdftex.def Info: ./figs/peridynamics_circle-eps-converted-to.pdf used o
-n input line 93.
-(pdftex.def)             Requested size: 167.99927pt x 150.46562pt.
+<use ./figs/peridynamics_circle.png>
+Package pdftex.def Info: ./figs/peridynamics_circle.png used on input line 93.
+(pdftex.def)             Requested size: 167.99927pt x 132.0256pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -400,15 +387,15 @@ o.pdf>
 (epstopdf)                    size: 79803 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_pull_armadillo-
 eps-converted-to.pdf ./figs/demo_pull_armadillo.eps>
-(epstopdf)             \includegraphics on input line 116.
+(epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_pull_armadillo-eps-converted-to.pdf, id=158, 1528.71124pt x 455.70
+<./figs/demo_pull_armadillo-eps-converted-to.pdf, id=159, 1528.71124pt x 455.70
 25pt>
 File: ./figs/demo_pull_armadillo-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_pull_armadillo-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_pull_armadillo-eps-converted-to.pdf used o
-n input line 116.
+n input line 123.
 (pdftex.def)             Requested size: 240.0pt x 71.5371pt.
 Package epstopdf Info: Source file: <./figs/demo_impact_upside.eps>
 (epstopdf)                    date: 2016-06-02 14:37:29
@@ -419,15 +406,15 @@ Package epstopdf Info: Source file: <./figs/demo_impact_upside.eps>
 (epstopdf)                    size: 86796 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_impact_upside-e
 ps-converted-to.pdf ./figs/demo_impact_upside.eps>
-(epstopdf)             \includegraphics on input line 127.
+(epstopdf)             \includegraphics on input line 134.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_impact_upside-eps-converted-to.pdf, id=159, 871.255pt x 584.1825pt
+<./figs/demo_impact_upside-eps-converted-to.pdf, id=160, 871.255pt x 584.1825pt
 >
 File: ./figs/demo_impact_upside-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_impact_upside-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_impact_upside-eps-converted-to.pdf used on
- input line 127.
+ input line 134.
 (pdftex.def)             Requested size: 240.0pt x 160.91364pt.
 
 
@@ -441,14 +428,14 @@ Package epstopdf Info: Source file: <./sampleFig.eps>
 (epstopdf)                    size: 2710 bytes
 (epstopdf)             Command: <epstopdf --outfile=./sampleFig-eps-converted-t
 o.pdf ./sampleFig.eps>
-(epstopdf)             \includegraphics on input line 139.
+(epstopdf)             \includegraphics on input line 146.
 Package epstopdf Info: Output file is already uptodate.
-<./sampleFig-eps-converted-to.pdf, id=160, 87.32625pt x 59.22125pt>
+<./sampleFig-eps-converted-to.pdf, id=161, 87.32625pt x 59.22125pt>
 File: ./sampleFig-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./sampleFig-eps-converted-to.pdf>
-Package pdftex.def Info: ./sampleFig-eps-converted-to.pdf used on input line 13
-9.
+Package pdftex.def Info: ./sampleFig-eps-converted-to.pdf used on input line 14
+6.
 (pdftex.def)             Requested size: 240.0pt x 162.78297pt.
 
 
@@ -463,15 +450,15 @@ o.pdf>
 (epstopdf)                    size: 119302 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_tear_armadillo-
 eps-converted-to.pdf ./figs/demo_tear_armadillo.eps>
-(epstopdf)             \includegraphics on input line 152.
+(epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_tear_armadillo-eps-converted-to.pdf, id=161, 1906.12125pt x 497.86
+<./figs/demo_tear_armadillo-eps-converted-to.pdf, id=162, 1906.12125pt x 497.86
 pt>
 File: ./figs/demo_tear_armadillo-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_tear_armadillo-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_tear_armadillo-eps-converted-to.pdf used o
-n input line 152.
+n input line 159.
 (pdftex.def)             Requested size: 504.0pt x 131.63599pt.
 Package epstopdf Info: Source file: <./figs/demo_tear_armadillo_close_view.eps>
 
@@ -483,20 +470,19 @@ converted-to.pdf>
 (epstopdf)                    size: 115925 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_tear_armadillo_
 close_view-eps-converted-to.pdf ./figs/demo_tear_armadillo_close_view.eps>
-(epstopdf)             \includegraphics on input line 161.
+(epstopdf)             \includegraphics on input line 168.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf, id=162, 770.88pt x
+<./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf, id=163, 770.88pt x
  1105.12875pt>
 File: ./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf Graphic file (
 type pdf)
 
 <use ./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_tear_armadillo_close_view-eps-converted-to
-.pdf used on input line 161.
+.pdf used on input line 168.
 (pdftex.def)             Requested size: 240.0pt x 344.05345pt.
- [3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle-eps-converted-to.pdf> <
-C:/Users/fei/docs/PGPaper/figs/demo_pull_armadillo-eps-converted-to.pdf>]
+ [3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -509,15 +495,15 @@ pdf>
 (epstopdf)                    size: 101290 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_strip_vs_fem-ep
 s-converted-to.pdf ./figs/demo_strip_vs_fem.eps>
-(epstopdf)             \includegraphics on input line 174.
+(epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_strip_vs_fem-eps-converted-to.pdf, id=188, 970.62625pt x 882.29625
+<./figs/demo_strip_vs_fem-eps-converted-to.pdf, id=183, 970.62625pt x 882.29625
 pt>
 File: ./figs/demo_strip_vs_fem-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_strip_vs_fem-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_strip_vs_fem-eps-converted-to.pdf used on 
-input line 174.
+input line 181.
 (pdftex.def)             Requested size: 240.0pt x 218.15022pt.
 Package epstopdf Info: Source file: <./figs/compare_different_poisson_ratio.eps
 >
@@ -529,17 +515,17 @@ Package epstopdf Info: Source file: <./figs/compare_different_poisson_ratio.eps
 (epstopdf)                    size: 120814 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/compare_different_po
 isson_ratio-eps-converted-to.pdf ./figs/compare_different_poisson_ratio.eps>
-(epstopdf)             \includegraphics on input line 182.
+(epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/compare_different_poisson_ratio-eps-converted-to.pdf, id=189, 654.445pt
+<./figs/compare_different_poisson_ratio-eps-converted-to.pdf, id=184, 654.445pt
  x 469.755pt>
 File: ./figs/compare_different_poisson_ratio-eps-converted-to.pdf Graphic file 
 (type pdf)
 
 <use ./figs/compare_different_poisson_ratio-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/compare_different_poisson_ratio-eps-converted-t
-o.pdf used on input line 182.
+o.pdf used on input line 189.
 (pdftex.def)             Requested size: 240.0pt x 172.26553pt.
 Package epstopdf Info: Source file: <./figs/demo_jello.eps>
 (epstopdf)                    date: 2016-06-02 14:37:29
@@ -549,15 +535,15 @@ Package epstopdf Info: Source file: <./figs/demo_jello.eps>
 (epstopdf)                    size: 69470 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_jello-eps-conve
 rted-to.pdf ./figs/demo_jello.eps>
-(epstopdf)             \includegraphics on input line 190.
+(epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_jello-eps-converted-to.pdf, id=190, 654.445pt x 865.2325pt>
+<./figs/demo_jello-eps-converted-to.pdf, id=185, 654.445pt x 865.2325pt>
 File: ./figs/demo_jello-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/demo_jello-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_jello-eps-converted-to.pdf used on input l
-ine 190.
+ine 197.
 (pdftex.def)             Requested size: 240.0pt x 317.29251pt.
 Package epstopdf Info: Source file: <./figs/demo_fall_bunny.eps>
 (epstopdf)                    date: 2016-06-02 14:37:29
@@ -568,15 +554,15 @@ f>
 (epstopdf)                    size: 126144 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_fall_bunny-eps-
 converted-to.pdf ./figs/demo_fall_bunny.eps>
-(epstopdf)             \includegraphics on input line 198.
+(epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_fall_bunny-eps-converted-to.pdf, id=191, 2197.20876pt x 580.1675pt
+<./figs/demo_fall_bunny-eps-converted-to.pdf, id=186, 2197.20876pt x 580.1675pt
 >
 File: ./figs/demo_fall_bunny-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_fall_bunny-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_fall_bunny-eps-converted-to.pdf used on in
-put line 198.
+put line 205.
 (pdftex.def)             Requested size: 504.0pt x 133.07275pt.
 
 
@@ -591,13 +577,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 (C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
 (C:\Users\fei\docs\PGPaper\pg2016-sub.brf)
 \tf@brf=\write3
-
-Underfull \vbox (badness 4024) has occurred while \output is active []
-
- [4 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo-eps-converted-to.pdf> <
-C:/Users/fei/docs/PGPaper/figs/demo_impact_upside-eps-converted-to.pdf> <C:/Use
-rs/fei/docs/PGPaper/sampleFig-eps-converted-to.pdf> <C:/Users/fei/docs/PGPaper/
-figs/demo_tear_armadillo_close_view-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
@@ -608,7 +587,10 @@ Underfull \hbox (badness 1430) in paragraph at lines 45--45
 g
  []
 
-
+[4 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo-eps-converted-to.pdf> <C
+:/Users/fei/docs/PGPaper/figs/demo_pull_armadillo-eps-converted-to.pdf> <C:/Use
+rs/fei/docs/PGPaper/figs/demo_impact_upside-eps-converted-to.pdf> <C:/Users/fei
+/docs/PGPaper/sampleFig-eps-converted-to.pdf>]
 Underfull \hbox (badness 1342) in paragraph at lines 57--57
 []\T1/ptm/m/sc/8 Glondu L., Mar-chal M., Du-mon-t G.\T1/ptm/m/n/8 :  Real-time
  []
@@ -620,8 +602,8 @@ frac-ture
  []
 
 [5 <C:/Users/fei/docs/PGPaper/figs/demo_fall_bunny-eps-converted-to.pdf> <C:/Us
-ers/fei/docs/PGPaper/figs/demo_strip_vs_fem-eps-converted-to.pdf> <C:/Users/fei
-/docs/PGPaper/figs/compare_different_poisson_ratio-eps-converted-to.pdf>]
+ers/fei/docs/PGPaper/figs/demo_tear_armadillo_close_view-eps-converted-to.pdf> 
+<C:/Users/fei/docs/PGPaper/figs/demo_strip_vs_fem-eps-converted-to.pdf>]
 Underfull \hbox (badness 2635) in paragraph at lines 95--95
 \T1/ptm/m/n/8 for mesh-less e-las-tic solid-s.  In \T1/ptm/m/it/8 Pro-ceed-ings
  of the 2011 12th
@@ -656,7 +638,8 @@ Underfull \hbox (badness 2521) in paragraph at lines 206--206
 ra-to-ries (SNL-NM),
  []
 
-[6 <C:/Users/fei/docs/PGPaper/figs/demo_jello-eps-converted-to.pdf>]
+[6 <C:/Users/fei/docs/PGPaper/figs/compare_different_poisson_ratio-eps-converte
+d-to.pdf> <C:/Users/fei/docs/PGPaper/figs/demo_jello-eps-converted-to.pdf>]
 Underfull \hbox (badness 3724) in paragraph at lines 271--271
 []\T1/ptm/m/sc/8 Terzopoulos D., Fleis-ch-er K.\T1/ptm/m/n/8 :  Mod-el-ing in-e
 las-tic
@@ -679,23 +662,23 @@ Underfull \hbox (badness 1484) in paragraph at lines 289--289
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
  [7
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
 (rerunfilecheck)             Checksum: D65834CD47700BF7B820D59FA8275EB0;3697.
  ) ) 
 Here is how much of TeX's memory you used:
- 5918 strings out of 495354
- 91687 string characters out of 3183858
- 193571 words of memory out of 3000000
- 8895 multiletter control sequences out of 15000+200000
- 51953 words of font info for 74 fonts, out of 3000000 for 9000
+ 5924 strings out of 495354
+ 91658 string characters out of 3183858
+ 193618 words of memory out of 3000000
+ 8896 multiletter control sequences out of 15000+200000
+ 53778 words of font info for 77 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  42i,10n,24p,3016b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
@@ -706,9 +689,9 @@ blic/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type
 1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTE
 X/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (7 pages, 1014628 bytes).
+Output written on pg2016-sub.pdf (7 pages, 980407 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
