@@ -38,8 +38,8 @@
 \teaser{
  \includegraphics[width=\linewidth]{./figs/demo_impact.eps}
  \centering
-  \caption{here is ball crack wall, brittle and ductile, isotropic and anisotropic}
-\label{fig:teaser}
+  \caption{ A sphere shoots through walls made of different materials, causing varied fracture behaviors. From left to right: isotropic brittle fracture, anisotropic brittle fracture, isotropic ductile fracture, anisotropic ductile fracture.}
+\label{fig:1}
 }
 
 \maketitle
@@ -85,7 +85,7 @@ In peridynamics, the governing equation at any point $\mathbf{x}$ is \nobreak{fo
 \rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}}+\mathbf{b}(\mathbf{x}),
 \label{eq:1}
 \end{equation}
-where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density that is exerted on $\mathbf{x}$ by $\mathbf{x}'$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
+where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, $V_\mathbf{x}$ is the volume of $\mathbf{x}$, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density that is exerted on $\mathbf{x}$ by $\mathbf{x}'$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
 
 \begin{figure}[t]
   \centering
@@ -110,19 +110,42 @@ As is discussed in Section~\ref{section:3}, the key to peridynamics-based consti
 \end{equation}
 where $\mathbf{x}$ and $\mathbf{y}$ denote the positions of particles before and after deformation respectively. The direction of the force density is along the deformed bond between the particles given by $\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}$. $A$ is a scalar that represents the force magnitude, and it is composed of two terms by addition $A = A_{dilation} + A_{distortion}$, namely the dilation term $A_{dilation}$ and the distortion term $A_{distortion}$.
 
-The dilation term $A_{dilation}$ measures the volume change without any shape distortion, which is defined as:
+The dilation term $A_{dilation}$ is due to the dilation part of \nobreak{deformation}, i.e., volume change without any shape distortion. It is defined as:
 \begin{equation}
-A_{dilation}=4\omega_{ij}d\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}a\theta_i,
+A_{dilation}=4\omega_{ij}d\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}a\theta_i.
 \label{eq:3}
 \end{equation}
-where $d$ and $a$ are both peridynamics material parameters.
+$d$ and $a$ are both peridynamics material parameters, and $\omega_{ij}$ is the weight function between particle $i$ and particle $j$. For isotropic materials $\omega_{ij}$ is monotonically decreasing with respect to the distance between particles:
+\begin{equation}
+\omega_{ij} = \frac{\delta}{|\mathbf{x}_j-\mathbf{x}_i|}.
+\label{eq:3}
+\end{equation}
+Note that $\omega_{ij}$ is defined in the material space, therefore can be precomputed. $\theta_i$ is the dilation at particle $i$ defined with respect to the stretch of all bonds between particle $i$ and its family:
+\begin{equation}
+\theta_i = d\sum_{k=1}^N\omega_{ik}s_{ik}\frac{\mathbf{y}_k-\mathbf{y}_i}{|\mathbf{y}_k-\mathbf{y}_i|}\cdot(\mathbf{x}_k-\mathbf{x}_i)V_k,
+\label{eq:4}
+\end{equation}
+where $N$ represents the number of family points $k$ for point $i$, and $V_k$ are their volumes. The stretch $s_{ik}$ of the bond  between particles is defined as:
+\begin{equation}
+s_{ik}=\frac{|\mathbf{y}_k-\mathbf{y}_i|}{|\mathbf{x}_k-\mathbf{x}_i|} -1.
+\label{eq:5}
+\end{equation}
+
+The distortion term $A_{distortion}$ is a result of distortion deformation between particle $i$ and $j$. It is simply defined with respect to the extension of the bond between the two particles as:
+\begin{equation}
+A_{distortion}=4\omega_{ij}b(|\mathbf{y}_j-\mathbf{y}_i|-|\mathbf{x}_j-\mathbf{x}_i|),
+\label{eq:6}
+\end{equation}
+with $\omega_{ij}$ as the weight function and $b$ is the material parameter.
+
+The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the book\cite{madenci2014peridynamic} for elaborated derivation. Figure~\ref{fig:3} demonstrates an example of the hyperelastic deformations animated with our model.
 
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_pull_armadillo.eps}
   \caption{\label{fig:3}
-  pull armadillo figure.
+  Armadillo is initially anchored on its back and four limbs, and it deforms elastically when its back is released.
 }
 \end{figure}
 
