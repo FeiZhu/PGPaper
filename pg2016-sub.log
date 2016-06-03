@@ -1,13 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.1)  3 JUN 2016 02:14
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  3 JUN 2016 11:52
 entering extended mode
- \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**pg2016-sub.tex
-(./pg2016-sub.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(./egpubl.cls
+**C:/Users/fei/docs/PGPaper/pg2016-sub.tex
+(C:/Users/fei/docs/PGPaper/pg2016-sub.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\Users\fei\docs\PGPaper\egpubl.cls
 Document Class: egpubl 2015/12/03 Document Style for EG Publications v3.63
 \c@table=\count79
 \c@figure=\count80
@@ -23,68 +20,66 @@ Document Class: egpubl 2015/12/03 Document Style for EG Publications v3.63
 \bibhang=\skip43
 \every@verbatim=\toks14
 \verbatim@line=\toks15
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(./pg2016-sub.lbl)
-\openout9 = `pg2016-sub.lbl'.
+(C:\Users\fei\docs\PGPaper\pg2016-sub.lbl))
+(C:\Users\fei\docs\PGPaper\pg2016.sty)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-) (./pg2016.sty)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(C:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(C:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(C:\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen102
 \Gin@req@width=\dimen103
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -93,9 +88,8 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -105,104 +99,93 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
+))
+(C:\CTEX\MiKTeX\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2012/02/06 v6.82o Hypertext links for LaTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-)))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
-
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package hobsub Info: Skipping package `etexcmds' (already loaded).
 Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
 Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
-)
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(C:\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen104
 \Hy@linkcounter=\count89
 \Hy@pagecounter=\count90
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+(C:\CTEX\MiKTeX\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2012/02/06 v6.82o Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count91
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(C:\CTEX\MiKTeX\tex\latex\00miktex\hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarks' set `false' on input line 4319.
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing ON on input line 4461.
+Package hyperref Info: Option `colorlinks' set `true' on input line 3925.
+Package hyperref Info: Option `bookmarks' set `false' on input line 3925.
+Package hyperref Info: Hyper figures OFF on input line 4046.
+Package hyperref Info: Link nesting OFF on input line 4051.
+Package hyperref Info: Hyper index ON on input line 4054.
+Package hyperref Info: Plain pages OFF on input line 4061.
+Package hyperref Info: Backreferencing ON on input line 4064.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks OFF on input line 4694.
+Package hyperref Info: Bookmarks OFF on input line 4290.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/backref.sty
-Package: backref 2012/07/25 v1.38 Bibliographical back referencing
+(C:\CTEX\MiKTeX\tex\latex\hyperref\backref.sty
+Package: backref 2010/08/30 v1.36 Bibliographical back referencing
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
 \c@Hy@tempcnt=\count92
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+(C:\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty
 \Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen105
+LaTeX Info: Redefining \url on input line 4637.
 \Fld@menulength=\count93
-\Field@Width=\dimen106
-\Fld@charsize=\dimen107
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing ON on input line 6308.
-Package hyperref Info: Link coloring ON on input line 6313.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
+\Field@Width=\dimen105
+\Fld@charsize=\dimen106
+Package hyperref Info: Hyper figures OFF on input line 5757.
+Package hyperref Info: Link nesting OFF on input line 5762.
+Package hyperref Info: Hyper index ON on input line 5765.
+Package hyperref Info: backreferencing ON on input line 5770.
+Package hyperref Info: Link coloring ON on input line 5775.
+Package hyperref Info: Link coloring with OCG OFF on input line 5782.
+Package hyperref Info: PDF/A mode OFF on input line 5787.
+LaTeX Info: Redefining \ref on input line 5827.
+LaTeX Info: Redefining \pageref on input line 5831.
 \Hy@abspage=\count94
 \c@Item=\count95
 \c@Hfootnote=\count96
@@ -210,15 +193,16 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver: hpdftex.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+(C:\CTEX\MiKTeX\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
 \Fld@listcount=\count97
 \c@bookmark@seq@number=\count98
 \Hy@SectionHShift=\skip44
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.sty
+(C:\CTEX\MiKTeX\tex\latex\base\t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
-) (./dfadobe.sty
+)
+(C:\Users\fei\docs\PGPaper\dfadobe.sty
 Package: dfadobe 2000/03/05 v1.4 T1-encoded Times (except symbols), Courier, He
 lvetica (at 90\%) + math package
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
@@ -248,30 +232,26 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 20.
-
-(./dfT1ptm.fd
+ (C:\Users\fei\docs\PGPaper\dfT1ptm.fd
 File: dfT1ptm.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/ptm.
-) (./dfT1phv.fd
+)
+(C:\Users\fei\docs\PGPaper\dfT1phv.fd
 File: dfT1phv.fd 1997/12/02 Fontinst v1.6 font definitions for T1/phv scaled to
  90\%.
-) (./dfT1pcr.fd
+) (C:\Users\fei\docs\PGPaper\dfT1pcr.fd
 File: dfT1pcr.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/pcr.
-)) (./egweblnk.sty
+))
+(C:\Users\fei\docs\PGPaper\egweblnk.sty
 Package: egweblnk 2004/10/29 v2.2 DF's support for http web links in class egpu
 bl
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/cite/cite.sty
+(C:\CTEX\MiKTeX\tex\latex\cite\cite.sty
 LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
 )
-(./pg2016-body-sub.tex (./pg2016-sub.aux
-
-LaTeX Warning: Label `eq:3' multiply defined.
-
-)
-\openout1 = `pg2016-sub.aux'.
-
+(C:\Users\fei\docs\PGPaper\pg2016-body-sub.tex
+(C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
@@ -286,16 +266,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
-\scratchdimen=\dimen108
+\scratchdimen=\dimen107
 \scratchbox=\box26
 \nofMPsegments=\count100
 \nofMParguments=\count101
 \everyMPshowfont=\toks17
 \MPscratchCnt=\count102
-\MPscratchDim=\dimen109
+\MPscratchDim=\dimen108
 \MPnumerator=\count103
 \makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks18
@@ -306,20 +287,20 @@ LaTeX Font Info:    ... okay on input line 36.
 Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
 (hyperref)                using 11in.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+(C:\CTEX\MiKTeX\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 142.
+Package color Info: Driver file: pdftex.def on input line 130.
 )
 Package hyperref Info: Link coloring ON on input line 36.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+(C:\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count105
@@ -332,38 +313,38 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 46
 .
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 46
 .
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+(C:\CTEX\MiKTeX\tex\latex\psnfss\omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+psycm on input line 46
 .
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+(C:\CTEX\MiKTeX\tex\latex\psnfss\omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 46.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 Package epstopdf Info: Source file: <./figs/demo_impact.eps>
-(epstopdf)                    date: 2016-06-02 23:29:27
-(epstopdf)                    size: 1305074 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 1327034 bytes
 (epstopdf)             Output file: <./figs/demo_impact-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-02 23:38:38
-(epstopdf)                    size: 174018 bytes
+(epstopdf)                    date: 2016-06-03 08:59:08
+(epstopdf)                    size: 89711 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_impact-eps-conv
 erted-to.pdf ./figs/demo_impact.eps>
 (epstopdf)             \includegraphics on input line 46.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_impact-eps-converted-to.pdf, id=4, 1236.62pt x 342.27875pt>
+<./figs/demo_impact-eps-converted-to.pdf, id=3, 1236.62pt x 342.27875pt>
 File: ./figs/demo_impact-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/demo_impact-eps-converted-to.pdf>
@@ -372,31 +353,10 @@ line 46.
 (pdftex.def)             Requested size: 504.0pt x 139.49954pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 46.
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
- <./figs/demo_impact-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `askari2008peridynamics' on page 2 undefined on input l
-ine 74.
-
-
-LaTeX Warning: Citation `silling2014hierarchical' on page 2 undefined on input 
-line 74.
-
-
-LaTeX Warning: Citation `askari2006peridynamic' on page 2 undefined on input li
-ne 74.
-
-
-LaTeX Warning: Citation `silling2010crack' on page 2 undefined on input line 74
-.
-
-
-LaTeX Warning: Citation `silling2014peridynamic' on page 2 undefined on input l
-ine 74.
-
-[2]
+ <C:/Users/fei/docs/PGPaper/figs/demo_impact-eps-converted-to.pdf>] [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
@@ -408,7 +368,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 Package pdftex.def Warning: Option `bb' does not make sense,
 (pdftex.def)                using `viewport' instead on input line 93.
 
-<./figs/peridynamics_circle.png, id=141, 443.256pt x 348.3414pt>
+<./figs/peridynamics_circle.png, id=148, 443.256pt x 348.3414pt>
 File: ./figs/peridynamics_circle.png Graphic file (type png)
 
 <use ./figs/peridynamics_circle.png>
@@ -416,24 +376,24 @@ Package pdftex.def Info: ./figs/peridynamics_circle.png used on input line 93.
 (pdftex.def)             Requested size: 167.99927pt x 135.54353pt.
 
 Underfull \hbox (badness 1810) in paragraph at lines 113--114
-[]\T1/ptm/m/n/9 The di-la-tion term $\OML/ptmcm/m/it/9 A[]$ \T1/ptm/m/n/9 is du
-e to the di-la-tion part of
+[]\T1/ptm/m/n/9 The di-la-tion ter-m $\OML/ptmcm/m/it/9 A[]$ \T1/ptm/m/n/9 is d
+ue to the di-la-tion part of
  []
 
-[3 <./figs/peridynamics_circle.png>]
+[3 <C:/Users/fei/docs/PGPaper/figs/peridynamics_circle.png>]
 Package epstopdf Info: Source file: <./figs/demo_pull_armadillo.eps>
-(epstopdf)                    date: 2016-06-02 23:29:28
-(epstopdf)                    size: 1217969 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 1238866 bytes
 (epstopdf)             Output file: <./figs/demo_pull_armadillo-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2016-06-02 23:38:39
-(epstopdf)                    size: 138902 bytes
+(epstopdf)                    date: 2016-06-03 08:59:10
+(epstopdf)                    size: 73319 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_pull_armadillo-
 eps-converted-to.pdf ./figs/demo_pull_armadillo.eps>
 (epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_pull_armadillo-eps-converted-to.pdf, id=164, 1269.74374pt x 412.54
+<./figs/demo_pull_armadillo-eps-converted-to.pdf, id=171, 1269.74374pt x 412.54
 124pt>
 File: ./figs/demo_pull_armadillo-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_pull_armadillo-eps-converted-to.pdf>
@@ -441,164 +401,163 @@ Package pdftex.def Info: ./figs/demo_pull_armadillo-eps-converted-to.pdf used o
 n input line 153.
 (pdftex.def)             Requested size: 240.0pt x 77.97447pt.
 Package epstopdf Info: Source file: <./figs/demo_impact_upside.eps>
-(epstopdf)                    date: 2016-06-02 23:29:28
-(epstopdf)                    size: 975773 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 993598 bytes
 (epstopdf)             Output file: <./figs/demo_impact_upside-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2016-06-02 23:38:40
-(epstopdf)                    size: 169718 bytes
+(epstopdf)                    date: 2016-06-03 08:59:11
+(epstopdf)                    size: 95388 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_impact_upside-e
 ps-converted-to.pdf ./figs/demo_impact_upside.eps>
-(epstopdf)             \includegraphics on input line 164.
+(epstopdf)             \includegraphics on input line 172.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_impact_upside-eps-converted-to.pdf, id=165, 871.255pt x 584.1825pt
+<./figs/demo_impact_upside-eps-converted-to.pdf, id=175, 871.255pt x 584.1825pt
 >
 File: ./figs/demo_impact_upside-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_impact_upside-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_impact_upside-eps-converted-to.pdf used on
- input line 164.
+ input line 172.
 (pdftex.def)             Requested size: 240.0pt x 160.91364pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 3701) in paragraph at lines 185--187
+\T1/ptm/m/n/9 Appealing anisotrop-ic ef-fect-s could be gen-er-at-ed with our
+ []
 
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 177.
+(pdftex.def)                using `viewport' instead on input line 191.
 
-<./figs/demo_impact_color_map.png, id=166, 1402.48969pt x 697.10437pt>
+<./figs/demo_impact_color_map.png, id=181, 1402.48969pt x 697.10437pt>
 File: ./figs/demo_impact_color_map.png Graphic file (type png)
 
 <use ./figs/demo_impact_color_map.png>
-Package pdftex.def Info: ./figs/demo_impact_color_map.png used on input line 17
-7.
+Package pdftex.def Info: ./figs/demo_impact_color_map.png used on input line 19
+1.
 (pdftex.def)             Requested size: 240.0pt x 119.99174pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [4 <C:/Users/fei/docs/PGPaper/figs/demo_pull_armadillo-eps-converted-to.pdf> <
+C:/Users/fei/docs/PGPaper/figs/demo_impact_upside-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/demo_tear_armadillo.eps>
-(epstopdf)                    date: 2016-06-02 23:29:28
-(epstopdf)                    size: 1606233 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 1631932 bytes
 (epstopdf)             Output file: <./figs/demo_tear_armadillo-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2016-06-02 23:38:40
-(epstopdf)                    size: 218909 bytes
+(epstopdf)                    date: 2016-06-03 08:59:13
+(epstopdf)                    size: 122667 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_tear_armadillo-
 eps-converted-to.pdf ./figs/demo_tear_armadillo.eps>
-(epstopdf)             \includegraphics on input line 190.
+(epstopdf)             \includegraphics on input line 204.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_tear_armadillo-eps-converted-to.pdf, id=167, 1906.12125pt x 497.86
+<./figs/demo_tear_armadillo-eps-converted-to.pdf, id=203, 1906.12125pt x 497.86
 pt>
 File: ./figs/demo_tear_armadillo-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_tear_armadillo-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_tear_armadillo-eps-converted-to.pdf used o
-n input line 190.
+n input line 204.
 (pdftex.def)             Requested size: 504.0pt x 131.63599pt.
 Package epstopdf Info: Source file: <./figs/demo_tear_armadillo_close_view.eps>
 
-(epstopdf)                    date: 2016-06-02 23:29:28
-(epstopdf)                    size: 1814484 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 1842662 bytes
 (epstopdf)             Output file: <./figs/demo_tear_armadillo_close_view-eps-
 converted-to.pdf>
-(epstopdf)                    date: 2016-06-02 23:38:41
-(epstopdf)                    size: 227911 bytes
+(epstopdf)                    date: 2016-06-03 08:59:14
+(epstopdf)                    size: 115936 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_tear_armadillo_
 close_view-eps-converted-to.pdf ./figs/demo_tear_armadillo_close_view.eps>
-(epstopdf)             \includegraphics on input line 199.
+(epstopdf)             \includegraphics on input line 213.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf, id=168, 770.88pt x
+<./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf, id=204, 770.88pt x
  1035.87pt>
 File: ./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf Graphic file (
 type pdf)
  <use ./figs/demo_tear_armadillo_close_view-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_tear_armadillo_close_view-eps-converted-to
-.pdf used on input line 199.
+.pdf used on input line 213.
 (pdftex.def)             Requested size: 240.0pt x 322.4915pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package epstopdf Info: Source file: <./figs/demo_strip_vs_fem.eps>
-(epstopdf)                    date: 2016-06-02 23:29:28
-(epstopdf)                    size: 1231553 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 1252540 bytes
 (epstopdf)             Output file: <./figs/demo_strip_vs_fem-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-06-02 23:38:41
-(epstopdf)                    size: 182192 bytes
+(epstopdf)                    date: 2016-06-03 08:59:16
+(epstopdf)                    size: 102440 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_strip_vs_fem-ep
 s-converted-to.pdf ./figs/demo_strip_vs_fem.eps>
-(epstopdf)             \includegraphics on input line 212.
+(epstopdf)             \includegraphics on input line 226.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_strip_vs_fem-eps-converted-to.pdf, id=169, 970.62625pt x 882.29625
+<./figs/demo_strip_vs_fem-eps-converted-to.pdf, id=205, 970.62625pt x 882.29625
 pt>
 File: ./figs/demo_strip_vs_fem-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_strip_vs_fem-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_strip_vs_fem-eps-converted-to.pdf used on 
-input line 212.
+input line 226.
 (pdftex.def)             Requested size: 240.0pt x 218.15022pt.
 Package epstopdf Info: Source file: <./figs/compare_different_poisson_ratio.eps
 >
-(epstopdf)                    date: 2016-06-02 23:29:27
-(epstopdf)                    size: 455901 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 467371 bytes
 (epstopdf)             Output file: <./figs/compare_different_poisson_ratio-eps
 -converted-to.pdf>
-(epstopdf)                    date: 2016-06-02 23:38:42
-(epstopdf)                    size: 64577 bytes
+(epstopdf)                    date: 2016-06-03 08:59:17
+(epstopdf)                    size: 41128 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/compare_different_po
 isson_ratio-eps-converted-to.pdf ./figs/compare_different_poisson_ratio.eps>
-(epstopdf)             \includegraphics on input line 220.
+(epstopdf)             \includegraphics on input line 234.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/compare_different_poisson_ratio-eps-converted-to.pdf, id=170, 654.445pt
+<./figs/compare_different_poisson_ratio-eps-converted-to.pdf, id=206, 654.445pt
  x 469.755pt>
 File: ./figs/compare_different_poisson_ratio-eps-converted-to.pdf Graphic file 
 (type pdf)
 
 <use ./figs/compare_different_poisson_ratio-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/compare_different_poisson_ratio-eps-converted-t
-o.pdf used on input line 220.
+o.pdf used on input line 234.
 (pdftex.def)             Requested size: 240.0pt x 172.26553pt.
 Package epstopdf Info: Source file: <./figs/demo_jello.eps>
-(epstopdf)                    date: 2016-06-02 23:29:28
-(epstopdf)                    size: 858742 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 875157 bytes
 (epstopdf)             Output file: <./figs/demo_jello-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-02 23:38:42
-(epstopdf)                    size: 134945 bytes
+(epstopdf)                    date: 2016-06-03 08:59:18
+(epstopdf)                    size: 70869 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_jello-eps-conve
 rted-to.pdf ./figs/demo_jello.eps>
-(epstopdf)             \includegraphics on input line 228.
+(epstopdf)             \includegraphics on input line 242.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_jello-eps-converted-to.pdf, id=171, 654.445pt x 865.2325pt>
+<./figs/demo_jello-eps-converted-to.pdf, id=207, 654.445pt x 865.2325pt>
 File: ./figs/demo_jello-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figs/demo_jello-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_jello-eps-converted-to.pdf used on input l
-ine 228.
+ine 242.
 (pdftex.def)             Requested size: 240.0pt x 317.29251pt.
 Package epstopdf Info: Source file: <./figs/demo_fall_bunny.eps>
-(epstopdf)                    date: 2016-06-02 23:29:27
-(epstopdf)                    size: 1467522 bytes
+(epstopdf)                    date: 2016-06-03 08:55:46
+(epstopdf)                    size: 1491519 bytes
 (epstopdf)             Output file: <./figs/demo_fall_bunny-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-06-02 23:38:43
-(epstopdf)                    size: 235288 bytes
+(epstopdf)                    date: 2016-06-03 08:59:20
+(epstopdf)                    size: 129228 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/demo_fall_bunny-eps-
 converted-to.pdf ./figs/demo_fall_bunny.eps>
-(epstopdf)             \includegraphics on input line 236.
+(epstopdf)             \includegraphics on input line 250.
 Package epstopdf Info: Output file is already uptodate.
 
-<./figs/demo_fall_bunny-eps-converted-to.pdf, id=172, 2197.20876pt x 580.1675pt
+<./figs/demo_fall_bunny-eps-converted-to.pdf, id=208, 2197.20876pt x 580.1675pt
 >
 File: ./figs/demo_fall_bunny-eps-converted-to.pdf Graphic file (type pdf)
  <use ./figs/demo_fall_bunny-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/demo_fall_bunny-eps-converted-to.pdf used on in
-put line 236.
+put line 250.
 (pdftex.def)             Requested size: 504.0pt x 133.07275pt.
 
 
@@ -610,127 +569,122 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(./pg2016-sub.bbl (./pg2016-sub.brf)
+(C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
+(C:\Users\fei\docs\PGPaper\pg2016-sub.brf)
 \tf@brf=\write3
-\openout3 = `pg2016-sub.brf'.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 
- [4 <./figs/demo_pull_armadillo-eps-converted-to.pdf> <./figs/demo_impact_upsid
-e-eps-converted-to.pdf> <./figs/demo_impact_color_map.png>]
-Underfull \hbox (badness 1430) in paragraph at lines 33--33
+Underfull \hbox (badness 1430) in paragraph at lines 45--45
 []\T1/ptm/m/sc/8 Forest C., Delingette H., Ay-ache N.\T1/ptm/m/n/8 :  Re-mov-in
 g
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 45--45
-[]\T1/ptm/m/sc/8 Glondu L., Mar-chal M., Du-mont G.\T1/ptm/m/n/8 :  Real-time
+Underfull \hbox (badness 1342) in paragraph at lines 57--57
+[]\T1/ptm/m/sc/8 Glondu L., Mar-chal M., Du-mon-t G.\T1/ptm/m/n/8 :  Real-time
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 56--56
+Underfull \hbox (badness 1655) in paragraph at lines 68--68
 []\T1/ptm/m/sc/8 Hahn D., Wo-j-tan C.\T1/ptm/m/n/8 :  High-resolution brit-tle 
 frac-ture
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
-[5 <./figs/demo_tear_armadillo-eps-converted-to.pdf> <./figs/demo_tear_armadill
-o_close_view-eps-converted-to.pdf> <./figs/demo_strip_vs_fem-eps-converted-to.p
-df>]
-Underfull \hbox (badness 2635) in paragraph at lines 83--83
-\T1/ptm/m/n/8 for mesh-less elas-tic solids.  In \T1/ptm/m/it/8 Pro-ceed-ings o
-f the 2011 12th
+[5 <C:/Users/fei/docs/PGPaper/figs/demo_impact_color_map.png> <C:/Users/fei/doc
+s/PGPaper/figs/demo_tear_armadillo_close_view-eps-converted-to.pdf>]
+Underfull \hbox (badness 2635) in paragraph at lines 95--95
+\T1/ptm/m/n/8 for mesh-less e-las-tic solid-s.  In \T1/ptm/m/it/8 Pro-ceed-ings
+ of the 2011 12th
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 134--134
-[]\T1/ptm/m/sc/8 Müller M., Keiser R., Nealen A., Pauly M.,
+Underfull \hbox (badness 3396) in paragraph at lines 146--146
+[]\T1/ptm/m/sc/8 Müller M., Keis-er R., Nealen A., Pauly M.,
  []
 
 
-Underfull \hbox (badness 4927) in paragraph at lines 134--134
-\T1/ptm/m/sc/8 Gross M., Alexa M.\T1/ptm/m/n/8 :  Point based an-i-ma-tion of e
-las-tic,
+Underfull \hbox (badness 4927) in paragraph at lines 146--146
+\T1/ptm/m/sc/8 Gross M., Alex-a M.\T1/ptm/m/n/8 :  Point based an-i-ma-tion of 
+e-las-tic,
  []
 
 
-Underfull \hbox (badness 1817) in paragraph at lines 134--134
-\T1/ptm/m/n/8 plas-tic and melt-ing ob-jects.  In \T1/ptm/m/it/8 Pro-ceed-ings 
-of the 2004 ACM
+Underfull \hbox (badness 1817) in paragraph at lines 146--146
+\T1/ptm/m/n/8 plas-tic and melt-ing ob-ject-s.  In \T1/ptm/m/it/8 Pro-ceed-ings
+ of the 2004 ACM
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 134--134
-\T1/ptm/m/n/8 la-Ville, Switzer-land, Switzer-land, 2004), SCA '04, Eu-ro-graph
--ics
+Underfull \hbox (badness 2409) in paragraph at lines 146--146
+\T1/ptm/m/n/8 la-Ville, Switzer-land, Switzer-land, 2004), S-CA '04, Eu-ro-grap
+h-ic-s
  []
 
-[6 <./figs/compare_different_poisson_ratio-eps-converted-to.pdf> <./figs/demo_j
-ello-eps-converted-to.pdf>]
-Underfull \hbox (badness 3724) in paragraph at lines 243--243
-[]\T1/ptm/m/sc/8 Terzopoulos D., Fleis-cher K.\T1/ptm/m/n/8 :  Mod-el-ing in-el
-as-tic
+[6 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo-eps-converted-to.pdf> <C
+:/Users/fei/docs/PGPaper/figs/demo_fall_bunny-eps-converted-to.pdf>]
+Underfull \hbox (badness 2521) in paragraph at lines 206--206
+\T1/ptm/m/it/8 crack-ing.  \T1/ptm/m/n/8 Tech. rep., San-di-a Na-tion-al Lab-o-
+ra-to-ries (SNL-NM),
  []
 
-
-Underfull \hbox (badness 1009) in paragraph at lines 254--254
-\T1/ptm/m/it/8 the 2005 ACM SIG-GRAPH/Eurographics Sym-po-sium on Com-puter
- []
-
-
-Underfull \hbox (badness 2913) in paragraph at lines 261--261
-\T1/ptm/m/n/8 adap-tive vir-tual node al-go-rithm with ro-bust mesh cut-ting.  
-In
+[7 <C:/Users/fei/docs/PGPaper/figs/demo_strip_vs_fem-eps-converted-to.pdf> <C:/
+Users/fei/docs/PGPaper/figs/compare_different_poisson_ratio-eps-converted-to.pd
+f> <C:/Users/fei/docs/PGPaper/figs/demo_jello-eps-converted-to.pdf>]
+Underfull \hbox (badness 3724) in paragraph at lines 271--271
+[]\T1/ptm/m/sc/8 Terzopoulos D., Fleis-ch-er K.\T1/ptm/m/n/8 :  Mod-el-ing in-e
+las-tic
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 261--261
+Underfull \hbox (badness 1009) in paragraph at lines 282--282
+\T1/ptm/m/it/8 the 2005 ACM SIG-GRAPH/Eurographics Sym-po-sium on Com-put-er
+ []
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 289--289
+\T1/ptm/m/n/8 adap-tive vir-tu-al n-ode al-go-rith-m with ro-bust mesh cut-ting
+.  In
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 289--289
 \T1/ptm/m/it/8 Pro-ceed-ings of the ACM SIG-GRAPH/Eurographics Sym-po-sium on
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
- [7 <./figs/demo_fall_bunny-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
- (./pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 270.
+ [8
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 270.
+ (C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 270.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 270.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
-(rerunfilecheck)             Checksum: F39BBC2E86C8C7A9375EB1B337BA270D;3706.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
+(rerunfilecheck)             Checksum: 51B5FE0E87F61C48D4E8E1CDB42391F8;3879.
  ) ) 
 Here is how much of TeX's memory you used:
- 6141 strings out of 493089
- 96820 string characters out of 6134843
- 187597 words of memory out of 5000000
- 9424 multiletter control sequences out of 15000+600000
- 55156 words of font info for 79 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 42i,10n,24p,2990b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (7 pages, 3049720 bytes).
+ 5939 strings out of 495354
+ 91850 string characters out of 3183858
+ 194159 words of memory out of 3000000
+ 8902 multiletter control sequences out of 15000+200000
+ 55156 words of font info for 79 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 42i,10n,24p,3016b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
+/public/amsfonts/cmextra/cmex9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9
+.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type
+1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTE
+X/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on pg2016-sub.pdf (8 pages, 2326731 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
- 82 named destinations out of 1000 (max. 500000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
