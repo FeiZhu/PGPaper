@@ -3,21 +3,18 @@
 \begin{tabular}{lccccccccccc}
   \hline
   \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Examples & particle num & $\delta$ & bond num & $\kappa$ & $\mu$ & $\rho$          & $\Psi_0$ & $\gamma$ & $s^w_{(k)(j)}$ & $\Delta t$ & performance\\
-           &              &          &          &   (Pa)   & (Pa)  &(Kg/$\mathrm{m}^3)$&          &          &                & (s)   &   (sec/per step)\\
-  \hline
-  Strip [Figure \ref{demo_strip_and_armadillo}(a)] & 45144 & 1.45$\lambda$ & 6902284 & $3.3\times10^7$ & $2.0\times10^7$ & 1000 & $\infty$ & 0.0 & $\infty$ & $10^{-4}$ & $\sim1.6$ \\
-  Strip [Figure \ref{demo_strip_and_armadillo}(b)] & 45144 & 1.45$\lambda$ & 6902284 & $6.3\times10^6$ & $3.8\times10^6$ & 1000 & $\infty$ & 0.0 & $\infty$ & $10^{-4}$ & $\sim1.6$ \\
-  Armadillo [Figure \ref{demo_strip_and_armadillo}(c)] & 423052 & 1.51$\lambda$  & 74829658& $6.3\times10^7$ & $3.8\times10^7$ & 1000  & $\infty$ & 0.0 & $\infty$ & $10^{-4}$ & $\sim6.4$ \\
-  Armadillo [Figure \ref{demo_tear_armadillo}] & 423052& 1.51$\lambda$ & 74829658 & $6.3\times10^7$ & $3.8\times10^7$ & 1000 & $\infty$ & 0.0 & 0.61 & $10^{-4}$ & $\sim6.4$ \\
-  Block [Figure \ref{demo_block}(a)] & 300000 & 1.45$\lambda$ & 50015478 & $3.3\times10^6$ & $2.0\times10^6$ & 2200 & $10^{25}$ & 0.2 & 0.05 & $10^{-4}$ & $\sim3.6$ \\
-  Block [Figure \ref{demo_block}(b)] & 300000 & 1.45$\lambda$ & 50015478 & $3.3\times10^6$ & $2.0\times10^6$ & 2200 & $(10^{25}, 10^{30})$ & 0.2 & 0.05 & $10^{-4}$ & $\sim3.6$ \\
-  Block [Figure \ref{demo_block}(c)] & 300000 & 1.45$\lambda$ & 50015478 & $3.3\times10^6$ & $2.0\times10^6$ & 2200 & $\infty$ & 0.0 & 0.02 & $10^{-4}$  & $\sim3.6$ \\
-  Block [Figure \ref{demo_block}(d)] & 300000 & 1.45$\lambda$ & 50015478 & $3.3\times10^6$ & $2.0\times10^6$ & 2200 & $\infty$ & 0.0 & 0.0005 & $10^{-6}$ & $\sim3.6$ \\
-  Jello-like [Figure \ref{demo_jello}] & 464712 & 1.45$\lambda$  & 86269614 & $1.0\times10^6$ & $4.6\times10^5$ & 1000 & $\infty$ & 0.0 & 0.4 & $5\times10^{-5}$ &
-  $\sim5.2$  \\
-  Bunny [Figure \ref{demo_fall_bunny}] & 516273 & 1.45$\lambda$ & 88495144 & $2.5\times10^5$ & $1.2\times10^5$ & 1000 & $\infty$ & 0.0  & 0.13 & $5\times10^{-4}$ & $\sim6.8$\\
+  Glass [Figure 1(a)(b)]   & 300000 & 1.45$\lambda$ & 50015478 & $3.3\times10^{10}$& $2.0\times10^{10}$& 2200 & $\infty $ & 0.0 & 0.0005   & $10^{-6}$          & $\sim2.4$ \\
+  Wall [Figure 1(c)(d)]    & 300000 & 1.45$\lambda$ & 50015478 & $3.3\times10^{6}$ & $2.0\times10^{6}$ & 2200 & $10^{25}$ & 0.2 & 0.05     & $10^{-4}$          & $\sim2.4$ \\
+  Armadillo [Figure 3]     & 423052 & 1.50$\lambda$ & 74829658 & $6.3\times10^7$   & $3.8\times10^7$   & 1000 & $\infty $ & 0.0 & $\infty$ & $10^{-4}$          & $\sim5.3$ \\
+  Wall [Figure 4(b)(c)]    & 300000 & 1.45$\lambda$ & 50015478 & $1.0\times10^{7}$ & $6.0\times10^{6}$ & 1200 & $\infty $ & 0.0 & $\infty$ & $5\times10^{-5}$   & $\sim2.4$ \\
+  Wall [Figure 4(d)(e)]    & 300000 & 1.45$\lambda$ & 50015478 & $1.0\times10^{7}$ & $6.0\times10^{6}$ & 1200 & $10^{26}$ & 0.2 & $\infty$ & $5\times10^{-5}$   & $\sim2.4$ \\
+  Jello [Figure 6]         & 464712 & 1.45$\lambda$ & 86269614 & $1.0\times10^6$   & $4.6\times10^5$   & 1000 & $\infty $ & 0.0 & 0.4      & $5\times10^{-5}$   & $\sim3.8$ \\
+  Beam\_bend [Figure 7(a)] & 45144  & 1.0 $\lambda$ & 6902284  & $6.3\times10^6$   & $3.8\times10^6$   & 1000 & $\infty $ & 0.0 & $\infty$ & $5\times10^{-5}$   & $\sim0.6$ \\
+  Beam\_bend [Figure 7(c)] & 45144  & 1.0 $\lambda$ & 6902284  & $3.3\times10^7$   & $2.0\times10^7$   & 1000 & $\infty $ & 0.0 & $\infty$ & $2.5\times10^{-5}$ & $\sim0.6$ \\
+  Armadillo [Figure 9]     & 423052 & 1.50$\lambda$ & 74829658 & $6.3\times10^7$   & $3.8\times10^7$   & 1000 & $\infty $ & 0.0 & 0.61     & $10^{-4}$          & $\sim5.3$ \\
+  Beam\_stretch [Figure 8] & 22344  & 1.0 $\lambda$ & 1253844  & $2.0\times10^6$   & $(9.2,1.5,2.2)\times10^5$&1000& $\infty$& 0.0 &$\infty$ &$1.0\times10^{-5}$ & $\sim0.2$ \\
+  Bunny [Figure 11]        & 516273 & 1.45$\lambda$ & 88495144 & $2.5\times10^5$   & $1.2\times10^5$   & 1000 & $\infty $ & 0.0 & 0.13     & $5\times10^{-4}$   & $\sim5.2$\\
+  Wall [Figure 12]         & 300000 & 1.45$\lambda$ & 50015478 & $1.0\times10^{7}$ & $6.0\times10^{6}$ & 1200 & $10^{26}$ &$(0.1,0.15,0.2)$ &$\infty$& $5\times10^{-5}$& $\sim2.4$\\
   \hline
 \end{tabular}
 }
