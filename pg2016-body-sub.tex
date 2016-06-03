@@ -38,8 +38,8 @@
 \teaser{
  \includegraphics[width=\linewidth]{./figs/demo_impact.eps}
  \centering
-  \caption{here is ball crack wall, brittle and ductile, isotropic and anisotropic}
-\label{fig:teaser}
+  \caption{ A sphere shoots through walls made of different materials, causing varied fracture behaviors. From left to right: isotropic brittle fracture, anisotropic brittle fracture, isotropic ductile fracture, anisotropic ductile fracture.}
+\label{fig:1}
 }
 
 \maketitle
@@ -85,7 +85,7 @@ In peridynamics, the governing equation at any point $\mathbf{x}$ is \nobreak{fo
 \rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}}+\mathbf{b}(\mathbf{x}),
 \label{eq:1}
 \end{equation}
-where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density that is exerted on $\mathbf{x}$ by $\mathbf{x}'$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
+where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, $V_\mathbf{x}$ is the volume of $\mathbf{x}$, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density that is exerted on $\mathbf{x}$ by $\mathbf{x}'$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
 
 \begin{figure}[t]
   \centering
@@ -101,7 +101,7 @@ where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathb
 
 In this section we describe our constitutive model for peridynamics in detail. We start with the basic isotropic elastic model, then plasticity is incorporated, and finally we extend the model with anisotropy.
 
-\subsection{Isotropic Elasticity}
+\subsection{Isotropic Elasticity}\label{section:4.1}
 
 As is discussed in Section~\ref{section:3}, the key to peridynamics-based constitutive modeling is the design of proper internal force density $\nobreak{\mathbf{T}<\cdot>}$. Silling et al.\cite{silling2007peridynamic} showed that peridynamic constitutive models can be designed to match many hyperelastic constitutive models under the classical elasticity theory. We derive our model based on the model described by Madenci and Oterkus \cite{madenci2014peridynamic}, which matches the isotropic linear elasticity model in classical theory. The elastic internal force density exerted by particle $j$ on particle $i$ is defined as below:
 \begin{equation}
@@ -110,43 +110,87 @@ As is discussed in Section~\ref{section:3}, the key to peridynamics-based consti
 \end{equation}
 where $\mathbf{x}$ and $\mathbf{y}$ denote the positions of particles before and after deformation respectively. The direction of the force density is along the deformed bond between the particles given by $\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}$. $A$ is a scalar that represents the force magnitude, and it is composed of two terms by addition $A = A_{dilation} + A_{distortion}$, namely the dilation term $A_{dilation}$ and the distortion term $A_{distortion}$.
 
-The dilation term $A_{dilation}$ measures the volume change without any shape distortion, which is defined as:
+The dilation term $A_{dilation}$ is due to the dilation part of \nobreak{deformation}, i.e., volume change without any shape distortion. It is defined as:
 \begin{equation}
-A_{dilation}=4\omega_{ij}d\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}a\theta_i,
+A_{dilation}=4\omega_{ij}d\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}a\theta_i.
 \label{eq:3}
 \end{equation}
-where $d$ and $a$ are both peridynamics material parameters.
+$d$ and $a$ are both peridynamics material parameters, and $\omega_{ij}$ is the weight function between particle $i$ and particle $j$. For isotropic materials $\omega_{ij}$ is monotonically decreasing with respect to the distance between particles:
+\begin{equation}
+\omega_{ij} = \frac{\delta}{|\mathbf{x}_j-\mathbf{x}_i|}.
+\label{eq:4}
+\end{equation}
+Note that $\omega_{ij}$ is defined in the material space, therefore can be precomputed. $\theta_i$ measures the dilation at particle $i$ defined with respect to the stretch of all bonds between particle $i$ and its family:
+\begin{equation}
+\theta_i = d\sum_{k=1}^N\omega_{ik}s_{ik}\frac{\mathbf{y}_k-\mathbf{y}_i}{|\mathbf{y}_k-\mathbf{y}_i|}\cdot(\mathbf{x}_k-\mathbf{x}_i)V_k,
+\label{eq:5}
+\end{equation}
+where $N$ represents the number of family points $k$ for point $i$, and $V_k$ are their volumes. The stretch $s_{ik}$ of the bond  between particles is defined as:
+\begin{equation}
+s_{ik}=\frac{|\mathbf{y}_k-\mathbf{y}_i|}{|\mathbf{x}_k-\mathbf{x}_i|} -1.
+\label{eq:6}
+\end{equation}
+
+The distortion term $A_{distortion}$ is a result of distortion deformation between particle $i$ and $j$. It is simply defined with respect to the extension of the bond between the two particles as:
+\begin{equation}
+A_{distortion}=4\omega_{ij}b(|\mathbf{y}_j-\mathbf{y}_i|-|\mathbf{x}_j-\mathbf{x}_i|),
+\label{eq:7}
+\end{equation}
+with $\omega_{ij}$ as the weight function and $b$ is the material parameter.
+
+The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the book\cite{madenci2014peridynamic} for elaborated derivation. Here we directly provide the conversion between the material parameters in this model and those from continuum mechanics:
+\begin{equation}
+a = \frac{1}{2}(\kappa-\frac{5\mu}{3}) \qquad b = \frac{15\mu}{2\pi\delta^5} \qquad d=\frac{9}{4\pi\delta^4},
+\label{eq:8}
+\end{equation}
+where $\kappa$ and $\mu$ denote the bulk modulus and the shear modulus respectively.
+
+In Figure~\ref{fig:3} we demonstrate an example of the hyperelastic deformations animated with our model.
 
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_pull_armadillo.eps}
   \caption{\label{fig:3}
-  pull armadillo figure.
+  Armadillo is initially anchored on its back and four limbs, and it deforms elastically when its back is released.
 }
 \end{figure}
 
 \subsection{Plasticity}
 
-\begin{figure}[h]
+Plasticity model for peridynamics is less studied in literature due to its complexity. To our knowledge, Silling et al. \cite{silling2007peridynamic} proposed the first plasticity model that is analogous to the von Mises flow model in classical theory. Mitchell presented a new framework for peridynamics-based plasticity modeling\cite{mitchell2011nonlocal} based on Silling et al.'s model, whereas the model hasn't been verified by experiments thus far. We adopt Mitchell's model for practical applications, and propose novel modifications based on their work.
+
+Our plasticity model is based on purely deviatoric plastic flow theory, i.e., plastic flow takes place without change in volume. However, the dilation and distortion decomposition of our elasticity model (see Section~\ref{section:4.1}) can not fully sperate deviatoric deformations. Therefore, we perform some reformulation before introducing our plasticity model.
+
+The reformulated elasticity model is additively composed by a deviatoric term $A_{deviatoric}$ and an isotropic term $A_{isotropic}$.
+
+blabla
+
+\begin{figure}[t]
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_impact_upside.eps}
   \caption{\label{fig:4}
-  ball wall impact figure 1x3.
+  Comparison of elastic and plastic deformations by shooting a sphere at two walls made of different materials with identical initial configuration as in (a). The elastic wall deforms on impact (b), and recovers afterwards (c). The plastic wall undergos permanent deformation (e) after the impact (d).
 }
 \end{figure}
 
 \subsection{Anisotropy}
 
-\emph{in this subsection, mention the teaser figure}
+Our constitutive model is isotropic up to now, and we extend it to anisotropy in this section. We model anisotropy by manipulating the weight functions between particles (see Equation~\ref{eq:4}) with direction information. The key idea is to associate an anisotropy matrix $\mathbf{G}$ with each particle, so that applying the transformation to the bond between particles biases the influence weight toward preferred directions. Intuitively, the originally spherical shape of particle family (see Figure~\ref{fig:2}) is now an ellipsoid.
 
-\begin{figure}[h]
+The weight function $\omega_{ij}$ for anisotropic materials is computed as below:
+\begin{equation}
+\omega_{ij}=\frac{\delta}{|\mathbf{G}(\mathbf{x}_j-\mathbf{x}_i)|}.
+\end{equation}
+Appealing anisotropic effects could be generated with our anisotropy model. See Figure~\ref{fig:1} for a demonstration of the model applied to brittle and ductile fracture animation. Figure~\ref{fig:5} compares the crack patterns generated by the brittle fracture examples in Figure~\ref{fig:1}.
+
+\begin{figure}[t]
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth, bb=0 0 1400 700]{./figs/demo_impact_color_map.png}
   \caption{\label{fig:5}
-  2d view.
+  Comparison of crack patterns generated by isotropic (left) and anisotropic (right) brittle fracture. The color represents the damage of particles, with blue as no damage and red as complete damage.
 }
 \end{figure}
 
