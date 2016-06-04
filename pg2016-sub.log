@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  4 JUN 2016 12:11
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  4 JUN 2016 12:53
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -404,66 +404,66 @@ Package pdftex.def Info: ./figs/demo_impact_color_map.png used on input line 22
 File: ./figs/demo_jello.png Graphic file (type png)
 
 <use ./figs/demo_jello.png>
-Package pdftex.def Info: ./figs/demo_jello.png used on input line 254.
+Package pdftex.def Info: ./figs/demo_jello.png used on input line 251.
 (pdftex.def)             Requested size: 240.0pt x 317.33247pt.
  [5 <C:/Users/fei/docs/PGPaper/figs/demo_impact_upside.png> <C:/Users/fei/docs/
 PGPaper/figs/demo_impact_color_map.png>]
-<./figs/compare_different_poisson_ratio.png, id=232, 654.19406pt x 469.755pt>
+<./figs/compare_different_poisson_ratio.png, id=229, 654.19406pt x 469.755pt>
 File: ./figs/compare_different_poisson_ratio.png Graphic file (type png)
 
 <use ./figs/compare_different_poisson_ratio.png>
 Package pdftex.def Info: ./figs/compare_different_poisson_ratio.png used on inp
-ut line 270.
+ut line 282.
 (pdftex.def)             Requested size: 240.0pt x 172.33722pt.
 
-<./figs/demo_impact_upside_plastic_fracture.png, id=233, 941.76843pt x 313.17pt
+<./figs/demo_impact_upside_plastic_fracture.png, id=230, 941.76843pt x 313.17pt
 >
 File: ./figs/demo_impact_upside_plastic_fracture.png Graphic file (type png)
  <use ./figs/demo_impact_upside_plastic_fracture.png>
 Package pdftex.def Info: ./figs/demo_impact_upside_plastic_fracture.png used on
- input line 278.
+ input line 290.
 (pdftex.def)             Requested size: 240.0pt x 79.80711pt.
 
-<./figs/demo_strip_vs_fem.png, id=234, 970.3753pt x 882.29625pt>
+<./figs/demo_strip_vs_fem.png, id=231, 970.3753pt x 882.29625pt>
 File: ./figs/demo_strip_vs_fem.png Graphic file (type png)
 
 <use ./figs/demo_strip_vs_fem.png>
-Package pdftex.def Info: ./figs/demo_strip_vs_fem.png used on input line 286.
+Package pdftex.def Info: ./figs/demo_strip_vs_fem.png used on input line 298.
 (pdftex.def)             Requested size: 240.0pt x 218.21754pt.
-
-<./figs/demo_tear_armadillo.png, id=252, 1906.12125pt x 497.60907pt>
+ [6 <C:/Users/fei/docs/PGPaper/figs/demo_jello.png> <C:/Users/fei/docs/PGPaper/
+figs/compare_different_poisson_ratio.png> <C:/Users/fei/docs/PGPaper/figs/demo_
+impact_upside_plastic_fracture.png>]
+<./figs/demo_tear_armadillo.png, id=261, 1906.12125pt x 497.60907pt>
 File: ./figs/demo_tear_armadillo.png Graphic file (type png)
 
 <use ./figs/demo_tear_armadillo.png>
-Package pdftex.def Info: ./figs/demo_tear_armadillo.png used on input line 326.
+Package pdftex.def Info: ./figs/demo_tear_armadillo.png used on input line 338.
 
 (pdftex.def)             Requested size: 504.0pt x 131.56964pt.
 
-<./figs/demo_tear_armadillo_close_view.png, id=253, 770.88pt x 1035.87pt>
+<./figs/demo_tear_armadillo_close_view.png, id=262, 770.88pt x 1035.87pt>
 File: ./figs/demo_tear_armadillo_close_view.png Graphic file (type png)
 
 <use ./figs/demo_tear_armadillo_close_view.png>
 Package pdftex.def Info: ./figs/demo_tear_armadillo_close_view.png used on inpu
-t line 335.
+t line 347.
 (pdftex.def)             Requested size: 240.0pt x 322.4915pt.
 
-<./figs/demo_fall_bunny.png, id=254, 2196.70688pt x 579.66562pt>
+<./figs/demo_fall_bunny.png, id=263, 2196.70688pt x 579.66562pt>
 File: ./figs/demo_fall_bunny.png Graphic file (type png)
 
 <use ./figs/demo_fall_bunny.png>
-Package pdftex.def Info: ./figs/demo_fall_bunny.png used on input line 343.
+Package pdftex.def Info: ./figs/demo_fall_bunny.png used on input line 355.
 (pdftex.def)             Requested size: 504.0pt x 132.99301pt.
- [6 <C:/Users/fei/docs/PGPaper/figs/demo_jello.png> <C:/Users/fei/docs/PGPaper/
-figs/compare_different_poisson_ratio.png> <C:/Users/fei/docs/PGPaper/figs/demo_
-impact_upside_plastic_fracture.png>]
-(C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
+ (C:\Users\fei\docs\PGPaper\pg2016-sub.bbl
 (C:\Users\fei\docs\PGPaper\pg2016-sub.brf)
 \tf@brf=\write3
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-
+ [7 <C:/Users/fei/docs/PGPaper/figs/demo_strip_vs_fem.png> <C:/Users/fei/docs/P
+GPaper/figs/demo_tear_armadillo_close_view.png>]
 Underfull \hbox (badness 1430) in paragraph at lines 45--45
 []\T1/ptm/m/sc/8 Forest C., Delingette H., Ay-ache N.\T1/ptm/m/n/8 :  Re-mov-in
 g
@@ -474,7 +474,7 @@ Underfull \hbox (badness 1342) in paragraph at lines 57--57
 []\T1/ptm/m/sc/8 Glondu L., Mar-chal M., Du-mon-t G.\T1/ptm/m/n/8 :  Real-time
  []
 
-[7 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo.png>]
+
 Underfull \hbox (badness 1655) in paragraph at lines 68--68
 []\T1/ptm/m/sc/8 Hahn D., Wo-j-tan C.\T1/ptm/m/n/8 :  High-resolution brit-tle 
 frac-ture
@@ -486,9 +486,7 @@ Underfull \hbox (badness 2635) in paragraph at lines 95--95
  of the 2011 12th
  []
 
-[8 <C:/Users/fei/docs/PGPaper/figs/demo_fall_bunny.png> <C:/Users/fei/docs/PGPa
-per/figs/demo_strip_vs_fem.png> <C:/Users/fei/docs/PGPaper/figs/demo_tear_armad
-illo_close_view.png>]
+[8 <C:/Users/fei/docs/PGPaper/figs/demo_tear_armadillo.png>]
 Underfull \hbox (badness 3396) in paragraph at lines 146--146
 []\T1/ptm/m/sc/8 Müller M., Keis-er R., Nealen A., Pauly M.,
  []
@@ -523,7 +521,7 @@ Underfull \hbox (badness 1635) in paragraph at lines 240--240
 a-he-dral mesh
  []
 
-
+[9 <C:/Users/fei/docs/PGPaper/figs/demo_fall_bunny.png>]
 Underfull \hbox (badness 3724) in paragraph at lines 281--281
 []\T1/ptm/m/sc/8 Terzopoulos D., Fleis-ch-er K.\T1/ptm/m/n/8 :  Mod-el-ing in-e
 las-tic
@@ -545,22 +543,22 @@ Underfull \hbox (badness 1484) in paragraph at lines 299--299
 \T1/ptm/m/it/8 Pro-ceed-ings of the ACM SIG-GRAPH/Eurographics Sym-po-sium on
  []
 
-[9])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 379.
  [10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 379.
  (C:\Users\fei\docs\PGPaper\pg2016-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 379.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 379.
 Package rerunfilecheck Info: File `pg2016-sub.brf' has not changed.
-(rerunfilecheck)             Checksum: 34A69D5E9D941AA16D1543E6DA3CC36B;4184.
+(rerunfilecheck)             Checksum: 08D5F2480B3155294E0EAC5FCB53DAEC;4184.
  ) ) 
 Here is how much of TeX's memory you used:
- 5984 strings out of 495354
- 91992 string characters out of 3183858
- 204315 words of memory out of 3000000
+ 5985 strings out of 495354
+ 92005 string characters out of 3183858
+ 206315 words of memory out of 3000000
  8928 multiletter control sequences out of 15000+200000
  55777 words of font info for 81 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -574,9 +572,9 @@ ublic/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
 fonts/type1/urw/courier/ucrr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.
 pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type
 1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (10 pages, 4117087 bytes).
+Output written on pg2016-sub.pdf (10 pages, 4119106 bytes).
 PDF statistics:
- 420 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
+ 421 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
