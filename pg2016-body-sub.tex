@@ -277,7 +277,7 @@ We present the results produced with our method in this section. All our example
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{./figs/demo_impact_upside_plastic_fracture.png}
   \caption{\label{fig:8}
-  Simulation of ductile fracture with different amount maximum plasticity. From left to right the parameter $\gamma$ is 0.1,0.15, and 0.2.
+  Simulation of ductile fracture with different amount maximum plasticity. From left to right the parameter $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ is 0.1,0.15, and 0.2.
 }
 \end{figure}
 \begin{figure}[t]
@@ -351,7 +351,9 @@ In Table~\ref{tab:1} we list the detailed parameter settings and the performance
 
 We have introduced a novel meshless framework for graphical modeling and animation of elastoplastic solids. Our work is the first peridynamics-based framework in computer graphics that can simulate a wide range of material behaviors, including elasticity, plasticity, and fracture.
 
-blabla.
+Our work is not without limitations. Currently we can not afford large time steps because we used explicit time integration in our implementation. In the future, we plan to incorporate implicit time integration into our framework to achieve less restricted time step size. Another limitation of our work stems from the mesh embedding strategy for crack surface representation. The level of crack detail is highly dependent on the embedded mesh resolution. In addition, we generate crack surfaces by separating the mesh elements, which could cause the zig-zag artifact (see Figure~\ref{fig:11}). This artifact might be alleviated by smoothing the crack surfaces somewhat, or employing the virtual node algorithm. While we used multi-threading in our implementation, the performance of our method could be further improved with GPGPU techniques.
+
+Other interesting avenues for future work include combining peridynamics theory with existing methods from classical theory such as FEM and SPH. These methods complement each other, and their combination could produce a new method that is more powerful for animation production.
 
 %-------------------------------------------------------------------------
 \bibliographystyle{eg-alpha}
