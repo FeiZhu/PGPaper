@@ -245,8 +245,8 @@ s_{ij}^\omega = \frac{s_{ij}^e}{\omega_{ij}} = \frac{e_{ij}-e_{ij}^p}{\delta}.
 The contribution of  initial discretization cancels out, and the criterion is able to produce compelling results in practical use.
 
 \subsection{Embedded Mesh}
-We embed a tetrahedron mesh into our system for rendering output.
-Our particles is first positioned to the center of elements and its family members is initialized through a pre-specified horizon $\delta$.
+While our point-based geometry representation offers great simplicity, this simplicity does come at a cost that it is difficult to generate render geometry. To model realistic fracture, sharp edges are required on the crack surfaces. This naturally motivates us to embed a volumetric mesh into our system.
+Given a tetrahedron mesh, our particles is first positioned to the center of elements and its family members is initialized through a pre-specified horizon $\delta$.
 Each particle that represents a single tetrahedron has a common face shared for each immediate neighbor.
 %Previous methods such as \cite{Chen2013} usually utilize a face-copying strategy to reflect fracture within a meshless framework.
 %However, this is only practical for brittle material where two copied crack triangle faces are either coincident or completely separated.
@@ -278,8 +278,6 @@ W_{\mathrm{v}} &=& \sum_{\mathrm{p}} \frac{1}{4}m_{\mathrm{p}}\\
 where subscripts $\mathrm{p}$ and $\mathrm{v}$ represent particle and vertex, respectively.
 $m_{\mathrm{p}}$ is the mass of the particle, $\textbf{v}_{\mathrm{v}}$ and $\textbf{v}_{\mathrm{p}}$ denote the velocity.
 For rendering, a surface mesh is extracted from the volumetric mesh at the end of each frame.
-
-While our point-based geometry representation offers great simplicity, this simplicity does come at a cost that it is difficult to generate render geometry. To model realistic fracture, sharp edges are required on the crack surfaces. This naturally motivates the use of mesh embedding approach.
 
 \begin{figure}[t]
   \centering
