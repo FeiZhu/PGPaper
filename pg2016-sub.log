@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  4 JUN 2016 12:08
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  4 JUN 2016 12:11
 entering extended mode
 **C:/Users/fei/docs/PGPaper/pg2016-sub.tex
 (C:/Users/fei/docs/PGPaper/pg2016-sub.tex
@@ -431,7 +431,7 @@ File: ./figs/demo_strip_vs_fem.png Graphic file (type png)
 Package pdftex.def Info: ./figs/demo_strip_vs_fem.png used on input line 286.
 (pdftex.def)             Requested size: 240.0pt x 218.21754pt.
 
-<./figs/demo_tear_armadillo.png, id=253, 1906.12125pt x 497.60907pt>
+<./figs/demo_tear_armadillo.png, id=252, 1906.12125pt x 497.60907pt>
 File: ./figs/demo_tear_armadillo.png Graphic file (type png)
 
 <use ./figs/demo_tear_armadillo.png>
@@ -439,7 +439,7 @@ Package pdftex.def Info: ./figs/demo_tear_armadillo.png used on input line 326.
 
 (pdftex.def)             Requested size: 504.0pt x 131.56964pt.
 
-<./figs/demo_tear_armadillo_close_view.png, id=254, 770.88pt x 1035.87pt>
+<./figs/demo_tear_armadillo_close_view.png, id=253, 770.88pt x 1035.87pt>
 File: ./figs/demo_tear_armadillo_close_view.png Graphic file (type png)
 
 <use ./figs/demo_tear_armadillo_close_view.png>
@@ -447,7 +447,7 @@ Package pdftex.def Info: ./figs/demo_tear_armadillo_close_view.png used on inpu
 t line 335.
 (pdftex.def)             Requested size: 240.0pt x 322.4915pt.
 
-<./figs/demo_fall_bunny.png, id=255, 2196.70688pt x 579.66562pt>
+<./figs/demo_fall_bunny.png, id=254, 2196.70688pt x 579.66562pt>
 File: ./figs/demo_fall_bunny.png Graphic file (type png)
 
 <use ./figs/demo_fall_bunny.png>
@@ -574,9 +574,9 @@ ublic/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
 fonts/type1/urw/courier/ucrr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.
 pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type
 1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pg2016-sub.pdf (10 pages, 4117270 bytes).
+Output written on pg2016-sub.pdf (10 pages, 4117087 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
+ 420 PDF objects out of 1000 (max. 8388607)
  106 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
