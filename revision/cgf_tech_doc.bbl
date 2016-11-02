@@ -1,0 +1,13 @@
+\begin{thebibliography}{\uppercase{Bon08}}
+
+\bibitem[Bon08]{bonet2008nonlinear}
+\textsc{Bonet J.}:
+\newblock \emph{Nonlinear continuum mechanics for finite element analysis}.
+\newblock Cambridge University Press, Cambridge, UK New York, 2008.
+
+\bibitem[MO14]{madenci2014peridynamic}
+\textsc{Madenci E., Oterkus E.}:
+\newblock \emph{Peridynamic theory and its applications}.
+\newblock Springer, 2014.
+
+\end{thebibliography}

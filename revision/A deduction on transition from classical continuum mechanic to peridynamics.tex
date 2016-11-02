@@ -1,0 +1,481 @@
+\documentclass[a4paper,11pt,CJK]{paper}
+\usepackage{amsmath,graphicx,indentfirst,multirow,geometry,fancyhdr,setspace,array,fancyhdr,bm}
+%\geometry{top=2.5cm,bottom=2.5cm,left=1cm,right=1cm}
+\pagestyle{fancy}
+\chead
+{
+    \begin{spacing}{0.1}
+        \large{A deduction on transition from classical continuum mechanic to peridynamics}
+    \end{spacing}
+}
+\rhead{}
+
+\newcommand{\bfT}{\textbf{T}}
+\newcommand{\bft}{\textbf{t}}
+\newcommand{\bfu}{\textbf{u}}
+\newcommand{\bfx}{\textbf{x}}
+\newcommand{\bff}{\textbf{f}}
+\newcommand{\bfv}{\textbf{v}}
+\newcommand{\bfy}{\textbf{y}}
+\newcommand{\bfui}{\textbf{u}_{(i)}}
+\newcommand{\bfvi}{\textbf{v}_{(i)}}
+\newcommand{\bffi}{\textbf{f}_{(i)}}
+\newcommand{\bfyi}{\textbf{y}_{(i)}}
+\newcommand{\bfuj}{\textbf{u}_{(j)}}
+\newcommand{\bfxj}{\textbf{x}_{(j)}}
+\newcommand{\bfyj}{\textbf{y}_{(j)}}
+\newcommand{\bfvj}{\textbf{v}_{(j)}}
+\newcommand{\bfxl}{\textbf{x}_{(l)}}
+\newcommand{\bfyl}{\textbf{y}_{(l)}}
+\newcommand{\bfuk}{\textbf{u}_{(k)}}
+\newcommand{\bfxk}{\textbf{x}_{(k)}}
+\newcommand{\bfyk}{\textbf{y}_{(k)}}
+\newcommand{\wkj}{w_{(k)(j)}}
+\newcommand{\wkl}{w_{(k)(l)}}
+\newcommand{\skj}{s_{(k)(j)}}
+\newcommand{\skl}{s_{(k)(l)}}
+\newcommand{\fkj}{\textbf{f}_{(k)(j)}}
+\newcommand{\tkj}{\textbf{t}_{(k)(j)}}
+\newcommand{\tjk}{\textbf{t}_{(j)(k)}}
+\newcommand{\thetak}{\theta_{(k)}}
+
+\begin{document}
+
+\section{Introduction}
+This document aims to provide a brief deduction on the transition from classical continuum mechanics to peridynamics.
+The derivation is mainly based on the chapter 2-4 of  book [MO14] which summarizes the recent years development of peridynamics.
+However, to make things clear, we only elaborate enough information that is necessary to graphics, while reasonably simplify the original model by ignoring
+effect resulted from temperature change since it's rarely considered in graphics applications.
+We hope this paper would be helpful for readers to obtain an understanding of how classical continuum mechanics can transit to the peridynamic theory.
+
+The document is outlined as follows.
+We start by presenting the governing equations of both classical continuum mechanics and peridynamics in the context of local theory(Section 2).
+Then by recasting them into a similar form, we derive the relationship between cauchy stress and peridynamics force density(Section 3).
+The resulted relationship enables us to translate the strain energy density and dilation into a different form with respect to particle displacement rather than cauchy stress in continuum mechanics(Section 4).
+After that, we deduce the explicit form of force density given the explicit expression of strain energy density(Section 5).
+Peridynamics parameters related to material parameters(bulk modulus, shear modulus) are determined in three-dimension structure based on two simple deformation case by equating the strain energy density for these two theories(Section 6).
+Finally, we try to give an intuitive reformulation of the peridynamics constitutive model via separating the force density into isotropic and deviatoric part, which is exactly the model used in our PG paper(Section 7).
+
+\section{Governing Equations}
+We temporarily restrict our discussion in the context of \textit{local} theory, as this is case for classical continuum mechanics.
+A local theory states that a material point $k$ could only interact with its immediate neighborhood. See Fig 1 below for an illustration.
+\begin{figure}[!h]
+\center
+\includegraphics[width=0.4\textwidth,natwidth=530,natheight=504]{deduction_fig_1.png}
+\caption{Material point $k$ interacts with its immediate neighborhood. Image from MO[14].}
+\end{figure}
+
+We use $(k-l),(k+l),(k-m),(k+m),(k-n)$ and $(k+n)$ to represent six nearest vicinities of material point $k$ along its three axis respectively.
+The classical continuum mechanics is a representative of local theory, and its governing equation is of the form
+\begin{equation}
+\rho_{(k)}\textbf{\"u}_{(k)} = \nabla\cdot\sigma_{(k)} + \textbf{b}_{(k)}
+\end{equation}
+where $\rho$ represents the mass density, $\textbf{u}$ denotes vector-valued displacement, and $\textbf{b}$ is the external body force.
+$\sigma$ is the 2-order symmetric cauchy stress which encodes the internal force information. Note that the above equation is build in terms of spatial differential,
+and we can further written it in a component-wise form
+\begin{eqnarray}
+  \rho_{(k)}\textbf{\"u}_{x(k)} &=& \sigma_{xx,x(k)} + \sigma_{xy,y(k)} + \sigma_{xz,z(k)} + \textbf{b}_{x(k)} \\
+  \rho_{(k)}\textbf{\"u}_{y(k)} &=& \sigma_{yx,x(k)} + \sigma_{yy,y(k)} + \sigma_{yz,z(k)} + \textbf{b}_{y(k)} \\
+  \rho_{(k)}\textbf{\"u}_{z(k)} &=& \sigma_{zx,x(k)} + \sigma_{zy,y(k)} + \sigma_{zz,z(k)} + \textbf{b}_{z(k)}
+\end{eqnarray}
+
+Vary from the continuum mechanics, peridynamics, however, constructs its governing equation through accumulating the force density from its immediate material points 
+rather than based on spatial differential, which means
+\begin{equation}
+\rho_{(k)}\textbf{\"u}_{(k)} = \sum_{j=k-l,k+l,k-m,k+m,k-n,k+n}(\tkj-\tjk)V_{(j)} + \textbf{b}_{(k)}
+\end{equation}
+where $\tkj$ represents the force density (per unit volume squared) that material point $j$ exerts on material point $k$,
+and $\tjk$ representing the force density (per unit volume squared) that material point $k$ exerts on material point $j$, arises from the Newton's third law.
+The above equation essentially formulates an integral form of constitutive model which could still remain valid
+even if discontinuities occur.
+The force density consists of all the constitutive information about internal force between material points,
+and we will give its explicit expression in Section 5.
+
+\section{Relationship between Cauchy Stress and Peridynamics Force Density}
+In this section, we derive the relationship between the cauchy stress and peridynamics force density.
+This can be achieved by rewriting the previous two governing equations to a similar form and equating them.
+For classical continuum mechanics, we would recast its governing equation by using the finite difference approximation with forward and backward formulae
+\begin{equation}
+\begin{aligned}
+\rho_{(k)}\textbf{\"u}_{x(k)} &= \quad \frac{1}{2}\frac{\sigma_{xx(k)} - \sigma_{xx(k-l)}}{\Delta x} + \frac{1}{2}\frac{\sigma_{xx(k+l)} - \sigma_{xx(k)}}{\Delta x}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{xy(k)} - \sigma_{xy(k-m)}}{\Delta y} + \frac{1}{2}\frac{\sigma_{xy(k+m)} - \sigma_{xy(k)}}{\Delta y}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{zx(k)} - \sigma_{zx(k-n)}}{\Delta z} + \frac{1}{2}\frac{\sigma_{xz(k+n)} - \sigma_{xz(k)}}{\Delta z}\\
+                              &\quad + \textbf{b}_{x(k)}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\rho_{(k)}\textbf{\"u}_{y(k)} &= \quad \frac{1}{2}\frac{\sigma_{yx(k)} - \sigma_{yx(k-l)}}{\Delta x} + \frac{1}{2}\frac{\sigma_{yx(k+l)} - \sigma_{yx(k)}}{\Delta x}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{yy(k)} - \sigma_{yy(k-m)}}{\Delta y} + \frac{1}{2}\frac{\sigma_{yy(k+m)} - \sigma_{yy(k)}}{\Delta y}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{yx(k)} - \sigma_{yx(k-n)}}{\Delta z} + \frac{1}{2}\frac{\sigma_{yz(k+n)} - \sigma_{yz(k)}}{\Delta z}\\
+                              &\quad + \textbf{b}_{y(k)}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+\rho_{(k)}\textbf{\"u}_{z(k)} &= \quad \frac{1}{2}\frac{\sigma_{zx(k)} - \sigma_{zx(k-l)}}{\Delta x} + \frac{1}{2}\frac{\sigma_{zx(k+l)} - \sigma_{zx(k)}}{\Delta x}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{zy(k)} - \sigma_{zy(k-m)}}{\Delta y} + \frac{1}{2}\frac{\sigma_{zy(k+m)} - \sigma_{zy(k)}}{\Delta y}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{zx(k)} - \sigma_{zx(k-n)}}{\Delta z} + \frac{1}{2}\frac{\sigma_{zz(k+n)} - \sigma_{zz(k)}}{\Delta z}\\
+                              &\quad + \textbf{b}_{z(k)}
+\end{aligned}
+\end{equation}
+It can be obviously seem from the above equations that each term involving cauchy stress corresponds to a immediate neighborhood of material point $k$.
+More straightforwardly would be to recast the governing function of peridynamics to a similar form
+\begin{equation}
+\begin{aligned}
+\rho_{(k)}\textbf{\"u}_{(k)} &= \quad (\bft_{(k)(k-l)} - \bft_{(k-l)(k)})V_{(k-l)} + (\bft_{(k)(k+l)} - \bft_{(k+l)(k)})V_{(k+l)}\\
+                             &\quad + (\bft_{(k)(k-m)} - \bft_{(k-m)(k)})V_{(k-m)} + (\bft_{(k)(k+m)} - \bft_{(k+m)(k)})V_{(k+m)}\\
+                             &\quad + (\bft_{(k)(k-n)} - \bft_{(k-n)(k)})V_{(k-n)} + (\bft_{(k)(k+n)} - \bft_{(k+n)(k)})V_{(k+n)}\\
+                             &\quad  + \textbf{b}_{(k)}
+\end{aligned}
+\end{equation}
+Then, equating each term of the above equation to equation(6)(7)(8) would result in the desired relationships between cauchy stress and force density 
+\begin{equation}
+\sigma_{\alpha\beta(k)} = 2t_{\beta(k)(q_\alpha)}\Delta\alpha V_{(q_\alpha)}\qquad \mathrm{with } \quad q_x=(k+l),q_y=(k+m),q_z=(k+n)
+\end{equation}
+\begin{equation}
+\sigma_{\alpha\beta(k)} = -2t_{\beta(k)(q_\alpha)}\Delta\alpha V_{(q_\alpha)}\qquad \mathrm{with } \quad q_x=(k-l),q_y=(k-m),q_z=(k-n)
+\end{equation}
+where $\alpha,\beta=x,y,z$. Especially, for normal stress, we would have
+\begin{equation}
+\sigma_{\alpha\alpha} = 2 \bft_{(k)(q_\alpha)}\cdot(\bfx_{(q_\alpha)}-\bfx_{k})V_{(q_\alpha)}
+\end{equation}
+The subsequent relation would also be useful for translating the strain energy density and dilation from classical mechanics to peridynamics in the next section
+\begin{equation}
+\begin{aligned}
+\sum_{\beta=x,y,z}\sigma_{\alpha\beta(k)}^2 &= \sum_{\beta=x,y,z}4t_{\beta(k)(q_\alpha)}^2(\Delta\alpha)^2 V_{(q_\alpha)}^2 \\
+                                            &= 4(\bft_{(k)(q_\alpha)}|\bfx_{(q_\alpha)}-\bfx_{k}|V_{(q_\alpha)})
+                                                 \cdot
+                                                (\bft_{(k)(q_\alpha)}|\bfx_{(q_\alpha)}-\bfx_{k}|V_{(q_\alpha)})
+\end{aligned}
+\end{equation}
+
+\section{Strain Energy Density and Dilatation in Peridynamics}
+For three-dimension case of classical continuum mechanics, the strain energy density is obtained from
+\begin{equation}
+W_{(k)} = \frac{1}{2}\bm{\sigma}^T_{(k)}\bm{\epsilon}_{(k)}
+\end{equation}
+with
+\begin{equation}
+\bm{\sigma}^T_{(k)} = \{\sigma_{xx(k)}\quad\sigma_{yy(k)}\quad\sigma_{zz(k)}\quad\sigma_{yz(k)}\quad\sigma_{xz(k)}\quad\sigma_{xy(k)}\}
+\end{equation}
+and
+\begin{equation}
+\bm{\epsilon}_{(k)} = \{\epsilon_{xx(k)}\quad\epsilon_{yy(k)}\quad\epsilon_{zz(k)}\quad\gamma_{yz(k)}\quad\gamma_{xz(k)}\quad\gamma_{xy(k)}\}
+\end{equation}
+Here we use the Voigt notation, and the constitutive relation between cauchy stress and strain for linear and isotropic materials should be calculated as
+\begin{equation}
+\bm{\sigma}^T_{(k)} = \textbf{C}\bm{\epsilon}_{(k)}
+\end{equation}
+where
+\begin{equation}
+\textbf{C} = \left[
+               \begin{array}{cccccc}
+                 \kappa+(4\mu/3) & \kappa-(2\mu/3) & \kappa-(2\mu/3) &  &  &  \\
+                 \kappa-(2\mu/3) & \kappa+(4\mu/3) & \kappa-(2\mu/3) &  &  &  \\
+                 \kappa-(2\mu/3) & \kappa-(2\mu/3) & \kappa+(4\mu/3) &  &  &  \\
+                   &  &  & \mu &  &  \\
+                   &  &  &  & \mu &  \\
+                   &  &  &  &  & \mu \\
+               \end{array}
+             \right]
+\end{equation}
+$\kappa$ and $\mu$ are bulk modulus and shear modulus, respectively.
+And they are related to another widely used couple of material parameters(Young modulus and Poisson's ratio) from
+\begin{equation}
+\kappa = \frac{E}{3(1-2\nu)} \qquad \mu = \frac{E}{2(1+\nu)}
+\end{equation}
+We can rewrite the above strain energy density to a different form with respect to cauchy stress and dilation by
+\begin{equation}
+W_{(k)} = \frac{\kappa}{2}\thetak^2+\left[\frac{1}{4\mu}(\sigma_{xx(k)}^2+\sigma_{yy(k)}^2+\sigma_{zz(k)}^2)
+                                         +\frac{1}{2\mu}(\sigma_{xy(k)}^2+\sigma_{xz(k)}^2+\sigma_{yz(k)}^2)
+                                         -\frac{3\kappa^2}{4\mu}\thetak^2
+                                    \right]
+\end{equation}
+in which the first term and the second term at right-side hand represent the dilatational energy and the  distortional energy, respectively.
+And the dilatation, $\thetak$, is defined through
+\begin{equation}
+\thetak = \epsilon_{xx(k)}+\epsilon_{yy(k)}+\epsilon_{zz(k)} = \frac{\sigma_{xx(k)}+\sigma_{yy(k)}+\sigma_{zz(k)}}{3\kappa}
+\end{equation}
+We rearrange the strain energy density to a slightly different form
+\begin{equation}
+\begin{aligned}
+W_{(k)} =& \frac{\kappa}{2}\thetak^2 -\frac{3\kappa^2}{4\mu}\thetak^2 \\
+         &+\frac{1}{8\mu}\left[(\sigma_{xx(k)}^2+\sigma_{xy(k)}^2+\sigma_{xz(k)}^2) + (\sigma_{xx(k)}^2+\sigma_{xy(k)}^2+\sigma_{xz(k)}^2)\right]\\
+         &+\frac{1}{8\mu}\left[(\sigma_{yx(k)}^2+\sigma_{yy(k)}^2+\sigma_{yz(k)}^2) + (\sigma_{yx(k)}^2+\sigma_{yy(k)}^2+\sigma_{yz(k)}^2)\right]\\
+         &+\frac{1}{8\mu}\left[(\sigma_{zx(k)}^2+\sigma_{zy(k)}^2+\sigma_{zz(k)}^2) + (\sigma_{zx(k)}^2+\sigma_{zy(k)}^2+\sigma_{zz(k)}^2)\right]
+\end{aligned}
+\end{equation}
+It can be seen that each term involving stress component corresponds to the contribution from one of its immediate neighborhood $(k-l),(k+l),(k-m),(k+m),(k-n)$ and $(k+n)$.
+Utilizing the relationship by equation(13) in the above section leads to the following result
+\begin{equation}
+\begin{aligned}
+W_{(k)} =& (\frac{\kappa}{2} -\frac{3\kappa^2}{4\mu})\thetak^2 \\
+         &+\frac{1}{2\mu}\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}(\tkj|\bfxj-\bfxk|V_{(j)})\cdot(\tkj|\bfxj-\bfxk|V_{(j)})
+\end{aligned}
+\end{equation}
+For bond-based peridynamics which is essentially a spring-mass system, the force exerted by each other within a couple of material points is of the same magnitude, which means 
+\begin{equation}
+\tkj =  \frac{1}{2}\fkj
+\end{equation}
+where $\fkj$ is the total force between material point $k$ and $j$, and is evaluated through
+\begin{equation}
+\fkj = c\skj\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}
+\end{equation}
+with
+\begin{equation}
+\skj = \frac{|\bfyj - \bfyk| - |\bfxj - \bfxk|}{|\bfxj - \bfxk|}
+\end{equation}
+being the stretch between two material points. $c$ amounts to constant elastic coefficient of spring force. Substituting the above equation into equation (23) results in
+\begin{equation}
+\begin{aligned}
+W_{(k)} =& (\frac{\kappa}{2} -\frac{3\kappa^2}{4\mu})\thetak^2 \\
+         &+\frac{c^2}{8\mu}\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}(\skj|\bfxj-\bfxk|V_{(j)})\cdot(\skj|\bfxj-\bfxk|V_{(j)})
+\end{aligned}
+\end{equation}
+We can then generalize this form to ordinary state-based peridynamics by simply replacing the coefficients before the first term and second term at right-side hand
+\begin{equation}
+W_{(k)} = a\thetak^2
+          +\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}b(\skj|\bfxj-\bfxk|V_{(j)})\cdot(\skj|\bfxj-\bfxk|V_{(j)})
+\end{equation}
+where $a$ and $b$ is the peridynamics parameters which would be determined in Section 6.
+
+We can also rewrite the dilatation, $\thetak$, in a slightly different form as
+\begin{equation}
+\begin{aligned}
+\thetak =& \frac{\sigma_{xx(k)}+\sigma_{yy(k)}+\sigma_{zz(k)}}{3\kappa}\\
+        =& \frac{1}{3\kappa}(\frac{1}{2}\sigma_{xx(k)}+\frac{1}{2}\sigma_{yy(k)}+\frac{1}{2}\sigma_{zz(k)}
+         + \frac{1}{2}\sigma_{xx(k)}+\frac{1}{2}\sigma_{yy(k)}+\frac{1}{2}\sigma_{zz(k)})
+\end{aligned}
+\end{equation}
+Based on the relation by equation (12), the above equation becomes
+\begin{equation}
+\thetak = \frac{1}{3\kappa}\left(\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}(\tkj\cdot(\bfxj-\bfxk)V_{(j)})\right)
+\end{equation}
+Again, in the case of bond-based peridynamics, we could have
+\begin{equation}
+\thetak = \frac{c}{6\kappa}\left(\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}\left(\skj\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}\cdot(\bfxj-\bfxk)V_{(j)}\right)\right)
+\end{equation}
+A general expression from bond-based to ordinary state-based could also be obtained from replacing the coefficient as
+\begin{equation}
+\thetak = d\left(\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}\left(\skj\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}\cdot(\bfxj-\bfxk)V_{(j)}\right)\right)
+\end{equation}
+where $d$ is another peridynamics parameter.
+
+\section{Explicit Form of Force Density}
+Up to now, what we discussed for peridynamic is limited to local case where material point only interact with its nearest neighborhood.
+To extend the model from \textit{local} to \textit{non-local}, we would redefine the strain energy density and dilatation as
+\begin{equation}
+W_{(k)} = a\thetak^2
+          +b\sum_{j=1}^{N}\wkj(\skj|\bfxj-\bfxk|V_{(j)})\cdot(\skj|\bfxj-\bfxk|V_{(j)})
+\end{equation}
+\begin{equation}
+\thetak = d\sum_{j=1}^{N}\wkj\skj\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}\cdot(\bfxj-\bfxk)V_{(j)}
+\end{equation}
+Note that we replace $\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}$ with $\sum_{j=1}^{N}$, where $N$ is the number of material points within the family of $k$.
+The family of material point $k$ is defined by a radius parameters, $\delta$, horizon, within which all material points are its family.
+And the weighted function,$\wkj$, used to control the influence material points away from material point $k$, is  defined through
+\begin{equation}
+\wkj = \frac{\delta}{|\bfxj-\bfxk|}
+\end{equation}
+Note that $\wkj$ is direction independent(i.e. isotropic) and material point with closer distance would gain a greater influence.
+
+Given the expression of strain energy density, we could derive the explicit form of force density from
+\begin{equation}
+\tkj = \frac{1}{V_{(j)}}\frac{\partial W_{(k)}}{\partial |\bfyj-\bfyk|}\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}
+\end{equation}
+Explicitly calculating the partial differential term in above equation yields the final result
+\begin{equation}
+\tkj = \frac{1}{2}A\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}
+\end{equation}
+with
+\begin{equation}
+A = 4\wkj\left\{ad\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak
+   +b\left(|\bfyj - \bfyk| - |\bfxj - \bfxk|\right) \right\}
+\end{equation}
+Similarly, we have
+\begin{equation}
+\tjk = \frac{1}{2}B\frac{\bfyk - \bfyj}{|\bfyk - \bfyj|}
+\end{equation}
+with
+\begin{equation}
+B= 4\wkj\left\{ad\frac{\bfyk-\bfyj}{|\bfyk-\bfyj|}\cdot\frac{\bfxk-\bfxj}{|\bfxk-\bfxj|}\theta_{(j)}
+   +b\left(|\bfyk - \bfyj| - |\bfxk - \bfxj|\right) \right\}
+\end{equation}
+Note that $\thetak$ and $\theta_{(j)}$ are not necessarily equal to each other in ordinary state-based peridynamics.
+However, $A$ and $B$ must be equal to each other in bond-based peridynamics as force between them is in fact a spring force, which requires
+\begin{equation}
+ad = 0
+\end{equation}
+\section{Parameters Determination}
+In the previous sections, we have introduced three peridynamics parameters($a,b,d$) when generalizing the form of strain energy density $W_{(k)}$ and dilation $\thetak$ from the bond-based to ordinary state-based framework.
+In this section, we determine these three parameters in terms of material constants of classical continuum mechanics based on two simple deformation case: \textit{isotropic expansion} and \textit{simple shear}.
+
+\textbf{Case 1: isotropic expansion}
+
+Isotropic expansion can be achieved by apply a uniform strain $\zeta$ in all directions, as shown in the following figure.
+\begin{figure}[!h]
+\center
+\includegraphics[width=0.4\textwidth,natwidth=327,natheight=237]{deduction_fig_2.png}
+\caption{A three dimensional body subject to isotropic expansion. Image from MO[14].}
+\end{figure}
+
+In this case we have
+\begin{eqnarray}
+  \epsilon_{xx(k)} =  \epsilon_{yy(k)} = \epsilon_{zz(k)} = \zeta\\
+  \epsilon_{xy(k)} =  \epsilon_{xz(k)} = \epsilon_{yz(k)} = 0
+\end{eqnarray}
+For analysis from equation(14,17,18,21) in classical continuum mechanics, we would get
+\begin{equation}
+W_{(k)} = \frac{9}{2}\kappa\zeta^2\\
+\end{equation}
+\begin{equation}
+\thetak = \epsilon_{xx(k)}+\epsilon_{yy(k)}+\epsilon_{zz(k)} = 3\zeta
+\end{equation}
+The deformed relative position can be written in terms of relative position in reference(undeformed) space
+\begin{equation}
+|\bfyj - \bfyk| = (1+\zeta)|\bfxj - \bfxk|
+\end{equation}
+We also define $\bm{\xi} = \bfxj - \bfxk, \xi = |\bm{\xi}|$.
+Strain energy density and dilation calculation in peridynamics requires an integral over a sphere of radius $\delta$.
+\begin{equation}
+\begin{aligned}
+W_{(k)} =& a\thetak^2
+           +b\sum_{j=1}^{N}\wkj(\skj|\bfxj-\bfxk|V_{(j)})\cdot(\skj|\bfxj-\bfxk|V_{(j)})\\
+        =& a\thetak^2
+           +b\int_0^\delta\int_0^{2\pi}\int_0^{\pi}\frac{\delta}{\xi}\left[(1+\zeta)\xi-\xi\right]^2\xi^2\sin(\phi)d\phi d\theta d\xi\\
+        =& 9a\zeta^2+\pi b\delta^5\zeta^2
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\thetak =& d\sum_{j=1}^{N}\wkj\skj\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}\cdot(\bfxj-\bfxk)V_{(j)}\\
+        =& d\int_0^\delta\int_0^{2\pi}\int_0^{\pi}\frac{\delta}{\xi}\left[(1+\zeta)\xi-\xi\right](\frac{\bm{\xi}}{\xi}\cdot\frac{\bm{\xi}}{\xi})\xi^2\sin(\phi)d\phi d\theta d\xi\\
+        =& \frac{4\pi d\delta^4}{3}\zeta
+\end{aligned}
+\end{equation}
+where $(\xi,\theta,\phi)$ are spherical coordinates. Comparing equation(44,45) with equation(47,48) leads to the consequent results
+\begin{equation}
+9a + \pi b\delta^5 = \frac{9}{2}\kappa
+\end{equation}
+\begin{equation}
+d = \frac{9}{4\pi\delta^4}
+\end{equation}
+
+\textbf{Case 2: simple shear}
+
+The figure below illustrates an example of simple shear.
+\begin{figure}[!h]
+\center
+\includegraphics[width=0.4\textwidth,natwidth=361,natheight=233]{deduction_fig_3.jpg}
+\caption{A three dimensional body subject to simple shear. Image from MO[14].}
+\end{figure}
+
+In this case, we have
+\begin{equation}
+\gamma_{xy(k)} = \zeta
+\end{equation}
+\begin{equation}
+\sigma_{xx(k)} = \sigma_{yy(k)} = \sigma_{zz(k)} = \gamma_{xz(k)} =\gamma_{yz(k)} = 0
+\end{equation}
+and
+\begin{equation}
+|\bfyj - \bfyk| = (1+\frac{\zeta\sin(2\phi)\sin(\theta)}{2})|\bfxj - \bfxk|
+\end{equation}
+
+Strain energy density and dilatation within realm of classical continuum mechanics become
+\begin{equation}
+W_{(k)} = \frac{1}{2}\mu\zeta^2\\
+\end{equation}
+\begin{equation}
+\thetak = 0
+\end{equation}
+
+We can also calculate the strain energy density from 
+\begin{equation}
+\begin{aligned}
+W_{(k)} =& b\sum_{j=1}^{N}\wkj(\skj|\bfxj-\bfxk|V_{(j)})\cdot(\skj|\bfxj-\bfxk|V_{(j)})\\
+        =& b\int_0^\delta\int_0^{2\pi}\int_0^{\pi}\frac{\delta}{\xi}\left[(1+\frac{\zeta\sin(2\phi)\sin(\theta)}{2})\xi-\xi\right]^2\xi^2\sin(\phi)d\phi d\theta d\xi\\
+        =& \frac{b\pi\delta^5\zeta^2}{15}
+\end{aligned}
+\end{equation}
+Equating equation(54) and (56) yields
+\begin{equation}
+b = \frac{15\mu}{2\pi\delta^5}
+\end{equation}
+Substituting equation (57) from (49) results in the determination of last parameters $a$
+\begin{equation}
+a = \frac{1}{2}(\kappa - \frac{5\mu}{3})
+\end{equation}
+It's worth to note that $\nu=0.25$ would lead to a zero value of $a$, making the equation(41) in bond-based case of peridynamics to be satisfied.
+
+\section{An intuitive comprehending of the peridynamics constitutive model}
+We have deduce the whole constitutive model from classical continuum mechanics to peridynamics. Here, we first make a brief summarization.
+The force density of ordinary state-based peridynamics is calculated through
+\begin{equation}
+\tkj = \frac{1}{2}A\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}
+\end{equation}
+with
+\begin{equation}
+A = 4\wkj\left\{ad\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak
+   +b\left(|\bfyj - \bfyk| - |\bfxj - \bfxk|\right) \right\}
+\end{equation}
+\begin{equation}
+\thetak = d\sum_{j=1}^{N}\wkj\skj\frac{\bfyj - \bfyk}{|\bfyj - \bfyk|}\cdot(\bfxj-\bfxk)V_{(j)}
+\end{equation}
+\begin{equation}
+a = \frac{1}{2}(\kappa - \frac{5\mu}{3})
+\end{equation}
+\begin{equation}
+b = \frac{15\mu}{2\pi\delta^5}
+\end{equation}
+\begin{equation}
+d = \frac{9}{4\pi\delta^4}
+\end{equation}
+In this section, we try to give an intuitive comprehending of model by separating the force density into \textit{isotropic} and \textit{deviatoric} part.
+We start by dividing $a$ into two parts
+\begin{equation}
+a = a_1 + a_2 \qquad \mathrm{with}\quad a_1 = \frac{1}{2}\kappa \quad a_2 = -\frac{5\mu}{6}
+\end{equation}
+and recasting $A$ to 
+\begin{equation}
+\begin{aligned}
+A =4\wkj\left\{a_1d\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak
+   +b\left(e_{(j)(k)} + \frac{a_2d}{b}\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak\right) \right\}
+\end{aligned}
+\end{equation}
+with
+\begin{equation}
+e_{(j)(k)} = (|\bfyj - \bfyk| - |\bfxj - \bfxk|)
+\end{equation}
+defined as the extension between two material points. Note that the first term in brace is only associated $\kappa$ while the second term in brace is only related to $\mu$.
+It shows that we have decoupled the isotropic and deviatoric effects.
+Extension $e_{(j)(k)}$ amounts to the cauchy strain in classical mechanics, and we would define the deviatoric component of extension through
+\begin{equation}
+\begin{aligned}
+e^d_{(j)(k)} \equiv& e_{(j)(k)} + \frac{a_2d}{b}\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak\\
+                  =& e_{(j)(k)} - \frac{\delta}{4}\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak
+\end{aligned} 
+\end{equation}
+The deviatoric extension have the same meaning as $\epsilon = \epsilon - \frac{1}{3}\mathrm{Tr}(\epsilon)$ in classical continuum mechanics,
+and would be useful when taking the plasticity into account, since plastic flow is only related with deviatoric component.
+
+Finally, we could rewrite $A$ as a more intuitive form
+\begin{equation}
+A = A_{iso} + A_{dev}
+\end{equation}
+with
+\begin{equation}
+A_{iso} = 4\wkj a\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak
+\end{equation}
+\begin{equation}
+A_{dev} = 4\wkj b e^d_{(j)(k)}
+\end{equation}
+where we redefine $a$ as
+\begin{equation}
+a = a_2d = \frac{9\kappa}{8\pi\delta^4}
+\end{equation}
+The above reformulation produces the exact constitutive model used in our PG paper.
+\end{document}
