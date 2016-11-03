@@ -31,7 +31,7 @@ This document presents the derivation of the constitutive model proposed in the 
 
 \subsection{Peridynamics equations of motion and the discretization}
 
-As is introduced in the paper, in peridynamics the governing equation for any material point located at $\mb{x}$ is formulated as below:
+As is introduced in the paper, the peridynamics governing equation for any material point located at $\mb{x}$ is formulated as below:
 \begin{equation}
 \rho\ddot{\mb{u}}(\mb{x}) = \int_{H_\mb{x}}[\mb{T}<\mb{x}'-\mb{x}> - \mb{T}<\mb{x}-\mb{x}'>]dV_{\mb{x}}+\mb{b}(\mb{x}).
 \label{eq:1}
@@ -60,7 +60,63 @@ In the context of local interactions, Equation \blue{\ref{eq:2}} for material po
 \end{equation}
 where $\mb{t}_{(k)(j)}$ denotes the internal force density that material point $j$ exerted on point $k$, and $\mb{t}_{(j)(k)}$ is the other way around.
 
+Let's recall the form of governing equations in continuum mechanics:
+\begin{equation}
+\rho_{(k)}\ddot{\mb{u}}_{(k)} = \nabla\cdot\sigma_{(k)} + \mb{b}_{(k)},
+\label{eq:4}
+\end{equation}
+where $\sigma_{(k)}$ is the cauchy stress at point $k$. We could further write it in a component-wise form and approximate the spatial derivatives with central difference. Take the $x$-component as an example:
+\begin{equation}
+\begin{aligned}
+\rho_{(k)}\ddot{\mb{u}}_{x(k)} &= \quad \frac{1}{2}\frac{\sigma_{xx(k)} - \sigma_{xx(k-l)}}{\Delta x} + \frac{1}{2}\frac{\sigma_{xx(k+l)} - \sigma_{xx(k)}}{\Delta x}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{xy(k)} - \sigma_{xy(k-m)}}{\Delta y} + \frac{1}{2}\frac{\sigma_{xy(k+m)} - \sigma_{xy(k)}}{\Delta y}\\
+                              &\quad+  \frac{1}{2}\frac{\sigma_{zx(k)} - \sigma_{zx(k-n)}}{\Delta z} + \frac{1}{2}\frac{\sigma_{xz(k+n)} - \sigma_{xz(k)}}{\Delta z}\\
+                              &\quad + \mb{b}_{x(k)}.
+\end{aligned}
+\label{eq:5}
+\end{equation}
+Each term in the above equation involves only material point $k$ and one immediate neighbor. We could recast Equation \blue{\ref{eq:3}} in a similar form:
+\begin{equation}
+\begin{aligned}
+\rho_{(k)}\ddot{\mb{u}}_{(k)} &= \quad (\mb{t}_{(k)(k-l)} - \mb{t}_{(k-l)(k)})V_{(k-l)} + (\mb{t}_{(k)(k+l)} - \mb{t}_{(k+l)(k)})V_{(k+l)}\\
+                             &\quad + (\mb{t}_{(k)(k-m)} - \mb{t}_{(k-m)(k)})V_{(k-m)} + (\mb{t}_{(k)(k+m)} - \mb{t}_{(k+m)(k)})V_{(k+m)}\\
+                             &\quad + (\mb{t}_{(k)(k-n)} - \mb{t}_{(k-n)(k)})V_{(k-n)} + (\mb{t}_{(k)(k+n)} - \mb{t}_{(k+n)(k)})V_{(k+n)}\\
+                             &\quad  + \mb{b}_{(k)}.
+\end{aligned}
+\label{eq:6}
+\end{equation}
+By equating Equation \blue{\ref{eq:5}} (and its counterparts) with Equation \blue{\ref{eq:6}}, we get the relationships between the cauchy stress and the peridynamics internal force density:
+\begin{equation}
+\sigma_{\alpha\beta(k)} = 2t_{\beta(k)(q_\alpha)}\Delta\alpha V_{(q_\alpha)}\qquad \mathrm{with } \quad q_x=(k+l),q_y=(k+m),q_z=(k+n)
+\label{eq:7}
+\end{equation}
+\begin{equation}
+\sigma_{\alpha\beta(k)} = -2t_{\beta(k)(q_\alpha)}\Delta\alpha V_{(q_\alpha)}\qquad \mathrm{with } \quad q_x=(k-l),q_y=(k-m),q_z=(k-n),
+\label{eq:8}
+\end{equation}
+where $\alpha,\beta=x,y,z$. Especially, for normal stress, we would have:
+\begin{equation}
+\sigma_{\alpha\alpha} = 2 \mb{t}_{(k)(q_\alpha)}\cdot(\mb{x}_{(q_\alpha)}-\mb{x}_{k})V_{(q_\alpha)}.
+\label{eq:9}
+\end{equation}
+The subsequent equation would also be useful for the derivation in following sections:
+\begin{equation}
+\begin{aligned}
+\sum_{\beta=x,y,z}\sigma_{\alpha\beta(k)}^2 &= \sum_{\beta=x,y,z}4t_{\beta(k)(q_\alpha)}^2(\Delta\alpha)^2 V_{(q_\alpha)}^2 \\
+                                            &= 4(\mb{t}_{(k)(q_\alpha)}|\mb{x}_{(q_\alpha)}-\mb{x}_{k}|V_{(q_\alpha)})
+                                                 \cdot
+                                                (\mb{t}_{(k)(q_\alpha)}|\mb{x}_{(q_\alpha)}-\mb{x}_{k}|V_{(q_\alpha)}).
+\end{aligned}
+\label{eq:10}
+\end{equation}
+
 \subsection{Strain energy density and internal force density}
+
+In continuum mechanics the hyperelastic constitutive models are generally represented as strain energy densities. Therefore it is necessary to define the relationship between strain energy density and peridynamics internal force density. According to the book by Madenci and Oterkus\blue{\cite{madenci2014peridynamic}}, the relationship is defined as below:
+\begin{equation}
+\mb{t}_{(k)(j)}=\frac{1}{V_{(j)}}\frac{\partial W_{(k)}}{\partial (|\mb{y}_{(j)}-\mb{y}_{(k)}|)}\frac{\mb{y}_{(j)}-\mb{y}_{(k)}}{|\mb{y}_{(j)}-\mb{y}_{(k)}|},
+\end{equation}
+in which $W_{(k)}$ is the strain energy density at material point $k$. The direction of the force density vector is aligned with the relative position vector in the deformed configuration.
 
 \section{Derivation for general hyperelastic materials}\label{section:3}
 
