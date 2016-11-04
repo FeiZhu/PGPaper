@@ -79,7 +79,7 @@ and we can further written it in a component-wise form
   \rho_{(k)}\textbf{\"u}_{z(k)} &=& \sigma_{zx,x(k)} + \sigma_{zy,y(k)} + \sigma_{zz,z(k)} + \textbf{b}_{z(k)}
 \end{eqnarray}
 
-Vary from the continuum mechanics, peridynamics, however, constructs its governing equation through accumulating the force density from its immediate material points 
+Vary from the continuum mechanics, peridynamics, however, constructs its governing equation through accumulating the force density from its immediate material points
 rather than based on spatial differential, which means
 \begin{equation}
 \rho_{(k)}\textbf{\"u}_{(k)} = \sum_{j=k-l,k+l,k-m,k+m,k-n,k+n}(\tkj-\tjk)V_{(j)} + \textbf{b}_{(k)}
@@ -131,7 +131,7 @@ More straightforwardly would be to recast the governing function of peridynamics
                              &\quad  + \textbf{b}_{(k)}
 \end{aligned}
 \end{equation}
-Then, equating each term of the above equation to equation(6)(7)(8) would result in the desired relationships between cauchy stress and force density 
+Then, equating each term of the above equation to equation(6)(7)(8) would result in the desired relationships between cauchy stress and force density
 \begin{equation}
 \sigma_{\alpha\beta(k)} = 2t_{\beta(k)(q_\alpha)}\Delta\alpha V_{(q_\alpha)}\qquad \mathrm{with } \quad q_x=(k+l),q_y=(k+m),q_z=(k+n)
 \end{equation}
@@ -216,7 +216,7 @@ W_{(k)} =& (\frac{\kappa}{2} -\frac{3\kappa^2}{4\mu})\thetak^2 \\
          &+\frac{1}{2\mu}\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}(\tkj|\bfxj-\bfxk|V_{(j)})\cdot(\tkj|\bfxj-\bfxk|V_{(j)})
 \end{aligned}
 \end{equation}
-For bond-based peridynamics which is essentially a spring-mass system, the force exerted by each other within a couple of material points is of the same magnitude, which means 
+For bond-based peridynamics which is essentially a spring-mass system, the force exerted by each other within a couple of material points is of the same magnitude, which means
 \begin{equation}
 \tkj =  \frac{1}{2}\fkj
 \end{equation}
@@ -393,7 +393,7 @@ W_{(k)} = \frac{1}{2}\mu\zeta^2\\
 \thetak = 0
 \end{equation}
 
-We can also calculate the strain energy density from 
+We can also calculate the strain energy density from
 \begin{equation}
 \begin{aligned}
 W_{(k)} =& b\sum_{j=1}^{N}\wkj(\skj|\bfxj-\bfxk|V_{(j)})\cdot(\skj|\bfxj-\bfxk|V_{(j)})\\
@@ -439,7 +439,7 @@ We start by dividing $a$ into two parts
 \begin{equation}
 a = a_1 + a_2 \qquad \mathrm{with}\quad a_1 = \frac{1}{2}\kappa \quad a_2 = -\frac{5\mu}{6}
 \end{equation}
-and recasting $A$ to 
+and recasting $A$ to
 \begin{equation}
 \begin{aligned}
 A =4\wkj\left\{a_1d\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak
@@ -457,7 +457,7 @@ Extension $e_{(j)(k)}$ amounts to the cauchy strain in classical mechanics, and 
 \begin{aligned}
 e^d_{(j)(k)} \equiv& e_{(j)(k)} + \frac{a_2d}{b}\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak\\
                   =& e_{(j)(k)} - \frac{\delta}{4}\frac{\bfyj-\bfyk}{|\bfyj-\bfyk|}\cdot\frac{\bfxj-\bfxk}{|\bfxj-\bfxk|}\thetak
-\end{aligned} 
+\end{aligned}
 \end{equation}
 The deviatoric extension have the same meaning as $\epsilon = \epsilon - \frac{1}{3}\mathrm{Tr}(\epsilon)$ in classical continuum mechanics,
 and would be useful when taking the plasticity into account, since plastic flow is only related with deviatoric component.

@@ -1,5 +1,10 @@
 \begin{thebibliography}{\uppercase{Bon08}}
 
+\bibitem[Ban16]{bang2016peridynamic}
+\textsc{Bang D.}:
+\newblock \emph{Peridynamic modeling of hyperelastic materials}.
+\newblock The University of Arizona., 2016.
+
 \bibitem[Bon08]{bonet2008nonlinear}
 \textsc{Bonet J.}:
 \newblock \emph{Nonlinear continuum mechanics for finite element analysis}.

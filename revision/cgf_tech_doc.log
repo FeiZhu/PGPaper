@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  3 NOV 2016 11:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  4 NOV 2016 16:54
 entering extended mode
 **C:/Users/fei/code/fei_personal/PGPaper/revision/cgf_tech_doc.tex
 (C:/Users/fei/code/fei_personal/PGPaper/revision/cgf_tech_doc.tex
@@ -229,23 +229,27 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks25
 
 (C:\CTEX\MiKTeX\tex\latex\geometry\geometry.cfg))
+(C:\CTEX\MiKTeX\tex\latex\tools\enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks26
+)
 
 LaTeX Warning: Unused global option(s):
     [fullpage].
 
 (C:\Users\fei\code\fei_personal\PGPaper\revision\cgf_tech_doc.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -254,12 +258,12 @@ LaTeX Font Info:    ... okay on input line 23.
 \scratchbox=\box54
 \nofMPsegments=\count117
 \nofMParguments=\count118
-\everyMPshowfont=\toks26
+\everyMPshowfont=\toks27
 \MPscratchCnt=\count119
 \MPscratchDim=\dimen134
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks27
+\everyMPtoPDFconversion=\toks28
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -295,11 +299,11 @@ LaTeX Font Info:    ... okay on input line 23.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 (C:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (C:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -310,7 +314,7 @@ LaTeX Warning: No \author given.
 <./fig1.png, id=1, 612.03656pt x 576.65437pt>
 File: ./fig1.png Graphic file (type png)
  <use ./fig1.png>
-Package pdftex.def Info: ./fig1.png used on input line 50.
+Package pdftex.def Info: ./fig1.png used on input line 51.
 (pdftex.def)             Requested size: 236.01561pt x 222.36897pt.
 
 
@@ -319,17 +323,17 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [1
 
 {C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}] [2 <C:/User
-s/fei/code/fei_personal/PGPaper/revision/fig1.png>]
-(C:\Users\fei\code\fei_personal\PGPaper\revision\cgf_tech_doc.bbl) [3]
+s/fei/code/fei_personal/PGPaper/revision/fig1.png>] [3] [4]
+(C:\Users\fei\code\fei_personal\PGPaper\revision\cgf_tech_doc.bbl) [5]
 (C:\Users\fei\code\fei_personal\PGPaper\revision\cgf_tech_doc.aux) ) 
 Here is how much of TeX's memory you used:
- 3004 strings out of 495354
- 37631 string characters out of 3183858
- 106941 words of memory out of 3000000
- 6133 multiletter control sequences out of 15000+200000
+ 3033 strings out of 495354
+ 37957 string characters out of 3183858
+ 110382 words of memory out of 3000000
+ 6160 multiletter control sequences out of 15000+200000
  12933 words of font info for 48 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,9n,24p,726b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,12n,24p,726b,234s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/CTEX/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx6.
@@ -344,9 +348,9 @@ ic/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmti10.pfb>
-Output written on cgf_tech_doc.pdf (3 pages, 215578 bytes).
+Output written on cgf_tech_doc.pdf (5 pages, 228171 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

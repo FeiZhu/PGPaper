@@ -3,6 +3,7 @@
 \usepackage{multicol,amsmath,amssymb,algorithmic}
 \usepackage{graphics,graphicx}
 \usepackage[right = 2.5cm, left=2.5cm, top = 2.5cm, bottom =2.5cm]{geometry}
+\usepackage{enumerate}
 \pagestyle{plain}
 \def\urlfont{\DeclareFontFamily{OT1}{cmtt}{\hyphenchar\font='057}
               \normalfont\ttfamily \hyphenpenalty=10000}
@@ -112,11 +113,65 @@ The subsequent equation would also be useful for the derivation in following sec
 
 \subsection{Strain energy density and internal force density}
 
-In continuum mechanics the constitutive models are generally represented as strain energy densities. Therefore
+In continuum mechanics the hyperelastic constitutive models are generally represented as strain energy densities. Therefore it is necessary to define the relationship between strain energy density and peridynamics internal force density. According to the book by Madenci and Oterkus\blue{\cite{madenci2014peridynamic}}, the relationship is defined as below:
+\begin{equation}
+\mb{t}_{(k)(j)}=\frac{1}{V_{(j)}}\frac{\partial W_{(k)}}{\partial (|\mb{y}_{(j)}-\mb{y}_{(k)}|)}\frac{\mb{y}_{(j)}-\mb{y}_{(k)}}{|\mb{y}_{(j)}-\mb{y}_{(k)}|},
+\label{eq:11}
+\end{equation}
+in which $W_{(k)}$ is the strain energy density at material point $k$. The direction of the force density vector is aligned with the relative position vector in the deformed configuration.
 
 \section{Derivation for general hyperelastic materials}\label{section:3}
 
+Given the strain energy representation of a general hyperelastic material in continuum mechanics, we could obtain the explicit form of its peridynamics internal force density following some common procedures. Once we get the explicit form of the force density, we could further derive the peridynamics version of governing equations and proceed with the simulation.
+
+The derivation procedures for a general hyperelastic material are listed below:
+\begin{enumerate}
+\item{Represent the strain energy density $W$ in terms of the internal force density $\mb{t}$, using the relationships in Equation \blue{\ref{eq:7}} \~{} \blue{\ref{eq:10}}. The strain energy densities in continuum mechanics are generally represented in terms of the stress tensor $\sigma$, or could be easily recast into this form. Then the derivation to the peridynamics form is straightforward with the relationships between $\sigma$ and $\mb{t}$.}
+\item{Perform differentiation to $W$ using Equation \blue{\ref{eq:11}}, and get the representation of $\mb{t}$. The resulting expression contains several auxiliary parameters.}
+\item{Determine the material parameters by equating the strain energy representations in continuum mechanics with their counterparts in peridynamics under several simple loading cases. The loading cases are carefully chosen so that the strain energy density could be analytically computed with the continuum mechanics representation. Then by equating the energy value with the peridynamics form of strain energy density, we could determine the peridynamics material parameters.}
+\end{enumerate}
+
 \section{Derivation for linear elastic materials}\label{section:4}
+
+We choose to design our peridynamics constitutive model based on the linear elastic model in continuum mechanics due to its simplicity. More general hyperelastic models could be derived following the same procedures introduced above. For instance, Bang\blue{\cite{bang2016peridynamic}} performed derivations for the incompressible Neo-Hookean material.
+
+\subsection{Strain energy density in terms of force density}
+
+For an isotropic linear elastic material, the explicit form of the strain energy density, $W_{(k)}$, at material point $k$ can be represented as
+\begin{equation}
+W_{(k)} = \frac{\kappa}{2}\theta_{(k)}^2+\left[\frac{1}{4\mu}(\sigma_{xx(k)}^2+\sigma_{yy(k)}^2+\sigma_{zz(k)}^2)
+                                         +\frac{1}{2\mu}(\sigma_{xy(k)}^2+\sigma_{xz(k)}^2+\sigma_{yz(k)}^2)
+                                         -\frac{3\kappa^2}{4\mu}\theta_{(k)}^2
+                                    \right],
+\label{eq:12}
+\end{equation}
+in which $k$ and $\mu$ are the bulk modulus and the shear modulus. Note that we ignore the temperature change in the course of deformation. The first term and the second term at the right-hand side of the equation represent the dilatational energy and the distortional energy, respectively. The dilatation, $\theta_{(k)}$ is defined through
+\begin{equation}
+\theta_{(k)} = \epsilon_{xx(k)}+\epsilon_{yy(k)}+\epsilon_{zz(k)} = \frac{\sigma_{xx(k)}+\sigma_{yy(k)}+\sigma_{zz(k)}}{3\kappa}.
+\label{eq:13}
+\end{equation}
+We rearrange the strain energy density to a slightly different form
+\begin{equation}
+\begin{aligned}
+W_{(k)} =& \frac{\kappa}{2}\theta_{(k)}^2 -\frac{3\kappa^2}{4\mu}\theta_{(k)}^2 \\
+         &+\frac{1}{8\mu}\left[(\sigma_{xx(k)}^2+\sigma_{xy(k)}^2+\sigma_{xz(k)}^2) + (\sigma_{xx(k)}^2+\sigma_{xy(k)}^2+\sigma_{xz(k)}^2)\right]\\
+         &+\frac{1}{8\mu}\left[(\sigma_{yx(k)}^2+\sigma_{yy(k)}^2+\sigma_{yz(k)}^2) + (\sigma_{yx(k)}^2+\sigma_{yy(k)}^2+\sigma_{yz(k)}^2)\right]\\
+         &+\frac{1}{8\mu}\left[(\sigma_{zx(k)}^2+\sigma_{zy(k)}^2+\sigma_{zz(k)}^2) + (\sigma_{zx(k)}^2+\sigma_{zy(k)}^2+\sigma_{zz(k)}^2)\right],
+\end{aligned}
+\label{eq:14}
+\end{equation}
+where each term involves stress component corresponds to the contribution from one of its immediate neighborhood $(k-l)$,$(k+l)$,$(k-m)$,$(k+m)$,$(k-n)$ and $(k+n)$.
+Utilizing the relationship by Equation \blue{\ref{eq:10}} leads to the following result
+\begin{equation}
+\begin{aligned}
+W_{(k)} =& (\frac{\kappa}{2} -\frac{3\kappa^2}{4\mu})\theta_{(k)}^2 \\
+         &+\frac{1}{2\mu}\sum_{\substack {j=k-l,k+l,\\ \quad k-m,k+m,\\ \quad k-n,k+n}}(\mb{t}_{(k)(j)}|\mb{x}_{(j)}-\mb{x}_{(k)}|V_{(j)})\cdot(\mb{t}_{(k)(j)}|\mb{x}_{(j)}-\mb{x}_{(k)}|V_{(j)}).
+\end{aligned}
+\label{eq:15}
+\end{equation}
+
+\subsection{Explicit form of force density}
+\subsection{Determination of material parameters}
 
 \bibliographystyle{eg-alpha}
 \bibliography{../references}
