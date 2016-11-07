@@ -8,7 +8,8 @@
 
 % for anonymous conference submission please enter your SUBMISSION ID
 % instead of the author's name (and leave the affiliation blank) !!
-\author[paper1047]{paper1047}
+\author[W. Chen et al.]{W. Chen, F. Zhu, J. Zhao,
+  S. Li, G. Wang}
 
 %\author[D. Fellner \& S. Behnke]
 %       {D.\,W. Fellner\thanks{Chairman Eurographics Publications Board}$^{1,2}$
@@ -36,7 +37,7 @@
 \begin{document}
 
 \teaser{
- \includegraphics[width=\linewidth]{./figs/demo_impact.png}
+ \includegraphics[width=\linewidth]{../figs/demo_impact.png}
  \centering
   \caption{ A sphere shoots through walls made of different materials, causing varied fracture behaviors. From left to right: isotropic brittle fracture, anisotropic brittle fracture, isotropic ductile fracture, anisotropic ductile fracture.}
 \label{fig:1}
@@ -76,6 +77,14 @@ In contrast to mesh-based approaches, meshless methods are generally considered 
 %-------------------------------------------------------------------------
 \section{Background}\label{section:3}
 
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=0.7\linewidth, bb=0 0 440 355]{../figs/peridynamics_circle.png}
+  \caption{\label{fig:2}
+  Illustration of peridynamics discretization. A continuum is represented as particles (pink dots), and any particle (green dot) interacts with the particles within its horizon (green circle).
+}
+\end{figure}
 The peridynamics theory models a continuum with particles, where any particle $\mathbf{x}$ interacts with other particles within a distance $\delta$. The distance $\delta$ is called the \textbf{horizon} of $\mathbf{x}$, and the particles within the horizon are referred as its \textbf{family}, $H_\mathbf{x}$. See Figure~\ref{fig:2} for an illustration of the peridynamics discretization. It seems analogous to other meshless methods based on classical theory \cite{Muller:2003:PFS:846276.846298,Muller:2004:PBA:1028523.1028542}, and the difference lies in the scale of interaction radius $\delta$. In the case of the classical (local) continuum model, the state of a particle is influenced by only particles in its immediate vicinity. For case of the peridynamics theory, however, the state of a particle is influenced by particles within a region of finite radius. The peridynamics theory is thus referred as a nonlocal theory. As the radius becomes infinitely large, the peridynamics theory becomes the continuous version of the molecular dynamics model. As the radius becomes smaller, it becomes the continuum mechanics model. Therefore, the peridynamics model establishes a connection between the continuum mechanics and molecular dynamics models.
 
 Our motivation for choosing peridynamics is that it is more favorable to handle material discontinuities, such as cracks.
@@ -89,15 +98,6 @@ In peridynamics, the governing equation at any point $\mathbf{x}$ is \nobreak{fo
 \label{eq:1}
 \end{equation}
 where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, $V_\mathbf{x}$ is the volume of $\mathbf{x}$, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density exerted by $\mathbf{x'}$ on $\mathbf{x}$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
-
-\begin{figure}[t]
-  \centering
-  %\mbox{} \hfill
-  \includegraphics[width=0.7\linewidth, bb=0 0 440 355]{./figs/peridynamics_circle.png}
-  \caption{\label{fig:2}
-  Illustration of peridynamics discretization. A continuum is represented as particles (pink dots), and any particle (green dot) interacts with the particles within its horizon (green circle).
-}
-\end{figure}
 
 %-------------------------------------------------------------------------
 \section{Elastoplastic Model}
@@ -155,7 +155,7 @@ where $\kappa$ and $\mu$ denote the bulk modulus and the shear modulus respectiv
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_pull_armadillo.png}
+  \includegraphics[width=\linewidth]{../figs/demo_pull_armadillo.png}
   \caption{\label{fig:3}
   An armadillo is initially anchored on its back and four limbs, and it deforms elastically when its back is released.
 }
@@ -204,7 +204,7 @@ Figure~\ref{fig:4} shows a comparison of the simulation results using our elasto
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_impact_upside.png}
+  \includegraphics[width=\linewidth]{../figs/demo_impact_upside.png}
   \caption{\label{fig:4}
   Comparison of elastic and plastic deformations by shooting a sphere at two walls made of different materials with identical initial configuration as in (a). The elastic wall deforms on impact (b), and recovers afterwards (c). The plastic wall undergos permanent deformation (e) after the impact (d).
 }
@@ -222,7 +222,7 @@ Appealing anisotropic effects could be generated with our anisotropy model. See 
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth, bb=0 0 1400 700]{./figs/demo_impact_color_map.png}
+  \includegraphics[width=\linewidth, bb=0 0 1400 700]{../figs/demo_impact_color_map.png}
   \caption{\label{fig:5}
   Comparison of crack patterns generated by isotropic (left) and anisotropic (right) brittle fracture. The color represents the damage of particles, with blue as no damage and red as complete damage.
 }
@@ -286,7 +286,7 @@ The contribution of  initial discretization cancels out, and the criterion is ab
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_jello.png}
+  \includegraphics[width=\linewidth]{../figs/demo_jello.png}
   \caption{\label{fig:6}
   Shooting a bullet through a jello, producing complex crack surfaces.
 }
@@ -323,7 +323,7 @@ We present the results produced with our method in this section. All our example
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/compare_different_poisson_ratio.png}
+  \includegraphics[width=\linewidth]{../figs/compare_different_poisson_ratio.png}
   \caption{\label{fig:7}
   Simulation of stretching beams with different Poisson ratios.
 }
@@ -331,7 +331,7 @@ We present the results produced with our method in this section. All our example
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_impact_upside_plastic_fracture.png}
+  \includegraphics[width=\linewidth]{../figs/demo_impact_upside_plastic_fracture.png}
   \caption{\label{fig:8}
   Simulation of ductile fracture with different amount maximum plasticity. From left to right the parameter $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ is 0.1,0.15, and 0.2.
 }
@@ -339,7 +339,7 @@ We present the results produced with our method in this section. All our example
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_strip_vs_fem.png}
+  \includegraphics[width=\linewidth]{../figs/demo_strip_vs_fem.png}
   \caption{\label{fig:9}
   Simulation of bending beams with different stiffness (top:soft;bottom:stiff) using our method and FEM. The results of our method are indistinguishable from the results produced by FEM.
 }
@@ -379,7 +379,7 @@ In Table~1 we list the detailed parameter settings and the performance data for 
 \begin{figure*}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_tear_armadillo.png}
+  \includegraphics[width=\linewidth]{../figs/demo_tear_armadillo.png}
   \caption{\label{fig:10}
   An armadillo is stretched until its limbs tear off.
 }
@@ -388,7 +388,7 @@ In Table~1 we list the detailed parameter settings and the performance data for 
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_tear_armadillo_close_view.png}
+  \includegraphics[width=\linewidth]{../figs/demo_tear_armadillo_close_view.png}
   \caption{\label{fig:11}
   A close view of the progressive fracture of the armadillo's legs.
 }
@@ -396,7 +396,7 @@ In Table~1 we list the detailed parameter settings and the performance data for 
 \begin{figure*}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{./figs/demo_fall_bunny.png}
+  \includegraphics[width=\linewidth]{../figs/demo_fall_bunny.png}
   \caption{\label{fig:12}
   An elastic bunny falls to the ground and shatters into pieces. Note the secondary fracture of the fragments.
 }

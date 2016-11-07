@@ -86,10 +86,10 @@ As we know, spatial derivatives are not well defined at discontinuities. Therefo
 
 In peridynamics, the governing equation at any point $\mathbf{x}$ is \nobreak{formulated} as below:
 \begin{equation}
-\rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}}+\mathbf{b}(\mathbf{x}),
+\rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}'}+\mathbf{b}(\mathbf{x}),
 \label{eq:1}
 \end{equation}
-where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, $V_\mathbf{x}$ is the volume of $\mathbf{x}$, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density exerted by $\mathbf{x'}$ on $\mathbf{x}$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
+where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, $V_\mathbf{x}'$ is the volume of $\mathbf{x}'$, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density exerted by $\mathbf{x'}$ on $\mathbf{x}$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
 
 \begin{figure}[t]
   \centering
@@ -112,11 +112,11 @@ As is discussed in Section~\ref{section:3}, the key to peridynamics-based consti
 \mathbf{T}_i<\mathbf{x}_j-\mathbf{x}_i> = \frac{1}{2}A\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|},
 \label{eq:2}
 \end{equation}
-where $\mathbf{x}$ and $\mathbf{y}$ denote the positions of particles before and after deformation respectively. The direction of the force density is along the deformed bond between the particles given by $\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}$. $A$ is a scalar that represents the force magnitude, and it is composed of two terms by addition $A = A_{dilation} + A_{deviatoric}$, namely the dilation term $A_{dilation}$ and the deviatoric term $A_{deviatoric}$.
+where $\mathbf{x}$ and $\mathbf{y}$ denote the positions of particles before and after deformation respectively. The direction of the force density is along the deformed bond between the particles given by $\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}$. $A$ is a scalar that represents the force magnitude, and it is composed of two terms by addition $A = A_{dil} + A_{dev}$, namely the dilatation term $A_{dil}$ and the deviatoric term $A_{dev}$.
 
-The dilation term $A_{dilation}$ is due to the dilation part of \nobreak{deformation}, i.e., volume change without any shape distortion. It is defined as:
+The dilatation term $A_{dil}$ is due to the dilatation part of \nobreak{deformation}, i.e., volume change without any shape distortion. It is defined as:
 \begin{equation}
-A_{dilation}=4\omega_{ij}a\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i,
+A_{dil}=4\omega_{ij}a\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i,
 \label{eq:3}
 \end{equation}
 where $a$ is a peridynamics material parameter and $\omega_{ij}$ is the weight function between particle $i$ and particle $j$. For isotropic materials $\omega_{ij}$ is monotonically decreasing with respect to the distance between particles:
@@ -124,7 +124,7 @@ where $a$ is a peridynamics material parameter and $\omega_{ij}$ is the weight f
 \omega_{ij} = \frac{\delta}{|\mathbf{x}_j-\mathbf{x}_i|}.
 \label{eq:4}
 \end{equation}
-Note that $\omega_{ij}$ is defined in the material space, therefore can be precomputed. The term $\theta_i$ measures the dilation at particle $i$, which is defined with respect to the stretch of all bonds between particle $i$ and its family:
+Note that $\omega_{ij}$ is defined in the material space, therefore can be precomputed. The term $\theta_i$ measures the dilatation at particle $i$, which is defined with respect to the stretch of all bonds between particle $i$ and its family:
 \begin{equation}
 \theta_i = \frac{9}{4\pi\delta^4}\sum_{k=1}^N\omega_{ik}s_{ik}\frac{\mathbf{y}_k-\mathbf{y}_i}{|\mathbf{y}_k-\mathbf{y}_i|}\cdot(\mathbf{x}_k-\mathbf{x}_i)V_k,
 \label{eq:5}
@@ -135,9 +135,9 @@ s_{ik}=\frac{|\mathbf{y}_k-\mathbf{y}_i|}{|\mathbf{x}_k-\mathbf{x}_i|} -1.
 \label{eq:6}
 \end{equation}
 
-The deviatoric term $A_{deviatoric}$ is a result of distortion that does not cause change in volume. It is defined with respect to the deviatoric component of bond extension:
+The deviatoric term $A_{dev}$ is a result of distortion that does not cause change in volume. It is defined with respect to the deviatoric component of bond extension:
 \begin{equation}
-A_{deviatoric}=4\omega_{ij}b(e_{ij}-\frac{\delta}{4}\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i),
+A_{dev}=4\omega_{ij}b(e_{ij}-\frac{\delta}{4}\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i),
 \label{eq:7}
 \end{equation}
 where $b$ is a material parameter. We denote $e_{ij} = |\mathbf{y}_j-\mathbf{y}_i|-|\mathbf{x}_j-\mathbf{x}_i|$ as the extension of the bond between particle $i$ and particle $j$. The term in brackets of Equation~\ref{eq:7} is the deviatoric component of bond extension $e_{ij}^d$:
@@ -145,9 +145,9 @@ where $b$ is a material parameter. We denote $e_{ij} = |\mathbf{y}_j-\mathbf{y}_
 e_{ij}^d = e_{ij}-\frac{\delta}{4}\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i.
 \label{eq:8}
 \end{equation}
-Intuitively, $e_{ij}^d$ is constructed by removing the dilation component of bond extension from the total bond extension $e_{ij}$.
+Intuitively, $e_{ij}^d$ is constructed by removing the dilatation component of bond extension from the total bond extension $e_{ij}$.
 
-In summary, the behavior of our isotropic elastic model is controlled by two material parameters $a$ and $b$. The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the book\cite{madenci2014peridynamic} for elaborated derivation. Here we directly provide the conversion between the material parameters in this model and those from continuum mechanics:
+In summary, the behavior of our isotropic elastic model is controlled by two material parameters $a$ and $b$. The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the supplementary document for elaborated derivation. Here we directly provide the conversion between the material parameters in this model and those from continuum mechanics:
 \begin{equation}
 a = \frac{9\kappa}{8\pi\delta^4} \qquad b = \frac{15\mu}{2\pi\delta^5},
 \label{eq:9}
@@ -173,26 +173,26 @@ e_{ij}^d = e_{ij}^e+e_{ij}^p,
 \end{equation}
 where $e_{ij}^e$ and $e_{ij}^p$ are the elastic and plastic part of the total deviatoric bond extension respectively. To incorporate plasticity into the constitutive model,  the deviatoric part of internal force density (see Equation~\ref{eq:7}) is now redefined as below:
 \begin{equation}
-A_{deviatoric} = 4\omega_{ij}b(e_{ij}^d-e_{ij}^p),
+A_{dev} = 4\omega_{ij}b(e_{ij}^d-e_{ij}^p),
 \label{eq:11}
 \end{equation}
 with the contribution of plastic deviatoric bond extension removed from force computation. In case of elastic deformations, the term $e_{ij}^p$ vanishes and Equation~\ref{eq:11} conforms to Equation~\ref{eq:7}.
 
-A simple yield function $f(A_{deviatoric})$ is used to determine whether deformation has entered the plasticity regime:
+A simple yield function $f(A_{dev})$ is used to determine whether deformation has entered the plasticity regime:
 \begin{equation}
-f(A_{deviatoric}) = \frac{(A_{deviatoric})^2}{2}-\Psi_0,
+f(A_{dev}) = \frac{(A_{dev})^2}{2}-\Psi_0,
 \label{eq:12}
 \end{equation}
-where $\Psi_0$ is a critical parameter. The deformation is elastic if $f(A_{deviatoric})\leq 0$, and plasticity is present if  $f(A_{deviatoric}) > 0$.
+where $\Psi_0$ is a critical parameter. The deformation is elastic if $f(A_{dev})\leq 0$, and plasticity is present if  $f(A_{dev}) > 0$.
 
-In case of plastic deformations, we project $A_{deviatoric}$ onto the yield surface to obtain a critical value of deviatoric force density $A_{deviatoric}^c$:
+In case of plastic deformations, we project $A_{dev}$ onto the yield surface to obtain a critical value of deviatoric force density $A_{dev}^c$:
 \begin{equation}
-A_{deviatoric}^c=\sqrt{2\Psi_0}\mathrm{sign}(A_{deviatoric}),
+A_{dev}^c=\sqrt{2\Psi_0}\mathrm{sign}(A_{dev}),
 \label{eq:13}
 \end{equation}
-where $\mathrm{sign}(\cdot)$ is the sign function. $A_{deviatoric}^c$ is used to compute the increment of plastic deviatoric bond extension:
+where $\mathrm{sign}(\cdot)$ is the sign function. $A_{dev}^c$ is used to compute the increment of plastic deviatoric bond extension:
 \begin{equation}
-\triangle e_n^p = \frac{1}{2b}(A_{deviatoric}-A_{deviatoric}^c)
+\triangle e_n^p = \frac{1}{2b}(A_{dev}-A_{dev}^c)
 \label{eq:14}
 \end{equation}
 \begin{equation}
@@ -334,7 +334,7 @@ We present the results produced with our method in this section. All our example
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/demo_impact_upside_plastic_fracture.png}
   \caption{\label{fig:8}
-  Simulation of ductile fracture with different amount maximum plasticity. From left to right the parameter $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ is 0.1,0.15, and 0.2.
+  Simulation of ductile fracture with different amount of maximum plasticity. From left to right the parameter $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ is 0.1,0.15, and 0.2.
 }
 \end{figure}
 \begin{figure}[t]
