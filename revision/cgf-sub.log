@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.14)  8 NOV 2016 17:30
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.10)  9 NOV 2016 00:22
 entering extended mode
-**C:/Users/fei/code/fei_personal/PGPaper/revision/cgf-sub.tex
-(C:/Users/fei/code/fei_personal/PGPaper/revision/cgf-sub.tex
+**D:/fei/code/PGPaper/revision/cgf-sub.tex
+(D:/fei/code/PGPaper/revision/cgf-sub.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(C:\Users\fei\code\fei_personal\PGPaper\revision\egpubl.cls
+(D:\fei\code\PGPaper\revision\egpubl.cls
 Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 \c@table=\count79
 \c@figure=\count80
@@ -24,7 +24,7 @@ Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(C:\Users\fei\code\fei_personal\PGPaper\revision\cgf-sub.lbl))
+(D:\fei\code\PGPaper\revision\cgf-sub.lbl))
 (C:\CTEX\MiKTeX\tex\latex\caption\caption.sty
 Package: caption 2011/11/10 v3.2e Customizing captions (AR)
 
@@ -355,7 +355,7 @@ File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
 (C:\CTEX\MiKTeX\tex\latex\base\t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
-(C:\Users\fei\code\fei_personal\PGPaper\revision\dfadobe.sty
+(D:\fei\code\PGPaper\revision\dfadobe.sty
 Package: dfadobe 2000/03/05 v1.4 T1-encoded Times (except symbols), Courier, He
 lvetica (at 90\%) + math package
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
@@ -382,17 +382,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 20.
 
-(C:\Users\fei\code\fei_personal\PGPaper\revision\dfT1ptm.fd
+(D:\fei\code\PGPaper\revision\dfT1ptm.fd
 File: dfT1ptm.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/ptm.
 )
-(C:\Users\fei\code\fei_personal\PGPaper\revision\dfT1phv.fd
+(D:\fei\code\PGPaper\revision\dfT1phv.fd
 File: dfT1phv.fd 1997/12/02 Fontinst v1.6 font definitions for T1/phv scaled to
  90\%.
 )
-(C:\Users\fei\code\fei_personal\PGPaper\revision\dfT1pcr.fd
+(D:\fei\code\PGPaper\revision\dfT1pcr.fd
 File: dfT1pcr.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/pcr.
 ))
-(C:\Users\fei\code\fei_personal\PGPaper\revision\egweblnk.sty
+(D:\fei\code\PGPaper\revision\egweblnk.sty
 Package: egweblnk 2004/10/29 v2.2 DF's support for http web links in class egpu
 bl
 )
@@ -401,8 +401,8 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-(C:\Users\fei\code\fei_personal\PGPaper\revision\cgf-body-sub.tex
-(C:\Users\fei\code\fei_personal\PGPaper\revision\cgf-sub.aux)
+(D:\fei\code\PGPaper\revision\cgf-body-sub.tex
+(D:\fei\code\PGPaper\revision\cgf-sub.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
@@ -509,7 +509,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
- <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_impact.png>] [2]
+ <D:/fei/code/PGPaper/figs/demo_impact.png>] [2]
 
 Package pdftex.def Warning: Option `bb' does not make sense,
 (pdftex.def)                using `viewport' instead on input line 83.
@@ -527,7 +527,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
- [3 <C:/Users/fei/code/fei_personal/PGPaper/figs/peridynamics_circle.png>]
+ [3 <D:/fei/code/PGPaper/figs/peridynamics_circle.png>]
 <../figs/demo_pull_armadillo.png, id=166, 1269.24188pt x 412.54124pt>
 File: ../figs/demo_pull_armadillo.png Graphic file (type png)
 
@@ -543,95 +543,96 @@ File: ../figs/demo_impact_upside.png Graphic file (type png)
 Package pdftex.def Info: ../figs/demo_impact_upside.png used on input line 169.
 
 (pdftex.def)             Requested size: 216.0pt x 144.86862pt.
- [4 <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_pull_armadillo.png>]
+ [4 <D:/fei/code/PGPaper/figs/demo_pull_armadillo.png>]
 <../figs/demo_impact_upside_plastic_fracture.png, id=197, 941.76843pt x 313.17p
 t>
 File: ../figs/demo_impact_upside_plastic_fracture.png Graphic file (type png)
  <use ../figs/demo_impact_upside_plastic_fracture.png>
 Package pdftex.def Info: ../figs/demo_impact_upside_plastic_fracture.png used o
-n input line 224.
+n input line 222.
 (pdftex.def)             Requested size: 216.0pt x 71.82687pt.
 
-Underfull \hbox (badness 1365) in paragraph at lines 227--227
+Underfull \hbox (badness 1365) in paragraph at lines 225--225
 \T1/ptm/m/n/9 amoun-t of max-i-mum plas-tic-i-ty. From left to right the
  []
 
 
 Package pdftex.def Warning: Option `bb' does not make sense,
-(pdftex.def)                using `viewport' instead on input line 232.
+(pdftex.def)                using `viewport' instead on input line 230.
 
 <../figs/demo_impact_color_map.png, id=198, 1405.50093pt x 697.10437pt>
 File: ../figs/demo_impact_color_map.png Graphic file (type png)
 
 <use ../figs/demo_impact_color_map.png>
 Package pdftex.def Info: ../figs/demo_impact_color_map.png used on input line 2
-32.
+30.
 (pdftex.def)             Requested size: 216.0pt x 107.9947pt.
 
-Underfull \hbox (badness 1097) in paragraph at lines 235--235
+Underfull \hbox (badness 1097) in paragraph at lines 233--233
 []\T1/ptm/m/n/9 Figure 6: |[] Com-par-i-son of crack pat-tern-s gen-er-at-ed by
 
  []
 
-[5 <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_impact_upside.png> <C:/Use
-rs/fei/code/fei_personal/PGPaper/figs/demo_impact_upside_plastic_fracture.png>]
+[5 <D:/fei/code/PGPaper/figs/demo_impact_upside.png> <D:/fei/code/PGPaper/figs/
+demo_impact_upside_plastic_fracture.png>]
 <../figs/demo_jello.png, id=217, 654.19406pt x 864.98157pt>
 File: ../figs/demo_jello.png Graphic file (type png)
 
 <use ../figs/demo_jello.png>
-Package pdftex.def Info: ../figs/demo_jello.png used on input line 295.
+Package pdftex.def Info: ../figs/demo_jello.png used on input line 293.
 (pdftex.def)             Requested size: 216.0pt x 285.58998pt.
- [6 <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_impact_color_map.png> <C:
-/Users/fei/code/fei_personal/PGPaper/figs/demo_jello.png>]
+ [6 <D:/fei/code/PGPaper/figs/demo_impact_color_map.png> <D:/fei/code/PGPaper/f
+igs/demo_jello.png>]
 <../figs/compare_different_poisson_ratio.png, id=243, 654.19406pt x 469.755pt>
 File: ../figs/compare_different_poisson_ratio.png Graphic file (type png)
 
 <use ../figs/compare_different_poisson_ratio.png>
 Package pdftex.def Info: ../figs/compare_different_poisson_ratio.png used on in
-put line 333.
+put line 331.
 (pdftex.def)             Requested size: 216.0pt x 155.09848pt.
 
 <../figs/demo_strip_vs_fem.png, id=244, 970.3753pt x 882.29625pt>
 File: ../figs/demo_strip_vs_fem.png Graphic file (type png)
 
 <use ../figs/demo_strip_vs_fem.png>
-Package pdftex.def Info: ../figs/demo_strip_vs_fem.png used on input line 341.
+Package pdftex.def Info: ../figs/demo_strip_vs_fem.png used on input line 339.
 (pdftex.def)             Requested size: 216.0pt x 196.39444pt.
 
-<../figs/revision/demo_bar_oscillate_vs_fem.png, id=245, 591.71063pt x 587.1937
-6pt>
-File: ../figs/revision/demo_bar_oscillate_vs_fem.png Graphic file (type png)
- <use ../figs/revision/demo_bar_oscillate_vs_fem.png>
-Package pdftex.def Info: ../figs/revision/demo_bar_oscillate_vs_fem.png used on
- input line 349.
-(pdftex.def)             Requested size: 216.0pt x 214.34633pt.
+<../figs/revision/demo_bar_oscillate_vs_fem_2.png, id=245, 749.80125pt x 295.85
+532pt>
+File: ../figs/revision/demo_bar_oscillate_vs_fem_2.png Graphic file (type png)
+ <use ../figs/revision/demo_bar_oscillate_vs_fem_2.png>
+Package pdftex.def Info: ../figs/revision/demo_bar_oscillate_vs_fem_2.png used 
+on input line 347.
+(pdftex.def)             Requested size: 216.0pt x 85.22702pt.
 
-<../figs/revision/demo_bar_twist_vs_fem.png, id=246, 924.45375pt x 270.25969pt>
+<../figs/revision/demo_bar_twist_vs_fem.png, id=246, 711.4078pt x 270.25969pt>
 File: ../figs/revision/demo_bar_twist_vs_fem.png Graphic file (type png)
+
 <use ../figs/revision/demo_bar_twist_vs_fem.png>
 Package pdftex.def Info: ../figs/revision/demo_bar_twist_vs_fem.png used on inp
-ut line 357.
-(pdftex.def)             Requested size: 216.0pt x 63.14401pt.
+ut line 355.
+(pdftex.def)             Requested size: 216.0pt x 82.05586pt.
 
-<../figs/revision/demo_armadillo_vs_fem_2.png, id=247, 938.75719pt x 327.47343p
-t>
+<../figs/revision/demo_armadillo_vs_fem_2.png, id=247, 825.0825pt x 327.47343pt
+>
 File: ../figs/revision/demo_armadillo_vs_fem_2.png Graphic file (type png)
  <use ../figs/revision/demo_armadillo_vs_fem_2.png>
 Package pdftex.def Info: ../figs/revision/demo_armadillo_vs_fem_2.png used on i
-nput line 365.
-(pdftex.def)             Requested size: 216.0pt x 75.34727pt.
+nput line 363.
+(pdftex.def)             Requested size: 216.0pt x 85.72571pt.
 
-Underfull \hbox (badness 1412) in paragraph at lines 368--368
+Underfull \hbox (badness 1412) in paragraph at lines 366--366
 []\T1/ptm/m/n/9 Figure 12: |[] Sim-u-la-tion of non-cyclic vi-bra-tions for an
  []
 
-[7 <C:/Users/fei/code/fei_personal/PGPaper/figs/compare_different_poisson_ratio
-.png> <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_strip_vs_fem.png>]
+[7 <D:/fei/code/PGPaper/figs/compare_different_poisson_ratio.png> <D:/fei/code/
+PGPaper/figs/demo_strip_vs_fem.png>]
 <../figs/demo_tear_armadillo.png, id=292, 1906.12125pt x 497.60907pt>
 File: ../figs/demo_tear_armadillo.png Graphic file (type png)
 
 <use ../figs/demo_tear_armadillo.png>
-Package pdftex.def Info: ../figs/demo_tear_armadillo.png used on input line 407
+Package pdftex.def Info: ../figs/demo_tear_armadillo.png used on input line 405
 .
 (pdftex.def)             Requested size: 456.0pt x 119.04137pt.
 
@@ -640,21 +641,21 @@ File: ../figs/revision/demo_brittle_fall.png Graphic file (type png)
 
 <use ../figs/revision/demo_brittle_fall.png>
 Package pdftex.def Info: ../figs/revision/demo_brittle_fall.png used on input l
-ine 423.
+ine 421.
 (pdftex.def)             Requested size: 456.0pt x 130.12166pt.
 
 <../figs/demo_fall_bunny.png, id=295, 2196.70688pt x 579.66562pt>
 File: ../figs/demo_fall_bunny.png Graphic file (type png)
 
 <use ../figs/demo_fall_bunny.png>
-Package pdftex.def Info: ../figs/demo_fall_bunny.png used on input line 431.
+Package pdftex.def Info: ../figs/demo_fall_bunny.png used on input line 429.
 (pdftex.def)             Requested size: 456.0pt x 120.32701pt.
 
 <../figs/revision/demo_tear_thin_sheet.png, id=296, 654.19406pt x 1056.94875pt>
 File: ../figs/revision/demo_tear_thin_sheet.png Graphic file (type png)
 <use ../figs/revision/demo_tear_thin_sheet.png>
 Package pdftex.def Info: ../figs/revision/demo_tear_thin_sheet.png used on inpu
-t line 439.
+t line 437.
 (pdftex.def)             Requested size: 216.0pt x 348.97157pt.
 
 <../figs/demo_tear_armadillo_close_view.png, id=297, 770.88pt x 1035.87pt>
@@ -662,14 +663,11 @@ File: ../figs/demo_tear_armadillo_close_view.png Graphic file (type png)
 
 <use ../figs/demo_tear_armadillo_close_view.png>
 Package pdftex.def Info: ../figs/demo_tear_armadillo_close_view.png used on inp
-ut line 447.
+ut line 445.
 (pdftex.def)             Requested size: 216.0pt x 290.2471pt.
- [8 <C:/Users/fei/code/fei_personal/PGPaper/figs/revision/demo_bar_oscillate_vs
-_fem.png> <C:/Users/fei/code/fei_personal/PGPaper/figs/revision/demo_bar_twist_
-vs_fem.png> <C:/Users/fei/code/fei_personal/PGPaper/figs/revision/demo_armadill
-o_vs_fem_2.png>]
-(C:\Users\fei\code\fei_personal\PGPaper\revision\cgf-sub.bbl
-(C:\Users\fei\code\fei_personal\PGPaper\revision\cgf-sub.brf)
+
+(D:\fei\code\PGPaper\revision\cgf-sub.bbl
+(D:\fei\code\PGPaper\revision\cgf-sub.brf)
 \tf@brf=\write3
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
@@ -681,7 +679,9 @@ Underfull \hbox (badness 1303) in paragraph at lines 9--9
 l-ti-scale
  []
 
-
+[8 <D:/fei/code/PGPaper/figs/revision/demo_bar_oscillate_vs_fem_2.png> <D:/fei/
+code/PGPaper/figs/revision/demo_bar_twist_vs_fem.png> <D:/fei/code/PGPaper/figs
+/revision/demo_armadillo_vs_fem_2.png>]
 Underfull \hbox (badness 1496) in paragraph at lines 28--28
 []\T1/ptm/m/sc/8 Bao Z., Hong J.-M., Ter-an J., Fed-ki-w R.\T1/ptm/m/n/8 :
  []
@@ -697,7 +697,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 63--63
 \T1/ptm/m/it/8 of the 12th ACM SIG-GRAPH/Eurographics Sym-po-sium on
  []
 
-[9 <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_tear_armadillo.png>]
+
 Underfull \hbox (badness 3758) in paragraph at lines 83--83
 []\T1/ptm/m/sc/8 Levine J. A., Bargteil A. W., Cor-si C.,
  []
@@ -724,7 +724,7 @@ Underfull \hbox (badness 1354) in paragraph at lines 88--88
 []\T1/ptm/m/sc/8 Liu N., He X., Li S., Wang G.\T1/ptm/m/n/8 :  Mesh-less
  []
 
-
+[9 <D:/fei/code/PGPaper/figs/demo_tear_armadillo.png>]
 Underfull \hbox (badness 3758) in paragraph at lines 95--95
 \T1/ptm/m/n/8 k-er-nel-s for mesh-less e-las-tic solid-s.  In \T1/ptm/m/it/8 Pr
 o-ceed-ings of
@@ -752,8 +752,7 @@ Underfull \hbox (badness 3049) in paragraph at lines 153--153
 []\T1/ptm/m/sc/8 Mazarak O., Mar-tin-s C., A-ma-natides J.\T1/ptm/m/n/8 :
  []
 
-[10 <C:/Users/fei/code/fei_personal/PGPaper/figs/revision/demo_brittle_fall.png
-> <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_fall_bunny.png>]
+
 Underfull \hbox (badness 1270) in paragraph at lines 172--172
 \T1/ptm/m/n/8 and frac-ture.  In \T1/ptm/m/it/8 Pro-ceed-ings of the 1999 Con-f
 er-ence on
@@ -764,7 +763,8 @@ Underfull \hbox (badness 1389) in paragraph at lines 177--177
 []\T1/ptm/m/sc/8 Norton A., Turk G., Ba-con B., Gerth J.,
  []
 
-
+[10 <D:/fei/code/PGPaper/figs/revision/demo_brittle_fall.png> <D:/fei/code/PGPa
+per/figs/demo_fall_bunny.png>]
 Underfull \hbox (badness 1681) in paragraph at lines 189--189
 \T1/ptm/m/n/8 and an-i-ma-tion of brit-tle frac-ture.  In \T1/ptm/m/it/8 Pro-ce
 ed-ings of the
@@ -781,9 +781,7 @@ Underfull \hbox (badness 1365) in paragraph at lines 200--200
 , ACM,
  []
 
-[11 <C:/Users/fei/code/fei_personal/PGPaper/figs/revision/demo_tear_thin_sheet.
-png> <C:/Users/fei/code/fei_personal/PGPaper/figs/demo_tear_armadillo_close_vie
-w.png>]
+
 Underfull \hbox (badness 1158) in paragraph at lines 247--247
 []\T1/ptm/m/sc/8 Silling S.\T1/ptm/m/n/8 :  Re-for-mu-la-tion of e-las-tic-i-ty
  the-o-ry for
@@ -799,7 +797,8 @@ Underfull \hbox (badness 1442) in paragraph at lines 254--254
 \T1/ptm/m/it/8 Pro-ceed-ings of the 18th Meet-ing of the ACM SIG-GRAPH
  []
 
-
+[11 <D:/fei/code/PGPaper/figs/revision/demo_tear_thin_sheet.png> <D:/fei/code/P
+GPaper/figs/demo_tear_armadillo_close_view.png>]
 Underfull \hbox (badness 3019) in paragraph at lines 259--259
 []\T1/ptm/m/sc/8 Steinemann D., O-taduy M. A., Gross M.\T1/ptm/m/n/8 :
  []
@@ -843,25 +842,25 @@ Underfull \hbox (badness 1152) in paragraph at lines 315--315
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 461.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 459.
  [12
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 461.
- (C:\Users\fei\code\fei_personal\PGPaper\revision\cgf-sub.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 461.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 461.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 459.
+ (D:\fei\code\PGPaper\revision\cgf-sub.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 459.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 459.
 Package rerunfilecheck Info: File `cgf-sub.brf' has not changed.
 (rerunfilecheck)             Checksum: BCEC64502BE4DDBDFF31C9CA63F15209;4325.
  ) ) 
 Here is how much of TeX's memory you used:
  8393 strings out of 495354
- 128932 string characters out of 3183858
- 241871 words of memory out of 3000000
+ 128429 string characters out of 3183858
+ 242863 words of memory out of 3000000
  11257 multiletter control sequences out of 15000+200000
  67063 words of font info for 100 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,13n,38p,3030b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,13n,38p,3011b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmex
 tra/cmex9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTE
@@ -873,7 +872,7 @@ ic/amsfonts/cm/cmsy9.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:
 /CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/ti
 mes/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on cgf-sub.pdf (12 pages, 5038881 bytes).
+Output written on cgf-sub.pdf (12 pages, 5025905 bytes).
 PDF statistics:
  469 PDF objects out of 1000 (max. 8388607)
  114 named destinations out of 1000 (max. 500000)

@@ -206,9 +206,7 @@ where $\mathrm{sign}(\cdot)$ is the sign function. $A_{dev}^c$ is used to comput
 e_{n+1}^p = (e_n^p+\triangle e_n^p)\mathrm{min}\big(1,\frac{\gamma}{|e_n^p+\triangle e_n^p|}\big).
 \label{eq:15}
 \end{equation}
-The subscripts $n$ and $n+1$ denote the discretized point of time at which the bond extensions and corresponding increments are evaluated. The parameter $\gamma$ which does not appear in the original model of Mitchell's \cite{mitchell2011nonlocal} is used to enforce a limit on the amount of plasticity. We found in experiments that with this parameter we obtain more control over the plastic behaviors and the stability of simulation is improved as well.
-
-Figure~\ref{fig:4} shows a comparison of the simulation results using our elastoplastic constitutive model. Our elastic model produces correct elastic behaviors, and permanent deformation is captured when plasticity is involved. In Figure~\ref{fig:5}, different amount of maximum plasticity is enforced and the results show that our model allows flexible control of the plastic deformation behaviors.
+The subscripts $n$ and $n+1$ denote the discretized point of time at which the bond extensions and corresponding increments are evaluated. The parameter $\gamma$ which does not appear in the original model of Mitchell's \cite{mitchell2011nonlocal} is used to enforce a limit on the amount of plasticity. We found in experiments that with this parameter we obtain more control over the plastic behaviors (see Figure~\ref{fig:5}) and the stability of simulation is improved as well. Figure~\ref{fig:4} shows a comparison of the simulation results using our elastoplastic constitutive model. Our elastic model produces correct elastic behaviors, and permanent deformation is captured when plasticity is involved.
 \subsection{Anisotropy}
 
 Our constitutive model is isotropic up to now, and we extend it to anisotropy in this section. We model anisotropy by manipulating the weight functions between particles (see Equation~\ref{eq:4}) with direction information. The key idea is to associate an anisotropy matrix $\mathbf{G}$ with each particle, so that applying the transformation to the bond between particles biases the influence weight toward preferred directions. The weight function $\omega_{ij}$ for anisotropic materials is computed as below:
@@ -348,7 +346,7 @@ The deformations of a bending beam in Figure~\ref{fig:9} produced with our metho
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/revision/demo_bar_oscillate_vs_fem_2.png}
   \caption{\label{fig:10}
-  Simulation of a swinging bar using linear FEM (top left), corotated linear FEM (top right), and our method (bottom left). Our method is accurate as the corotated linear FEM (bottom right).
+  Simulation of a swinging bar using linear FEM (left), corotated linear FEM (middle left), and our method (middle right). Our method is accurate as the corotated linear FEM (right).
 }
 \end{figure}
 \begin{figure}[t]
