@@ -94,10 +94,10 @@ As we know, spatial derivatives are not well defined at discontinuities. Therefo
 
 In peridynamics, the governing equation at any point $\mathbf{x}$ is \nobreak{formulated} as below:
 \begin{equation}
-\rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}}+\mathbf{b}(\mathbf{x}),
+\rho\ddot{\mathbf{u}}(\mathbf{x}) = \int_{H_\mathbf{x}}[\mathbf{T}<\mathbf{x}'-\mathbf{x}> - \mathbf{T}<\mathbf{x}-\mathbf{x}'>]dV_{\mathbf{x}'}+\mathbf{b}(\mathbf{x}),
 \label{eq:1}
 \end{equation}
-where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, $V_\mathbf{x}$ is the volume of $\mathbf{x}$, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density exerted by $\mathbf{x'}$ on $\mathbf{x}$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
+where $\rho$ is the mass density, $\mathbf{u}$ denotes the displacement, $\mathbf{b}$ is the external loads due to gravity and impact forces, $V_\mathbf{x}'$ is the volume of $\mathbf{x}'$, and $\mathbf{x}'$ is one material point that belongs to the family $H_{\mathbf{x}}$ of $\mathbf{x}$. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ are two essential terms in which the constitutive laws of materials are encoded. $\mathbf{T}<\mathbf{x}'-\mathbf{x}>$ represents the internal force density exerted by $\mathbf{x'}$ on $\mathbf{x}$, and $\mathbf{T}<\mathbf{x}-\mathbf{x}'>$ is the other way around. The two terms both appear in the governing equation to enforce the Newton's third law, and similar strategy was employed in SPH methods\cite{Muller:2003:PFS:846276.846298}. The angle brackets representation $<\cdot>$ was defined by Silling et al. \cite{silling2007peridynamic} as a function inside the family $H_\mathbf{x}$, which they called as a \textbf{state}. Please note the integral form of the equation, which is the key difference between peridynamics and classical theory. The entire framework is built on displacements $\mathbf{u}$ instead of their spatial derivatives, thereby making discontinuity modeling trivial.
 
 %-------------------------------------------------------------------------
 \section{Elastoplastic Model}
@@ -111,11 +111,11 @@ As is discussed in Section~\ref{section:3}, the key to peridynamics-based consti
 \mathbf{T}_i<\mathbf{x}_j-\mathbf{x}_i> = \frac{1}{2}A\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|},
 \label{eq:2}
 \end{equation}
-where $\mathbf{x}$ and $\mathbf{y}$ denote the positions of particles before and after deformation respectively. The direction of the force density is along the deformed bond between the particles given by $\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}$. $A$ is a scalar that represents the force magnitude, and it is composed of two terms by addition $A = A_{dilation} + A_{deviatoric}$, namely the dilation term $A_{dilation}$ and the deviatoric term $A_{deviatoric}$.
+where $\mathbf{x}$ and $\mathbf{y}$ denote the positions of particles before and after deformation respectively. The direction of the force density is along the deformed bond between the particles given by $\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}$. $A$ is a scalar that represents the force magnitude, and it is composed of two terms by addition $A = A_{dil} + A_{dev}$, namely the dilatation term $A_{dil}$ and the deviatoric term $A_{dev}$.
 
-The dilation term $A_{dilation}$ is due to the dilation part of \nobreak{deformation}, i.e., volume change without any shape distortion. It is defined as:
+The dilatation term $A_{dil}$ is due to the dilatation part of \nobreak{deformation}, i.e., volume change without any shape distortion. It is defined as:
 \begin{equation}
-A_{dilation}=4\omega_{ij}a\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i,
+A_{dil}=4\omega_{ij}a\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i,
 \label{eq:3}
 \end{equation}
 where $a$ is a peridynamics material parameter and $\omega_{ij}$ is the weight function between particle $i$ and particle $j$. For isotropic materials $\omega_{ij}$ is monotonically decreasing with respect to the distance between particles:
@@ -123,7 +123,7 @@ where $a$ is a peridynamics material parameter and $\omega_{ij}$ is the weight f
 \omega_{ij} = \frac{\delta}{|\mathbf{x}_j-\mathbf{x}_i|}.
 \label{eq:4}
 \end{equation}
-Note that $\omega_{ij}$ is defined in the material space, therefore can be precomputed. The term $\theta_i$ measures the dilation at particle $i$, which is defined with respect to the stretch of all bonds between particle $i$ and its family:
+Note that $\omega_{ij}$ is defined in the material space, therefore can be precomputed. The term $\theta_i$ measures the dilatation at particle $i$, which is defined with respect to the stretch of all bonds between particle $i$ and its family:
 \begin{equation}
 \theta_i = \frac{9}{4\pi\delta^4}\sum_{k=1}^N\omega_{ik}s_{ik}\frac{\mathbf{y}_k-\mathbf{y}_i}{|\mathbf{y}_k-\mathbf{y}_i|}\cdot(\mathbf{x}_k-\mathbf{x}_i)V_k,
 \label{eq:5}
@@ -134,9 +134,9 @@ s_{ik}=\frac{|\mathbf{y}_k-\mathbf{y}_i|}{|\mathbf{x}_k-\mathbf{x}_i|} -1.
 \label{eq:6}
 \end{equation}
 
-The deviatoric term $A_{deviatoric}$ is a result of distortion that does not cause change in volume. It is defined with respect to the deviatoric component of bond extension:
+The deviatoric term $A_{dev}$ is a result of distortion that does not cause change in volume. It is defined with respect to the deviatoric component of bond extension:
 \begin{equation}
-A_{deviatoric}=4\omega_{ij}b(e_{ij}-\frac{\delta}{4}\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i),
+A_{dev}=4\omega_{ij}b(e_{ij}-\frac{\delta}{4}\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i),
 \label{eq:7}
 \end{equation}
 where $b$ is a material parameter. We denote $e_{ij} = |\mathbf{y}_j-\mathbf{y}_i|-|\mathbf{x}_j-\mathbf{x}_i|$ as the extension of the bond between particle $i$ and particle $j$. The term in brackets of Equation~\ref{eq:7} is the deviatoric component of bond extension $e_{ij}^d$:
@@ -144,9 +144,9 @@ where $b$ is a material parameter. We denote $e_{ij} = |\mathbf{y}_j-\mathbf{y}_
 e_{ij}^d = e_{ij}-\frac{\delta}{4}\frac{\mathbf{y}_j-\mathbf{y}_i}{|\mathbf{y}_j-\mathbf{y}_i|}\cdot\frac{\mathbf{x}_j-\mathbf{x}_i}{|\mathbf{x}_j-\mathbf{x}_i|}\theta_i.
 \label{eq:8}
 \end{equation}
-Intuitively, $e_{ij}^d$ is constructed by removing the dilation component of bond extension from the total bond extension $e_{ij}$.
+Intuitively, $e_{ij}^d$ is constructed by removing the dilatation component of bond extension from the total bond extension $e_{ij}$.
 
-In summary, the behavior of our isotropic elastic model is controlled by two material parameters $a$ and $b$. The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the book\cite{madenci2014peridynamic} for elaborated derivation. Here we directly provide the conversion between the material parameters in this model and those from continuum mechanics:
+In summary, the behavior of our isotropic elastic model is controlled by two material parameters $a$ and $b$. The model is equivalent to the isotropic linear elasticity model in classical theory, please refer to the supplementary document for elaborated derivation. Here we directly provide the conversion between the material parameters in this model and those from continuum mechanics:
 \begin{equation}
 a = \frac{9\kappa}{8\pi\delta^4} \qquad b = \frac{15\mu}{2\pi\delta^5},
 \label{eq:9}
@@ -163,6 +163,14 @@ where $\kappa$ and $\mu$ denote the bulk modulus and the shear modulus respectiv
 
 \subsection{Plasticity}
 
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/demo_impact_upside.png}
+  \caption{\label{fig:4}
+  Comparison of elastic and plastic deformations by shooting a sphere at two walls made of different materials with identical initial configuration as in (a). The elastic wall deforms on impact (b), and recovers afterwards (c). The plastic wall undergos permanent deformation (e) after the impact (d).
+}
+\end{figure}
 Plasticity model for peridynamics is less studied in literature due to its complexity. To our knowledge, Silling et al. \cite{silling2007peridynamic} proposed the first plasticity model that is analogous to the von Mises flow model in classical theory. Mitchell presented a new framework for peridynamics-based plasticity modeling\cite{mitchell2011nonlocal} based on Silling et al.'s model, whereas the model hasn't been verified by experiments thus far. We adopt Mitchell's model for practical applications, and propose novel modifications based on their work.
 
 Our plasticity model is based on purely deviatoric plastic flow theory, therefore we start by decomposing the deviatoric bond extension $e_{ij}^d$ (see Equation~\ref{eq:8}) into two components by addition:
@@ -172,26 +180,26 @@ e_{ij}^d = e_{ij}^e+e_{ij}^p,
 \end{equation}
 where $e_{ij}^e$ and $e_{ij}^p$ are the elastic and plastic part of the total deviatoric bond extension respectively. To incorporate plasticity into the constitutive model,  the deviatoric part of internal force density (see Equation~\ref{eq:7}) is now redefined as below:
 \begin{equation}
-A_{deviatoric} = 4\omega_{ij}b(e_{ij}^d-e_{ij}^p),
+A_{dev} = 4\omega_{ij}b(e_{ij}^d-e_{ij}^p),
 \label{eq:11}
 \end{equation}
 with the contribution of plastic deviatoric bond extension removed from force computation. In case of elastic deformations, the term $e_{ij}^p$ vanishes and Equation~\ref{eq:11} conforms to Equation~\ref{eq:7}.
 
-A simple yield function $f(A_{deviatoric})$ is used to determine whether deformation has entered the plasticity regime:
+A simple yield function $f(A_{dev})$ is used to determine whether deformation has entered the plasticity regime:
 \begin{equation}
-f(A_{deviatoric}) = \frac{(A_{deviatoric})^2}{2}-\Psi_0,
+f(A_{dev}) = \frac{(A_{dev})^2}{2}-\Psi_0,
 \label{eq:12}
 \end{equation}
-where $\Psi_0$ is a critical parameter. The deformation is elastic if $f(A_{deviatoric})\leq 0$, and plasticity is present if  $f(A_{deviatoric}) > 0$.
+where $\Psi_0$ is a critical parameter. The deformation is elastic if $f(A_{dev})\leq 0$, and plasticity is present if  $f(A_{dev}) > 0$.
 
-In case of plastic deformations, we project $A_{deviatoric}$ onto the yield surface to obtain a critical value of deviatoric force density $A_{deviatoric}^c$:
+In case of plastic deformations, we project $A_{dev}$ onto the yield surface to obtain a critical value of deviatoric force density $A_{dev}^c$:
 \begin{equation}
-A_{deviatoric}^c=\sqrt{2\Psi_0}\mathrm{sign}(A_{deviatoric}),
+A_{dev}^c=\sqrt{2\Psi_0}\mathrm{sign}(A_{dev}),
 \label{eq:13}
 \end{equation}
-where $\mathrm{sign}(\cdot)$ is the sign function. $A_{deviatoric}^c$ is used to compute the increment of plastic deviatoric bond extension:
+where $\mathrm{sign}(\cdot)$ is the sign function. $A_{dev}^c$ is used to compute the increment of plastic deviatoric bond extension:
 \begin{equation}
-\triangle e_n^p = \frac{1}{2b}(A_{deviatoric}-A_{deviatoric}^c)
+\triangle e_n^p = \frac{1}{2b}(A_{dev}-A_{dev}^c)
 \label{eq:14}
 \end{equation}
 \begin{equation}
@@ -200,16 +208,7 @@ e_{n+1}^p = (e_n^p+\triangle e_n^p)\mathrm{min}\big(1,\frac{\gamma}{|e_n^p+\tria
 \end{equation}
 The subscripts $n$ and $n+1$ denote the discretized point of time at which the bond extensions and corresponding increments are evaluated. The parameter $\gamma$ which does not appear in the original model of Mitchell's \cite{mitchell2011nonlocal} is used to enforce a limit on the amount of plasticity. We found in experiments that with this parameter we obtain more control over the plastic behaviors and the stability of simulation is improved as well.
 
-Figure~\ref{fig:4} shows a comparison of the simulation results using our elastoplastic constitutive model. Our elastic model produces correct elastic behaviors, and permanent deformation is captured when plasticity is involved.
-\begin{figure}[t]
-  \centering
-  %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{../figs/demo_impact_upside.png}
-  \caption{\label{fig:4}
-  Comparison of elastic and plastic deformations by shooting a sphere at two walls made of different materials with identical initial configuration as in (a). The elastic wall deforms on impact (b), and recovers afterwards (c). The plastic wall undergos permanent deformation (e) after the impact (d).
-}
-\end{figure}
-
+Figure~\ref{fig:4} shows a comparison of the simulation results using our elastoplastic constitutive model. Our elastic model produces correct elastic behaviors, and permanent deformation is captured when plasticity is involved. In Figure~\ref{fig:5}, different amount of maximum plasticity is enforced and the results show that our model allows flexible control of the plastic deformation behaviors.
 \subsection{Anisotropy}
 
 Our constitutive model is isotropic up to now, and we extend it to anisotropy in this section. We model anisotropy by manipulating the weight functions between particles (see Equation~\ref{eq:4}) with direction information. The key idea is to associate an anisotropy matrix $\mathbf{G}$ with each particle, so that applying the transformation to the bond between particles biases the influence weight toward preferred directions. The weight function $\omega_{ij}$ for anisotropic materials is computed as below:
@@ -217,17 +216,24 @@ Our constitutive model is isotropic up to now, and we extend it to anisotropy in
 \omega_{ij}=\frac{\delta}{|\mathbf{G}(\mathbf{x}_j-\mathbf{x}_i)|}.
 \label{eq:16}
 \end{equation}
-Appealing anisotropic effects could be generated with our anisotropy model. See Figure~\ref{fig:1} for a demonstration of the model applied to brittle and ductile fracture animation. Figure~\ref{fig:5} compares the crack patterns generated by the brittle fracture examples in Figure~\ref{fig:1}.
+Appealing anisotropic effects could be generated with our anisotropy model. See Figure~\ref{fig:1} for a demonstration of the model applied to brittle and ductile fracture animation. Figure~\ref{fig:6} compares the crack patterns generated by the brittle fracture examples in Figure~\ref{fig:1}.
 
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
-  \includegraphics[width=\linewidth, bb=0 0 1400 700]{../figs/demo_impact_color_map.png}
+  \includegraphics[width=\linewidth]{../figs/demo_impact_upside_plastic_fracture.png}
   \caption{\label{fig:5}
+  Simulation of ductile fracture with different amount of maximum plasticity. From left to right the parameter $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ is 0.1,0.15, and 0.2.
+}
+\end{figure}
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth, bb=0 0 1400 700]{../figs/demo_impact_color_map.png}
+  \caption{\label{fig:6}
   Comparison of crack patterns generated by isotropic (left) and anisotropic (right) brittle fracture. The color represents the damage of particles, with blue as no damage and red as complete damage.
 }
 \end{figure}
-
 %-------------------------------------------------------------------------
 \section{Fracture}
 
@@ -287,7 +293,7 @@ The contribution of  initial discretization cancels out, and the criterion is ab
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/demo_jello.png}
-  \caption{\label{fig:6}
+  \caption{\label{fig:7}
   Shooting a bullet through a jello, producing complex crack surfaces.
 }
 \end{figure}
@@ -301,7 +307,7 @@ If this is the case, we split the vertex, assign corresponding tetrahedra to eac
 After spliting, we could safely remove only those crack faces that directly results in our vertex splitting.
 If the connected tetrahedra are separated into more than two groups, we accordingly split vertex into multiple copies.
 Simultaneous splitting of multiple vertices at one crack face are also compatible in our method.
-Figure~\ref{fig:6} shows an example of using our strategy to produce complex crack surfaces.
+Figure~\ref{fig:7} shows an example of using our strategy to produce complex crack surfaces.
 
 After handling mesh topology, we update the vertex positions using the velocities of corresponding particles.
 A simple weighted-average approach is employed to update the vertex positions:
@@ -318,22 +324,15 @@ $m_{\mathrm{p}}$ and $\textbf{v}_{\mathrm{p}}$ are the mass and velocity of the 
 
 We present the results produced with our method in this section. All our examples are run on a 3.5GHz, Intel Core i7-5930K CPU with 32G RAM. The embedded tetrahedron meshes are generated using the open-source TetGen software \cite{Si:2015:TDQ:2732672.2629697}. All the figures in the paper are rendered off-line using the open-source POV-Ray software (\url{http://www.povray.org/}). We use explicit time integration for ease of implementation. We also performed a naive parallelized implementation of our method using OpenMP.
 
-\noindent{\textbf{Constitutive model validation.}} We validate our constitutive model by simulating deformations with varied material properties and performing comparisons with the results of FEM. Figure~\ref{fig:3} shows an example of isotropic elastic deformations, where the back and four limbs of an armadillo are initially anchored and then the anchor on the back is removed. The deformations are plausible and no undesirable numerical fracture occurs when the arms of the armadillo are over-stretched. In Figure~\ref{fig:4} we compare the results of elasticity and plasticity, and our model produces correct deformation behaviors. Figure~\ref{fig:7} compares the elastic deformations of stretching beams with different Poisson ratio values. Unlike Levine et al.'s model \cite{Levine:2015:PPS:2849517.2849526}, our constitutive model is not limited to a single Poisson ratio. In Figure~\ref{fig:8}, different amount of maximum plasticity is enforced and the results show that our model allows flexible control of the plastic deformation behaviors. Finally, we compare the deformations of a bending beam using our method and FEM in Figure~\ref{fig:9}. The results produced with our method are almost identical to those generated by FEM, under both stiff and soft material settings. This demonstrates the accuracy of our method in constitutive modeling.
+\noindent{\textbf{Constitutive model validation.}} We validate our constitutive model by simulating deformations with varied material properties and performing comparisons with the results of FEM. Figure~\ref{fig:3} shows an example of isotropic elastic deformations, where the back and four limbs of an armadillo are initially anchored and then the anchor on the back is removed. The deformations are plausible and no undesirable numerical fracture occurs when the arms of the armadillo are over-stretched. In Figure~\ref{fig:4} we compare the results of elasticity and plasticity, and our model produces correct deformation behaviors. Figure~\ref{fig:5} demonstrates the varied effects produced by tunning the amount of maximum plasticity. Figure~\ref{fig:8} compares the elastic deformations of stretching beams with different Poisson ratio values. Unlike Levine et al.'s model \cite{Levine:2015:PPS:2849517.2849526}, our constitutive model is not limited to a single Poisson ratio. Finally, we conduct comparisons with FEM through Figure~\ref{fig:9} to Figure~\ref{fig:12}.
+The deformations of a bending beam in Figure~\ref{fig:9} produced with our method are almost identical to those generated by FEM, under both stiff and soft material settings. We further demonstrate the accuracy of our method in constitutive modeling using comparisons with quantitative error analysis. The swing (See Figure~\ref{fig:10}) and twist (See Figure~\ref{fig:11}) deformations of the bar produced by our method are as accurate as those by corotated linear FEM with position deviations less than $10\%$. The position deviations are measured over the diagonal of the object's bounding box: $Error = \frac{|\bm{x}_p-\bm{x}_p^{ref}|}{d}$ where $d$ is the length of the diagonal. Note that our constitutive model alleviates artifacts of the classical linear model albeit derived from it. It is because peridynamics does not employ the geometric linear approximation of the Cauchy strain as the linear model in continuum mechanics does. Thus peridynamics does not suffer from ghost forces while undergoing rigid rotations, even though the constitutive relation is linear. We also obtain nice accuracy for the noncyclic vibrations of the armadillo presented in Figure~\ref{fig:12}. Therefore, we believe our peridynamics-based constitutive model is plausible for graphical animations.
 
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/compare_different_poisson_ratio.png}
-  \caption{\label{fig:7}
-  Simulation of stretching beams with different Poisson ratios.
-}
-\end{figure}
-\begin{figure}[t]
-  \centering
-  %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{../figs/demo_impact_upside_plastic_fracture.png}
   \caption{\label{fig:8}
-  Simulation of ductile fracture with different amount maximum plasticity. From left to right the parameter $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ is 0.1,0.15, and 0.2.
+  Simulation of stretching beams with different Poisson ratios.
 }
 \end{figure}
 \begin{figure}[t]
@@ -344,8 +343,32 @@ We present the results produced with our method in this section. All our example
   Simulation of bending beams with different stiffness (top:soft;bottom:stiff) using our method and FEM. The results of our method are indistinguishable from the results produced by FEM.
 }
 \end{figure}
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/revision/demo_bar_oscillate_vs_fem.png}
+  \caption{\label{fig:10}
+  blabla.
+}
+\end{figure}
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/revision/demo_bar_twist_vs_fem.png}
+  \caption{\label{fig:11}
+  blabla.
+}
+\end{figure}
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/revision/demo_armadillo_vs_fem_2.png}
+  \caption{\label{fig:12}
+  blabla.
+}
+\end{figure}
 
-\noindent{\textbf{Fracture animation.}} Our method could simulate brittle and ductile fracture with compelling visual realism. In Figure~\ref{fig:1} a wide range of fracture behaviors are generated, including isotropic brittle fracture, anisotropic brittle fracture, isotropic ductile fracture, and anisotropic ductile fracture. This demonstrates the capability of our method in simulating fracture. We believe our approach is the first peridynamics-based framework in graphics with such flexibility. Figure~\ref{fig:6} shows an example of shooting a bullet into a jello-like object. Our method handles well the generation of the complex crack surfaces. The armadillo in Figure~\ref{fig:10} is stretched until its limbs tear off. The behavior of ductile fracture is correctly demonstrated, including the progressive generation of multiple cracks (see Figure~\ref{fig:11}). In Figure~\ref{fig:12} a bunny made of elastic material falls to the ground and shatters. Our method is able to realistically capture the secondary fracture of the fragments.
+\noindent{\textbf{Fracture animation.}} Our method could simulate brittle and ductile fracture with compelling visual realism. In Figure~\ref{fig:1} a wide range of fracture behaviors are generated, including isotropic brittle fracture, anisotropic brittle fracture, isotropic ductile fracture, and anisotropic ductile fracture. This demonstrates the capability of our method in simulating fracture. We believe our approach is the first peridynamics-based framework in graphics with such flexibility. Figure~\ref{fig:6} shows an example of shooting a bullet into a jello-like object. Our method handles well the generation of the complex crack surfaces. The armadillo in Figure~\ref{fig:13} is stretched until its limbs tear off. The behavior of ductile fracture is correctly demonstrated, including the progressive generation of multiple cracks (see Figure~\ref{fig:14}). In Figure~\ref{fig:17} a bunny made of elastic material falls to the ground and shatters. Our method is able to realistically capture the secondary fracture of the fragments.
 
 In Table~1 we list the detailed parameter settings and the performance data for all the examples presented in the paper. The results in this paper are produced with practical computation time.
 
@@ -357,18 +380,22 @@ In Table~1 we list the detailed parameter settings and the performance data for 
   Examples & particle num & $\delta$ & bond num & $\kappa$ & $\mu$ & $\rho$            & $\Psi_0$ & $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ & $s^w_{(k)(j)}$ & $\Delta t$ & performance\\
            &              &          &          &   (KPa)   & (KPa)  &(Kg/$\mathrm{m}^3)$&          &                                              &                & (s)       &(s/step)\\
   \hline
-  Glass Wall[Figure~\ref{fig:1}(a)(b)]     & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{7}$ & $2.0\times10^{7}$        & 2200 & $\infty $ & 0.0             & 0.0005   & $1.0\times10^{-6}$          & $\sim2.4$ \\
+  Glass Wall[Figure~\ref{fig:1}(a)(b), Figure~\ref{fig:15}]     & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{7}$ & $2.0\times10^{7}$        & 2200 & $\infty $ & 0.0             & 0.0005   & $1.0\times10^{-6}$          & $\sim2.4$ \\
   Plastic Wall [Figure~\ref{fig:1}(c)(d)]  & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{3}$ & $2.0\times10^{3}$        & 2200 & $10^{25}$ & 0.2             & 0.05     & $1.0\times10^{-4}$          & $\sim2.4$ \\
   Armadillo [Figure~\ref{fig:3}]           & $4.2\times10^5$ & 1.50$\lambda$ & $7.5\times10^7$ & $6.3\times10^4$   & $3.8\times10^4$          & 1000 & $\infty $ & 0.0             & $\infty$ & $1.0\times10^{-4}$          & $\sim5.3$ \\
   Elastic Wall [Figure~\ref{fig:4}(b)(c)]  & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $1.0\times10^{4}$ & $6.0\times10^{3}$        & 1200 & $\infty $ & 0.0             &$\infty$  & $5.0\times10^{-5}$   & $\sim2.4$ \\
   Plastic Wall [Figure~\ref{fig:4}(d)(e)]  & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $1.0\times10^{4}$ & $6.0\times10^{3}$        & 1200 & $10^{26}$ & 0.2             & $\infty$ & $5.0\times10^{-5}$   & $\sim2.4$ \\
-  Jello [Figure~\ref{fig:6}]               & $4.6\times10^5$ & 1.45$\lambda$ & $8.6\times10^7$ & $1.0\times10^3$   & $4.6\times10^2$          & 1000 & $\infty $ & 0.0             & 0.4      & $5.0\times10^{-5}$   & $\sim3.8$ \\
-  Beam Stretch [Figure~\ref{fig:7}]        & $2.2\times10^4$ & 1.0 $\lambda$ & $1.3\times10^6$ & $2.0\times10^3$   & $(9.2,1.5,2.2)\times10^2$& 1000 & $\infty$  & 0.0             &$\infty$  & $1.0\times10^{-5}$ & $\sim0.2$ \\
-  Wall [Figure~\ref{fig:8}]                & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $1.0\times10^{4}$ & $6.0\times10^{3}$        & 1200 & $10^{26}$ &$(0.1,0.15,0.2)$ &$\infty$  & $5.0\times10^{-5}$   & $\sim2.4$ \\
+  Wall [Figure~\ref{fig:5}]                & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $1.0\times10^{4}$ & $6.0\times10^{3}$        & 1200 & $10^{26}$ &$(0.1,0.15,0.2)$ &$\infty$  & $5.0\times10^{-5}$   & $\sim2.4$ \\
+  Jello [Figure~\ref{fig:7}]               & $4.6\times10^5$ & 1.45$\lambda$ & $8.6\times10^7$ & $1.0\times10^3$   & $4.6\times10^2$          & 1000 & $\infty $ & 0.0             & 0.4      & $5.0\times10^{-5}$   & $\sim3.8$ \\
+  Beam Stretch [Figure~\ref{fig:8}]        & $2.2\times10^4$ & 1.0 $\lambda$ & $1.3\times10^6$ & $2.0\times10^3$   & $(9.2,1.5,2.2)\times10^2$& 1000 & $\infty$  & 0.0             &$\infty$  & $1.0\times10^{-5}$ & $\sim0.2$ \\
   Soft Beam Bend [Figure~\ref{fig:9}]      & $4.5\times10^4$ & 1.0 $\lambda$ & $6.9\times10^6$ & $6.3\times10^3$   & $3.8\times10^3$          & 1000 & $\infty $ & 0.0             & $\infty$ & $5.0\times10^{-5}$   & $\sim0.6$ \\
   Stiff Beam Bend [Figure~\ref{fig:9}]     & $4.5\times10^4$ & 1.0 $\lambda$ & $6.9\times10^6$ & $3.3\times10^4$   & $2.0\times10^4$          & 1000 & $\infty $ & 0.0             & $\infty$ & $2.5\times10^{-5}$ & $\sim0.6$ \\
-  Armadillo [Figure~\ref{fig:10}]          & $4.2\times10^5$ & 1.50$\lambda$ & $7.5\times10^7$ & $6.3\times10^4$   & $3.8\times10^4$          & 1000 & $\infty $ & 0.0             & 0.61     & $1.0\times10^{-4}$          & $\sim5.3$ \\
-  Bunny [Figure~\ref{fig:12}]              & $5.2\times10^5$ & 1.45$\lambda$ & $8.8\times10^7$ & $2.5\times10^2$   & $1.2\times10^2$          & 1000 & $\infty $ & 0.0             & 0.13     & $5.0\times10^{-4}$          & $\sim5.2$ \\
+  Bar Swing [Figure~\ref{fig:10}]     & $9.2\times10^3$ & 1.11 $\lambda$ & $1.5\times10^5$ & $5.0\times10^3$   & $5.0\times10^3$          & 1000 & $\infty $ & 0.0             & $\infty$ & $1.0\times10^{-4}$ & $\sim0.05$ \\
+  Bar Twist [Figure~\ref{fig:11}]     & $9.2\times10^3$ & 1.34 $\lambda$ & $1.5\times10^5$ & $1.0\times10^3$   & $6.0\times10^2$          & 1000 & $\infty $ & 0.0             & $\infty$ & $1.0\times10^{-4}$ & $\sim0.06$ \\
+  Armadillo Vibrate [Figure~\ref{fig:12}]     & $2.0\times10^4$ & 1.38 $\lambda$ & $1.8\times10^6$ & $5.0\times10^3$   & $3.0\times10^3$          & 1000 & $\infty $ & 0.0             & $\infty$ & $5.0\times10^{-4}$ & $\sim0.2$ \\
+  Armadillo [Figure~\ref{fig:13}]          & $4.2\times10^5$ & 1.50$\lambda$ & $7.5\times10^7$ & $6.3\times10^4$   & $3.8\times10^4$          & 1000 & $\infty $ & 0.0             & 0.61     & $1.0\times10^{-4}$          & $\sim5.3$ \\
+  Thin Sheet [Figure~\ref{fig:16}]              & $1.6\times10^5$ & 1.45$\lambda$ & $2.0\times10^7$ & $5.0\times10^3$   & $3.0\times10^3$          & 1000 & $\infty $ & 0.0             & 0.1     & $5.0\times10^{-5}$          & $\sim1.8$ \\
+  Bunny [Figure~\ref{fig:17}]              & $5.2\times10^5$ & 1.45$\lambda$ & $8.8\times10^7$ & $2.5\times10^2$   & $1.2\times10^2$          & 1000 & $\infty $ & 0.0             & 0.13     & $5.0\times10^{-4}$          & $\sim5.2$ \\
   \hline
 \end{tabular}
 }
@@ -380,24 +407,39 @@ In Table~1 we list the detailed parameter settings and the performance data for 
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/demo_tear_armadillo.png}
-  \caption{\label{fig:10}
+  \caption{\label{fig:13}
   An armadillo is stretched until its limbs tear off.
 }
 \end{figure*}
-
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/demo_tear_armadillo_close_view.png}
-  \caption{\label{fig:11}
+  \caption{\label{fig:14}
   A close view of the progressive fracture of the armadillo's legs.
 }
 \end{figure}
 \begin{figure*}[t]
   \centering
   %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/revision/demo_brittle_fall.png}
+  \caption{\label{fig:15}
+  blabla.
+}
+\end{figure*}
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/revision/demo_tear_thin_sheet.png}
+  \caption{\label{fig:16}
+  blabla.
+}
+\end{figure}
+\begin{figure*}[t]
+  \centering
+  %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/demo_fall_bunny.png}
-  \caption{\label{fig:12}
+  \caption{\label{fig:17}
   An elastic bunny falls to the ground and shatters into pieces. Note the secondary fracture of the fragments.
 }
 \end{figure*}
@@ -407,7 +449,7 @@ In Table~1 we list the detailed parameter settings and the performance data for 
 
 We have introduced a novel meshless framework for graphical modeling and animation of elastoplastic solids. Our work is the first peridynamics-based framework in computer graphics that can simulate a wide range of material behaviors, including elasticity, plasticity, and fracture.
 
-Our work is not without limitations. Currently we can not afford large time steps because we used explicit time integration in our implementation. In the future, we plan to incorporate implicit time integration into our framework to achieve less restricted time step size. Another limitation of our work stems from the mesh embedding strategy for crack surface representation. The level of crack detail is highly dependent on the embedded mesh resolution. In addition, we generate crack surfaces by separating the mesh elements, which could cause the zig-zag artifact (see Figure~\ref{fig:11}). This artifact might be alleviated by smoothing the crack surfaces somewhat, or employing the virtual node algorithm. While we used multi-threading in our implementation, the performance of our method could be further improved with GPGPU techniques.
+Our work is not without limitations. Currently we can not afford large time steps because we used explicit time integration in our implementation. In the future, we plan to incorporate implicit time integration into our framework to achieve less restricted time step size. Another limitation of our work stems from the mesh embedding strategy for crack surface representation. The level of crack detail is highly dependent on the embedded mesh resolution. In addition, we generate crack surfaces by separating the mesh elements, which could cause the zig-zag artifact (see Figure~\ref{fig:14}). This artifact might be alleviated by smoothing the crack surfaces somewhat, or employing the virtual node algorithm. While we used multi-threading in our implementation, the performance of our method could be further improved with GPGPU techniques.
 
 Other interesting avenues for future work include combining peridynamics theory with existing methods from classical theory such as FEM and SPH. These methods complement each other, and their combination could produce a new method that is more powerful for animation production.
 
