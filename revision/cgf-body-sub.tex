@@ -238,6 +238,22 @@ Appealing anisotropic effects could be generated with our anisotropy model. See 
 In this section we present our fracture model and introduce the mesh embedding strategy we employ to generate crack surfaces.
 
 \subsection{Fracture Criterion}
+
+Material damage can be modeled in peridynamics by permanently eliminating the bonds between particles. The dynamics with discontinuities is trivial due to the integral-based nature of peridynamics. For elastic brittle materials, a simple critical stretch is generally used as the fracture criterion. This criterion conforms to the physically plausible energy release rate, and it has been validated before \cite{Silling2005}. Levine et al.\cite{Levine:2015:PPS:2849517.2849526} also utilized this criterion for brittle fracture modeling in computer graphics. In order to account for plasticity and model ductile fracture, we redefined the elastic critical stretch criterion as:
+\begin{equation}
+s_{ij}^e =\frac{e_{ij}-e_{ij}^p}{|\mathbf{x}_i-\mathbf{x}_j|}.
+\label{eq:17}
+\end{equation}
+
+Unfortunately, we found in experiments that this fracture criterion would cause unrealistic artifacts since bonds with smaller rest lengths are sometimes more prone to breaking. We alleviate this problem by incorporating the weight function $\omega_{ij}$ into the criterion to increase the fracture criterion of closer family members. Shattering effects could arise for brittle materials, which lead to many tiny fragments. We could avoid the generation of too small fragments by continuously increasing the crack threshold as the material gets damaged. The final fracture criterion that we employ in our model is formulated as below:
+\begin{equation}
+s_{ij}^\omega = (1 + \alpha\phi)\frac{s_{ij}^e}{\omega_{ij}} = (1 + \alpha\phi)\frac{e_{ij}-e_{ij}^p}{\delta},
+\label{eq:18}
+\end{equation}
+where $\phi = 1 - \frac{n_i}{N_i}$ measures the damage level of material point $i$. $n_i$ and $N_i$ are the numbers of active bonds connecting $i$ with its family members in the deformed and initial configurations, respectively. $n_i$ gradually decreases as more bonds around $i$ are broken, increasing the damage level of $i$. The parameter $\alpha$ is set to 0 by default, and could be used to mitigate the shattering effect while non-zero values are given.
+Figure~\ref{fig:7_after} provides an example of controlling the dust with different $\alpha$ values.
+It shows that our criterion is able to produce compelling results in practical use.
+
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
@@ -246,25 +262,6 @@ In this section we present our fracture model and introduce the mesh embedding s
   Glass wall fracture with different $\alpha$ values.
 }
 \end{figure}
-
-Material damage can be modeled in peridynamics by permanently eliminating the bonds between particles. The dynamics with discontinuities is trivial due to the integral-based nature of peridynamics. For elastic brittle materials, a simple critical stretch is generally used as the fracture criterion. This criterion conforms to the physically plausible energy release rate, and it has been validated before \cite{Silling2005}. Levine et al.\cite{Levine:2015:PPS:2849517.2849526} also utilized this criterion for brittle fracture modeling in computer graphics. In order to account for plasticity and model ductile fracture, we redefined the elastic critical stretch criterion as:
-\begin{equation}
-s_{ij}^e =\frac{e_{ij}-e_{ij}^p}{|\mathbf{x}_i-\mathbf{x}_j|}.
-\label{eq:17}
-\end{equation}
-Unfortunately, we found in experiments that this fracture criterion would cause unrealistic artifacts since bonds with smaller rest lengths are sometimes more prone to breaking. 
-Shattering effects would also arise for brittle materials.
-We alleviate these problems by incorporating the weight function $\omega_{ij}$ in the criterion to increase the fracture criterion of closer family members  
-and by continuously increasing the crack threshold as the material gets damaged:
-\begin{equation}
-s_{ij}^\omega = (1 + \alpha\times\phi)\frac{s_{ij}^e}{\omega_{ij}} = (1 + \alpha\times\phi)\frac{e_{ij}-e_{ij}^p}{\delta}.
-\label{eq:18}
-\end{equation}
-where $\phi = 1 - \frac{rest\_bond\_num}{initial\_bond\_num}$ represents the crack ratio of material point.
-The parameter $\alpha$ defaults to 0, and is used to mitigate the shattering effect if non-zero value given.
-Figure~\ref{fig:7_after} provides an example of controlling the dust with different $\alpha$ values.
-It shows that our criterion is able to produce compelling results in practical use.
-
 \subsection{Embedded Mesh}
 %While our point-based geometry representation offers great simplicity, this simplicity does come at a cost that it is difficult to generate render geometry. To model realistic fracture, sharp edges are required on the crack surfaces. This naturally motivates us to embed a volumetric mesh into our system.
 %Given a tetrahedron mesh, we first initialize our particles to the center of elements and its family members through a pre-specified horizon $\delta$.
@@ -301,14 +298,6 @@ It shows that our criterion is able to produce compelling results in practical u
 %$m_{\mathrm{p}}$ is the mass of the particle, $\textbf{v}_{\mathrm{v}}$ and $\textbf{v}_{\mathrm{p}}$ denote the velocity.
 %For rendering, a surface mesh is extracted from the volumetric mesh at the end of each frame.
 
-\begin{figure}[t]
-  \centering
-  %\mbox{} \hfill
-  \includegraphics[width=\linewidth]{../figs/demo_jello.png}
-  \caption{\label{fig:7}
-  Shooting a bullet through a jello, producing complex crack surfaces.
-}
-\end{figure}
 While particle-based discretization offers great simplicity, this simplicity does come at a cost that it is difficult to generate surface representation. This naturally motivates the use of mesh embedding approach, in which the boundary of volumetric meshes could represent the original object surface and the newly generated crack surfaces during simulation. We use tetrahedron meshes to represent object geometry, and the particles are initialized at the barycenters of each mesh element.
 The particle family members are initialized according to the mesh connectivity and a pre-specified horizon $\delta$.
 To accommodate the topology changes resulted from fracture, we propose a simple strategy that dynamically split the embedded mesh along the elements.
@@ -331,14 +320,14 @@ A simple weighted-average approach is employed to update the vertex positions:
 where subscripts $\mathrm{p}$ and $\mathrm{v}$ represent the particle and the mesh vertex respectively.
 $m_{\mathrm{p}}$ and $\textbf{v}_{\mathrm{p}}$ are the mass and velocity of the particle, $\textbf{v}_{\mathrm{v}}$ and $\textbf{x}_{\mathrm{v}}$ are the velocity and position of the mesh vertex.
 
-%-------------------------------------------------------------------------
-\section{Results}
-
-We present the results produced with our method in this section. All our examples are run on a 3.5GHz, Intel Core i7-5930K CPU with 32G RAM. The embedded tetrahedron meshes are generated using the open-source TetGen software \cite{Si:2015:TDQ:2732672.2629697}. All the figures in the paper are rendered off-line using the open-source POV-Ray software (\url{http://www.povray.org/}). We use explicit time integration for ease of implementation. We also performed a naive parallelized implementation of our method using OpenMP.
-
-\noindent{\textbf{Constitutive model validation.}} We validate our constitutive model by simulating deformations with varied material properties and performing comparisons with the results of FEM. Figure~\ref{fig:3} shows an example of isotropic elastic deformations, where the back and four limbs of an armadillo are initially anchored and then the anchor on the back is removed. The deformations are plausible and no undesirable numerical fracture occurs when the arms of the armadillo are over-stretched. In Figure~\ref{fig:4} we compare the results of elasticity and plasticity, and our model produces correct deformation behaviors. Figure~\ref{fig:5} demonstrates the varied effects produced by tunning the amount of maximum plasticity. Figure~\ref{fig:8} compares the elastic deformations of stretching beams with different Poisson ratio values. Unlike Levine et al.'s model \cite{Levine:2015:PPS:2849517.2849526}, our constitutive model is not limited to a single Poisson ratio. Finally, we conduct comparisons with FEM through Figure~\ref{fig:9} to Figure~\ref{fig:12}.
-The deformations of a bending beam in Figure~\ref{fig:9} produced with our method are almost identical to those generated by FEM, under both stiff and soft material settings. We further demonstrate the accuracy of our method in constitutive modeling using comparisons with quantitative error analysis. The swing (see Figure~\ref{fig:10}) and twist (see Figure~\ref{fig:11}) deformations of the bar produced by our method are as accurate as those by corotated linear FEM with position deviations less than $10\%$. The position deviations are measured over the diagonal of the object's bounding box: $Error = \frac{|\bm{x}_p-\bm{x}_p^{ref}|}{d}$ where $d$ is the length of the diagonal. Note that our constitutive model alleviates artifacts of the classical linear model albeit derived from it. It is because peridynamics does not employ the geometric linear approximation as the Cauchy strain in continuum mechanics does. Thus peridynamics does not suffer from ghost forces while undergoing rigid rotations, even though the constitutive relation is linear. We also obtain nice accuracy for the noncyclic vibrations of the armadillo presented in Figure~\ref{fig:12}. Therefore, we believe our peridynamics-based constitutive model is plausible for graphical animations.
-
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/demo_jello.png}
+  \caption{\label{fig:7}
+  Shooting a bullet through a jello, producing complex crack surfaces.
+}
+\end{figure}
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
@@ -347,6 +336,14 @@ The deformations of a bending beam in Figure~\ref{fig:9} produced with our metho
   Simulation of stretching beams with different Poisson ratios.
 }
 \end{figure}
+%-------------------------------------------------------------------------
+\section{Results}
+
+We present the results produced with our method in this section. All our examples are run on a 3.5GHz, Intel Core i7-5930K CPU with 32G RAM. The embedded tetrahedron meshes are generated using the open-source TetGen software \cite{Si:2015:TDQ:2732672.2629697}. All the figures in the paper are rendered off-line using the open-source POV-Ray software (\url{http://www.povray.org/}). We use explicit time integration for ease of implementation. We also performed a naive parallelized implementation of our method using OpenMP.
+
+\noindent{\textbf{Constitutive model validation.}} We validate our constitutive model by simulating deformations with varied material properties and performing comparisons with the results of FEM. Figure~\ref{fig:3} shows an example of isotropic elastic deformations, where the back and four limbs of an armadillo are initially anchored and then the anchor on the back is removed. The deformations are plausible and no undesirable numerical fracture occurs when the arms of the armadillo are over-stretched. In Figure~\ref{fig:4} we compare the results of elasticity and plasticity, and our model produces correct deformation behaviors. Figure~\ref{fig:5} demonstrates the varied effects produced by tunning the amount of maximum plasticity. Figure~\ref{fig:8} compares the elastic deformations of stretching beams with different Poisson ratio values. Unlike Levine et al.'s model \cite{Levine:2015:PPS:2849517.2849526}, our constitutive model is not limited to a single Poisson ratio. Finally, we conduct comparisons with FEM through Figure~\ref{fig:9} to Figure~\ref{fig:12}.
+The deformations of a bending beam in Figure~\ref{fig:9} produced with our method are almost identical to those generated by FEM, under both stiff and soft material settings. We further demonstrate the accuracy of our method in constitutive modeling using comparisons with quantitative error analysis. The swing (see Figure~\ref{fig:10}) and twist (see Figure~\ref{fig:11}) deformations of the bar produced by our method are as accurate as those by corotated linear FEM with position deviations less than $10\%$. The position deviations are measured over the diagonal of the object's bounding box: $Error = \frac{|\bm{x}_p-\bm{x}_p^{ref}|}{d}$ where $d$ is the length of the diagonal. Note that our constitutive model alleviates artifacts of the classical linear model albeit derived from it. It is because peridynamics does not employ the geometric linear approximation as the Cauchy strain in continuum mechanics does. Thus peridynamics does not suffer from ghost forces while undergoing rigid rotations, even though the constitutive relation is linear. We also obtain nice accuracy for the noncyclic vibrations of the armadillo presented in Figure~\ref{fig:12}. Therefore, we believe our peridynamics-based constitutive model is plausible for graphical animations.
+
 \begin{figure}[t]
   \centering
   %\mbox{} \hfill
@@ -380,7 +377,7 @@ The deformations of a bending beam in Figure~\ref{fig:9} produced with our metho
 }
 \end{figure}
 
-\noindent{\textbf{Fracture animation.}} Our method could simulate brittle and ductile fracture with compelling visual realism. In Figure~\ref{fig:1} a wide range of fracture behaviors are generated, including isotropic brittle fracture, anisotropic brittle fracture, isotropic ductile fracture, and anisotropic ductile fracture. This demonstrates the capability of our method in simulating fracture. We believe our approach is the first peridynamics-based framework in graphics with such flexibility. Figure~\ref{fig:6} shows an example of shooting a bullet into a jello-like object. Our method handles well the generation of the complex crack surfaces. The armadillo in Figure~\ref{fig:13} is stretched until its limbs tear off. The behavior of ductile fracture is correctly demonstrated, including the progressive generation of multiple cracks (see Figure~\ref{fig:17}). The glass wall in Figure~\ref{fig:14} is pressed by a heavy metal ball. Cracks develop and propagate without shattering the glass into fragments. This phenomenon cannot be reproduced by the level set approach \cite{Hegemann:2013:LSM:2485895.2485908} as mentioned in their paper, and it is challenging for the remeshing-based FEM methods \cite{O'Brien:1999:GMA:311535.311550,O'Brien:2002:GMA:566654.566579} considering the mesh operations. In contrast, our method handles the complicated propagation process well, including the branching and merging of cracks. In Figure~\ref{fig:15} a bunny made of elastic material falls to the ground and shatters. Our method is able to realistically capture the secondary fracture of the fragments. Figure~\ref{fig:16} is another demonstration of our method in handling crack tips. A thin sheet with initial cracks is torn on two sides. The cracks gradually proceed and finally shatter the sheet. Please note the filaments generated as a result of crack branching and merging.
+\noindent{\textbf{Fracture animation.}} Our method could simulate brittle and ductile fracture with compelling visual realism. In Figure~\ref{fig:1} a wide range of fracture behaviors are generated, including isotropic brittle fracture, anisotropic brittle fracture, isotropic ductile fracture, and anisotropic ductile fracture. This demonstrates the capability of our method in simulating fracture. We believe our approach is the first peridynamics-based framework in graphics with such flexibility. Figure~\ref{fig:7} shows an example of shooting a bullet into a jello-like object. Our method handles well the generation of the complex crack surfaces. The armadillo in Figure~\ref{fig:13} is stretched until its limbs tear off. The behavior of ductile fracture is correctly demonstrated, including the progressive generation of multiple cracks (see Figure~\ref{fig:17}). The glass wall in Figure~\ref{fig:14} is pressed by a heavy metal ball. Cracks develop and propagate without shattering the glass into fragments. This phenomenon cannot be reproduced by the level set approach \cite{Hegemann:2013:LSM:2485895.2485908} as mentioned in their paper, and it is challenging for the remeshing-based FEM methods \cite{O'Brien:1999:GMA:311535.311550,O'Brien:2002:GMA:566654.566579} considering the mesh operations. In contrast, our method handles the complicated propagation process well, including the branching and merging of cracks. In Figure~\ref{fig:15} a bunny made of elastic material falls to the ground and shatters. Our method is able to realistically capture the secondary fracture of the fragments. Figure~\ref{fig:16} is another demonstration of our method in handling crack tips. A thin sheet with initial cracks is torn on two sides. The cracks gradually proceed and finally shatter the sheet. Please note the filaments generated as a result of crack branching and merging.
 
 In Table~\ref{tab:1} we list the detailed parameter settings and the performance data for all the examples presented in the paper. The results in this paper are produced with practical computation time.
 \begin{table*}[htb]
