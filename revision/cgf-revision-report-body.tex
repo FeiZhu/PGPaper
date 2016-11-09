@@ -82,7 +82,15 @@ We define the plasticity control parameter $\gamma$ in Equation~15 in light of t
 
 \noindent{Q: }\emph{Justification of Equation 18 is required.}
 
-blabla.
+Both equation 17 and 18 are formally discretization independent, and there are indeed unreasonable statements in the previous paper.
+Cauchy strain is widely used in FEM or Mass-Spring-like systems.
+However, we found in practice that simply using this criterion in our discretization system would cause unrealistic artifact. 
+The reason is that family members that have a closer distance from the material point would sometimes break first,
+which would consequently lead to a strange situation that lots of small fragments floating around the main body 
+since these members has been geometrically separated from the material point, while still has force between them.
+We eliminate this problem by incorporating the weighted function $\omega_{ij}$ into our criterion.
+Our strategy that dividing by the weighted function makes closer family members to be less prone to break,
+and the simulated results show that this criterion is able to produce compelling visual effect.
 
 \noindent{Q: }\emph{More comparisons against FEM are preferred.}
 

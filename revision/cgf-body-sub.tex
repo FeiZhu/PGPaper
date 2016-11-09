@@ -238,18 +238,32 @@ Appealing anisotropic effects could be generated with our anisotropy model. See 
 In this section we present our fracture model and introduce the mesh embedding strategy we employ to generate crack surfaces.
 
 \subsection{Fracture Criterion}
+\begin{figure}[t]
+  \centering
+  %\mbox{} \hfill
+  \includegraphics[width=\linewidth]{../figs/revision/demo_shatter_control.png}
+  \caption{\label{fig:7_after}
+  Glass wall fracture with different $\alpha$ values.
+}
+\end{figure}
 
 Material damage can be modeled in peridynamics by permanently eliminating the bonds between particles. The dynamics with discontinuities is trivial due to the integral-based nature of peridynamics. For elastic brittle materials, a simple critical stretch is generally used as the fracture criterion. This criterion conforms to the physically plausible energy release rate, and it has been validated before \cite{Silling2005}. Levine et al.\cite{Levine:2015:PPS:2849517.2849526} also utilized this criterion for brittle fracture modeling in computer graphics. In order to account for plasticity and model ductile fracture, we redefined the elastic critical stretch criterion as:
 \begin{equation}
 s_{ij}^e =\frac{e_{ij}-e_{ij}^p}{|\mathbf{x}_i-\mathbf{x}_j|}.
 \label{eq:17}
 \end{equation}
-Unfortunately,  we found in experiments that this fracture criterion would cause unrealistic artifacts since bonds with smaller rest lengths are more prone to breaking. We eliminate such dependency of fracture behaviors on initial discretization by  incorporating the weight function $\omega_{ij}$ in the criterion:
+Unfortunately, we found in experiments that this fracture criterion would cause unrealistic artifacts since bonds with smaller rest lengths are sometimes more prone to breaking. 
+Shattering effects would also arise for brittle materials.
+We alleviate these problems by incorporating the weight function $\omega_{ij}$ in the criterion to increase the fracture criterion of closer family members  
+and by continuously increasing the crack threshold as the material gets damaged:
 \begin{equation}
-s_{ij}^\omega = \frac{s_{ij}^e}{\omega_{ij}} = \frac{e_{ij}-e_{ij}^p}{\delta}.
+s_{ij}^\omega = (1 + \alpha\times\phi)\frac{s_{ij}^e}{\omega_{ij}} = (1 + \alpha\times\phi)\frac{e_{ij}-e_{ij}^p}{\delta}.
 \label{eq:18}
 \end{equation}
-The contribution of  initial discretization cancels out, and the criterion is able to produce compelling results in practical use.
+where $\phi = 1 - \frac{rest\_bond\_num}{initial\_bond\_num}$ represents the crack ratio of material point.
+The parameter $\alpha$ defaults to 0, and is used to mitigate the shattering effect if non-zero value given.
+Figure~\ref{fig:7_after} provides an example of controlling the dust with different $\alpha$ values.
+It shows that our criterion is able to produce compelling results in practical use.
 
 \subsection{Embedded Mesh}
 %While our point-based geometry representation offers great simplicity, this simplicity does come at a cost that it is difficult to generate render geometry. To model realistic fracture, sharp edges are required on the crack surfaces. This naturally motivates us to embed a volumetric mesh into our system.
@@ -377,7 +391,7 @@ In Table~\ref{tab:1} we list the detailed parameter settings and the performance
   Examples & particle num & $\delta$ & bond num & $\kappa$ & $\mu$ & $\rho$            & $\Psi_0$ & $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ & $s^w_{(k)(j)}$ & $\Delta t$ & performance\\
            &              &          &          &   (KPa)   & (KPa)  &(Kg/$\mathrm{m}^3)$&          &                                              &                & (s)       &(s/step)\\
   \hline
-  Glass Wall[Figure~\ref{fig:1}(a)(b), Figure~\ref{fig:14}]     & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{7}$ & $2.0\times10^{7}$        & 2200 & $\infty $ & 0.0             & 0.0005   & $1.0\times10^{-6}$          & $\sim2.4$ \\
+  Glass Wall[Figure~\ref{fig:1}(a)(b), Figure ~\ref{fig:7_after},~\ref{fig:14}]     & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{7}$ & $2.0\times10^{7}$        & 2200 & $\infty $ & 0.0             & 0.0005   & $1.0\times10^{-6}$          & $\sim2.4$ \\
   Plastic Wall [Figure~\ref{fig:1}(c)(d)]  & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{3}$ & $2.0\times10^{3}$        & 2200 & $10^{25}$ & 0.2             & 0.05     & $1.0\times10^{-4}$          & $\sim2.4$ \\
   Armadillo [Figure~\ref{fig:3}]           & $4.2\times10^5$ & 1.50$\lambda$ & $7.5\times10^7$ & $6.3\times10^4$   & $3.8\times10^4$          & 1000 & $\infty $ & 0.0             & $\infty$ & $1.0\times10^{-4}$          & $\sim5.3$ \\
   Elastic Wall [Figure~\ref{fig:4}(b)(c)]  & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $1.0\times10^{4}$ & $6.0\times10^{3}$        & 1200 & $\infty $ & 0.0             &$\infty$  & $5.0\times10^{-5}$   & $\sim2.4$ \\
