@@ -242,7 +242,7 @@ In this section we present our fracture model and introduce the mesh embedding s
   \centering
   %\mbox{} \hfill
   \includegraphics[width=\linewidth]{../figs/revision/demo_shatter_control.png}
-  \caption{\label{fig:7_after}
+  \caption{\label{fig:6_after}
   Glass wall fracture with different $\alpha$ values.
 }
 \end{figure}
@@ -262,7 +262,7 @@ s_{ij}^\omega = (1 + \alpha\times\phi)\frac{s_{ij}^e}{\omega_{ij}} = (1 + \alpha
 \end{equation}
 where $\phi = 1 - \frac{rest\_bond\_num}{initial\_bond\_num}$ represents the crack ratio of material point.
 The parameter $\alpha$ defaults to 0, and is used to mitigate the shattering effect if non-zero value given.
-Figure~\ref{fig:7_after} provides an example of controlling the dust with different $\alpha$ values.
+Figure~\ref{fig:6_after} provides an example of controlling the dust with different $\alpha$ values.
 It shows that our criterion is able to produce compelling results in practical use.
 
 \subsection{Embedded Mesh}
@@ -391,7 +391,7 @@ In Table~\ref{tab:1} we list the detailed parameter settings and the performance
   Examples & particle num & $\delta$ & bond num & $\kappa$ & $\mu$ & $\rho$            & $\Psi_0$ & $\frac{\gamma}{|\mathbf{x}_j-\mathbf{x}_i|}$ & $s^w_{(k)(j)}$ & $\Delta t$ & performance\\
            &              &          &          &   (KPa)   & (KPa)  &(Kg/$\mathrm{m}^3)$&          &                                              &                & (s)       &(s/step)\\
   \hline
-  Glass Wall[Figure~\ref{fig:1}(a)(b), Figure ~\ref{fig:7_after},~\ref{fig:14}]     & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{7}$ & $2.0\times10^{7}$        & 2200 & $\infty $ & 0.0             & 0.0005   & $1.0\times10^{-6}$          & $\sim2.4$ \\
+  Glass Wall[Figure~\ref{fig:1}(a)(b), Figure ~\ref{fig:6_after},~\ref{fig:14}]     & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{7}$ & $2.0\times10^{7}$        & 2200 & $\infty $ & 0.0             & 0.0005   & $1.0\times10^{-6}$          & $\sim2.4$ \\
   Plastic Wall [Figure~\ref{fig:1}(c)(d)]  & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $3.3\times10^{3}$ & $2.0\times10^{3}$        & 2200 & $10^{25}$ & 0.2             & 0.05     & $1.0\times10^{-4}$          & $\sim2.4$ \\
   Armadillo [Figure~\ref{fig:3}]           & $4.2\times10^5$ & 1.50$\lambda$ & $7.5\times10^7$ & $6.3\times10^4$   & $3.8\times10^4$          & 1000 & $\infty $ & 0.0             & $\infty$ & $1.0\times10^{-4}$          & $\sim5.3$ \\
   Elastic Wall [Figure~\ref{fig:4}(b)(c)]  & $3.0\times10^5$ & 1.45$\lambda$ & $5.0\times10^7$ & $1.0\times10^{4}$ & $6.0\times10^{3}$        & 1200 & $\infty $ & 0.0             &$\infty$  & $5.0\times10^{-5}$   & $\sim2.4$ \\
