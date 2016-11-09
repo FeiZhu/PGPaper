@@ -40,12 +40,12 @@
 %-------------------------------------------------------------------------
 \section{Revision Summary}
 
-We have made some serious changes to our method and the manuscript according to the suggestions of the reviewers. The major changes include (but not limited to):
+We have carefully revised our submission according to the suggestions of the reviewers. The major changes include (but not limited to):
 \begin{enumerate}
-\item{blabla}
-\item{bla}
-\item{bla}
-\item{bla}
+\item{Add examples that demonstrate the benefits of our method compared with existing fracture algorithms.}
+\item{Add more complex comparisons against FEM along with quantitative error analysis.}
+\item{Provide a supplementary technical document that derives the constitutive model in the paper.}
+\item{Address other main issues in the review comments by adding corresponding detailed explanations in the manuscript.}
 \end{enumerate}
 
 \section{Answers to Reviewers' Comments}
@@ -56,29 +56,29 @@ Here we respond to the comments made by each reviewer.
 
 \noindent{Q: }\emph{Lack examples that show handling of crack tips.}
 
-blbabla.
+We add two examples that involve complex propagations of crack tips in the revised manuscript (see Figure~14 and Figure~16). The results reveal that our approach could handle well the advancing, branching, and merging of crack tips.
 
-\noindent{Q: }\emph{The glass fracture example reveals fracture 'dust' at the particle level. Is it due to the ''numerical fracture``?}
+\noindent{Q: }\emph{The glass fracture example reveals fracture 'dust' at the particle level. Is it due to the ``numerical fracture''?}
 
 blabla.
 
 \noindent{Q: }\emph{Show compelling examples that demonstrate the benefits of the peridynamics approach.}
 
-blabla.
+We include more examples of deformation in the manuscript and the comparisons against FEM show that our method could achieve accuracy that is as good as corotated linear FEM. This demonstrates the benefits of our peridynamics constitutive model compared with linear elastic model, from which it is derived. We provide analysis of this in the results section. Also, the additional fracture examples that emphasize on handling of crack tips are either impossible or challenging for existing algorithms. In the contrast, it is trivially handled by our peridynamics approach.
 
 \noindent{}\textbf{Reviewer \#2:}
 
-\noindent{Q: }\emph{More explanation of Equation 1 is required.}
+\noindent{Q: }\emph{More explanation of Equation 1 is required. What does the ``volume of $\mathbf{x}$'' mean? Is $\mathbf{x}'$ the variable being integrated over? Why it's not a finite sum in Equation~1?}
 
-blabla.
+The volume of $\mathbf{x}$ means volume of the material region occupied by material point $\mathbf{x}$. Yes, it is $\mathbf{x}'$ the variable being integrated over instead of $\mathbf{x}$. We have removed this typo in the revised manuscript. Equation 1 is the governing equation for a continuum body and each material point may has infinite number of material points within its horizon. Therefore it's a integral in Equation 1, not a finite sum. The integral would be replaced by a finite sum after the body is discretized into particles. We explained this issue in the supplementary document.
 
 \noindent{Q: }\emph{More motivation for why the different terms (equations 3-15) have the form that they do is required.}
 
-blabla.
+We provide derivation for each equation of the constitutive model in the supplementary technical document, which should explains why the different terms appear in the form as they are.
 
 \noindent{Q: }\emph{More explanation of the parameter that controls the amount of maximum plasticity is required.}
 
-blabla.
+We define the plasticity control parameter $\gamma$ in Equation~15 in light of the paper by O'Brien et al. \cite{O'Brien:2002:GMA:566654.566579}. It is indeed an artificial parameter that lack rigorous physical meaning, whereas it is a flexible parameter that allows more control over the effects of plasticity (see Figure~5). Thus we consider it as a practical parameter for animation. O'Brien et al. \cite{O'Brien:2002:GMA:566654.566579} provided a graphical illustration of this parameter, please refer to their paper.
 
 \noindent{Q: }\emph{Justification of Equation 18 is required.}
 
@@ -86,62 +86,62 @@ blabla.
 
 \noindent{Q: }\emph{More comparisons against FEM are preferred.}
 
-blabla.
+We've included more complex dexamples in the revised manuscript that demonstrate visual and quantitative comparisons against FEM.
 
 \noindent{}\textbf{Reviewer \#3:}
 
-\noindent{Q: }\emph{Use shorter notations for $A_{deviatoric}$ and $A_{dialatational}$.}
+\noindent{Q: }\emph{Use shorter notations for $A_{deviatoric}$ and $A_{dilatational}$.}
 
-blabla.
+We have shortened the notations as $A_{dev}$ and $A_{dil}$ respectively.
 
 \noindent{Q: }\emph{Provide a step overview of the computations performed in each time step.}
 
-blabla.
+The computations of our method in each time step follow standard simulation pipeline. We employ explicit time integration, therefore in each time step the forces (internal \&\& external) are evaluated according to current state of particles and then they are plugged into the governing equation for time integration. No special procedure is required, which also reveals the simplicity of our approach. 
 
 \noindent{Q: }\emph{A supplementary document or appendix is required that shows one can derive the peridynamics constitutive model from a classic hyperelastic energy density.}
 
-blabla
+We have provide a supplementary document in the revised submission. In the document, we present detailed derivation of the constitutive model that we proposed in the paper. We also introduce the common procedures for deriving the peridynamics form of a general hyperelastic material in continuum mechanics.
 
 \noindent{Q: }\emph{Provide a discussion on the choice motivations for linear elastic model. Why not more general nonlinear models? Is there any technical difficulty?}
 
-blabla
+We choose linear elastic model as the basis of our peridynamics constitutive model due to its simplicity. The results (see Figure~9$\sim$12) show that our model does not suffer from the artifacts of linear model and is as good as corotated linear model. We believe this model is adequate for a lot of animations. Please refer to the paper for explanations. However, we emphasize that general nonlinear models apply as well. We present common procedures for deriving peridynamics constitutive model from general hyperelastic materials in the supplementary document.
 
 \noindent{Q: }\emph{In a lot of the elastic examples the motion is significantly damped. Why?}
 
-blabla.
+We add damping forces for stable simulations since we use explicit time integration. These simple damping forces are either laplacian damping or air damping, which are probably the reasons for the damped motion.
 
 \noindent{Q: }\emph{How is the time integration of the governing equation discretized.}
 
-blabla.
+We use explicit time integration for simplicity. In each time step, the internal forces and external forces are evaluated at current state of particles according to the constitutive relation, then velocities of the particles are update, and finally the positions. These are the standard procedures for simulation methods.
 
 \noindent{Q: }\emph{A discussion on element inversion is preferred.}
 
-blabla.
+Peridynamics does not naturally handle element inversion, therefore neither does our method. We conducted an experiment that involves element inversion, please refer to the corresponding video clip in the revised submission.
 
 \noindent{}\textbf{Reviewer \#4:}
 
 \noindent{Q: }\emph{The exposition can be improved by providing examples/comparisons that show the advantage of peridynamics over existing methods.}
 
-blabla.
+We provide more comparisons with FEM to demonstrate the advantage of our peridynamics constitutive model. We also present examples that show handling of complicated crack propagations, which is impossible for some existing methods and challenging for others. We believe these additional examples should show the benefits of our approach.
 
 \noindent{Q: }\emph{Comparisons against FEM with more complex examples are required.}
 
-blabla.
+We add more complex comparisons against FEM with error analysis in the revised manuscript.
 
 \noindent{Q: }\emph{Do the FEM simulations use the same material parameters as the peridynamics simulations for achieving the same effiect?}
 
-blabla.
+Yes, we use the same material parameters for the FEM comparisons. Moreover, we initialize particles at vertices of the FEM mesh and the horizon values for these peridynamics simulations are chosen so that the family of particles are their immediate neighbors.
 
 \noindent{Q: }\emph{Crack surfaces are jagged, why not smooth these surfaces or alternatively use a finer mesh?}
 
-blabla.
+We didn't smooth the crack surfaces because this issue could be considered as orthogonal to the peridynamics model itself. Nevertheless, smoothing the surfaces could indeed improve the visual results when our method is applied to practical animations.
 
 
 %-------------------------------------------------------------------------
 \bibliographystyle{eg-alpha}
 %\bibliographystyle{eg-alpha-doi}
 
-%\bibliography{paper-bib}
+\bibliography{../references}
 
 %-------------------------------------------------------------------------
 %\newpage
