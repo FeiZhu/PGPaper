@@ -253,9 +253,9 @@ s_{ij}^e =\frac{e_{ij}-e_{ij}^p}{|\mathbf{x}_i-\mathbf{x}_j|}.
 \label{eq:17}
 \end{equation}
 Unfortunately, we found in experiments that this fracture criterion would cause unrealistic artifacts since bonds with smaller rest lengths are sometimes more prone to breaking. 
-Shattering effects would also arise for brittle materials.
-We alleviate these problems by incorporating the weight function $\omega_{ij}$ in the criterion to increase the fracture criterion of closer family members  
-and by continuously increasing the crack threshold as the material gets damaged:
+Shattering effects would also arise for brittle objects.
+We alleviate these problems by incorporating the weight function $\omega_{ij}$ into the criterion to increase the fracture value for closer family members  
+and continuously increasing the crack threshold as the material gets damaged:
 \begin{equation}
 s_{ij}^\omega = (1 + \alpha\times\phi)\frac{s_{ij}^e}{\omega_{ij}} = (1 + \alpha\times\phi)\frac{e_{ij}-e_{ij}^p}{\delta}.
 \label{eq:18}
