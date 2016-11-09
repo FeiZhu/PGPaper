@@ -58,9 +58,9 @@ Here we respond to the comments made by each reviewer.
 
 We add two examples that involve complex propagations of crack tips in the revised manuscript (see Figure~14 and Figure~16). The results reveal that our approach could handle well the advancing, branching, and merging of crack tips.
 
-\noindent{Q: }\emph{The glass fracture example reveals fracture 'dust' at the particle level. Is it due to the ``numerical fracture''?}
+\noindent{Q: }\emph{The glass fracture example reveals fracture `dust' at the particle level. Is it due to the ``numerical fracture''?}
 
-blabla.
+No, the dust in the glass fracture example is not a result of numerical fracture. In fact, peridynamics is free from numerical fracture as the family of particles and corresponding weight function values are determined in the initial configuration. For instance, the arms of the armadillo in Figure~3 of the paper are overstretched and no fracture occurs. There are many dust in the glass fracture example probably because brittle materials tend to shatter into dust. Nevertheless, we could modify the fracture criterion in Equation 18 so that we could control the amount of dust during shattering process. The core idea is to increase the criterion value as the material gets more damaged. This modification is physically plausible, because as objects are fractured into smaller fragments, it is harder for these fragments to further shatter. Please refer to the paper for modified fracture criterion and the accompanying video for results using different parameter values.
 
 \noindent{Q: }\emph{Show compelling examples that demonstrate the benefits of the peridynamics approach.}
 
@@ -86,7 +86,7 @@ blabla.
 
 \noindent{Q: }\emph{More comparisons against FEM are preferred.}
 
-We've included more complex dexamples in the revised manuscript that demonstrate visual and quantitative comparisons against FEM.
+We've included more complex examples in the revised manuscript that demonstrate visual and quantitative comparisons against FEM.
 
 \noindent{}\textbf{Reviewer \#3:}
 
@@ -96,7 +96,7 @@ We have shortened the notations as $A_{dev}$ and $A_{dil}$ respectively.
 
 \noindent{Q: }\emph{Provide a step overview of the computations performed in each time step.}
 
-The computations of our method in each time step follow standard simulation pipeline. We employ explicit time integration, therefore in each time step the forces (internal \&\& external) are evaluated according to current state of particles and then they are plugged into the governing equation for time integration. No special procedure is required, which also reveals the simplicity of our approach. 
+The computations of our method in each time step follow standard simulation pipeline. We employ explicit time integration, therefore in each time step the forces (internal \&\& external) are evaluated according to current state of particles and then they are plugged into the governing equation for time integration. No special procedure is required, which also reveals the simplicity of our approach.
 
 \noindent{Q: }\emph{A supplementary document or appendix is required that shows one can derive the peridynamics constitutive model from a classic hyperelastic energy density.}
 
