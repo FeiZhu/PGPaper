@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Preliminaries}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Peridynamics equations of motion and the discretization}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Peridynamics for local interactions}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Strain energy density and internal force density}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Derivation for general hyperelastic materials}{}% 6
+\BOOKMARK [1][-]{section.4}{Derivation for linear elastic materials}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Strain energy density in terms of force density}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{Explicit form of force density}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.3}{Determination of material parameters}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.4}{An intuitive comprehension}{section.4}% 11
