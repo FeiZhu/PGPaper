@@ -67,10 +67,10 @@ Blablabla.
 
 We provide a supplement video that shows a bending beam of four different $\delta$ values. We find that the bending beam with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are visually undistinguished, which suggests that the simulation results are less sensitive to the parameter $\delta$.
 
-For FEM comparison, we use a $\delta$ value of $1.0\lambda$ for most experiments, which amount to that we consider only the 1-ring neighbors as FEM. Note peridynamics could converge to the classical continuum mechanics when $\delta$ approaching 0 according to \cite{Weckner2005705}.
+Note that peridynamics could converge to the classical continuum mechanics when $\delta$ approaching 0 according to \cite{Weckner2005705}. So we use a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amount to that we consider only the 1-ring neighbors similar to FEM.
 
 As for the selection of $\delta$, we recommend a value range from $1.0\lambda$ to $2.0\lambda$.
-A grater $\delta$ could result in inadequate family members for those particles close to boundary, thus causing the material behave more softer due to the less force contribution from its family, which can be seen from a bending beam of a $\delta$ value $3.0\lambda$ in the right-bottom of supplement video.
+A grater $\delta$ could result in inadequate family members for those particles close to boundary, thus causing the material behave more softer due to the insufficient force contribution from its family, which can be seen from a bending beam of a $\delta$ value $3.0\lambda$ in the right-bottom of supplement video.
 In this case, a correction for boundary particle could be taken into account.
 
 \noindent{Q: }\emph{There are missing steps for discretization. How do we go from equation 1 to discrete equations of motion, where $\mathbf{x}$ and $\mathbf{x'}$ are particles rather than arbitrary points in the material? }
