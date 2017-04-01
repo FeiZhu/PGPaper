@@ -83,8 +83,8 @@ From discretization, we could naturally have
 \begin{equation}
 \nabla\cdot\sigma = \sum_{H_\mathbf{x}}[\mathbf{T}\langle\mathbf{x}',\mathbf{x}\rangle - \mathbf{T}\langle\mathbf{x},\mathbf{x}'\rangle]V_{\mathbf{x}'}
 \end{equation}
-We note that it is the force summation within horizon that should be interpreted as a discretization of divergence.
-Although weight function are encoded in force density, $\omega$ is used only to compute the force summation in a weighted way, which is inherently different from other methods such as SPH where weight functions are simutaneously used to calculate quantities' first-order or second-order derivatives
+We note that it is the force summation over horizon that should be interpreted as a discretization of divergence.
+Although weight functions are encoded in force density, $\omega$ is used only to compute the force summation in a weighted way, which is inherently different from other methods such as SPH where weight functions are simutaneously used to calculate quantities' first-order or second-order derivatives
 (e.g. $\nabla\cdot\mathbf{A_i} = -\frac{1}{\rho_i}\sum_j(\mathbf{A_i - A_j})\cdot\nabla\omega_{ij}$)
 
 That is, in our formulation, what involved here are just displacements of material points,
@@ -103,7 +103,7 @@ Blablaba.
 
 \noindent{Q: }\emph{How is equation 17 used, exactly? what are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
 
-Blablabla.
+Equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded, then we further improve it to Equation 18 by incorporating the weight function and increasing critical value through $\phi$ as fracture proceeding. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have modify this part of statements in the paper to make it more clarified.
 
 \noindent{Q: }\emph{Unreasonable statements on geometric linearity and stress-strain linearity.}
 
@@ -111,7 +111,8 @@ Blablabla.
 
 \noindent{Q: }\emph{How many elements were used for each example? How did the performance compare to the performance of peridynamics?}
 
-Blablabla.
+Since we position our particles at the center of elements, the elements num is equal to the particles in our simulation.
+We did't detailly compare the performance between FEM and Peridynamics, considering it could be affected by a lof of factors such as integration method and implementation, but we found in our experiments that the efficients of these two method are comparable.
 
 \noindent{Q: }\emph{Question on the supplemental video (random cube)?}
 
