@@ -65,7 +65,7 @@ Blablabla.
 
 \noindent{Q: }\emph{How much does the interaction radius parameter $\delta$ affect the simulation quality? Do the comparisons hold up for any value of $\delta$? Or does it need to be tuned? How sensitive is the range of values for which peridynamics gives good result, and are there rules of thumb for how $\delta$ should be selected?}
 
-We provide a supplement video that shows a bending beam of four different $\delta$ values. We find that the bending beam with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are visually undistinguished, which suggests that the simulation results are less sensitive to the parameter $\delta$.
+We provide a supplement video that compares four different $\delta$ values for a bending beam. It shows that the bending beam with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are visually undistinguished, which suggests that the simulation results are less sensitive to the parameter $\delta$.
 
 Note that peridynamics could converge to the classical continuum mechanics when $\delta$ approaching 0 according to \cite{Weckner2005705}. So we use a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amount to that we consider only the 1-ring neighbors similar to FEM.
 
@@ -109,7 +109,7 @@ Blablaba.
 
 \noindent{Q: }\emph{How is equation 17 used, exactly? what are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
 
-Equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded, then we further improve it to Equation 18 by incorporating the weight function and increasing critical value through $\phi$ as fracture proceeding. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have modify this part of statements in the paper to make it more clarified.
+Equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded, then we further improve it to Equation 18 by incorporating the weight function and increasing critical value through $\phi$ as fracture proceeding. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have modify this part of statements in the paper to eliminate the ambiguities.
 
 \noindent{Q: }\emph{Unreasonable statements about the relationship between rotation artifacts, geometric linearity and stress-strain linearity.}
 
