@@ -67,7 +67,7 @@ Blablabla.
 
 We provide a supplement video that compares four different $\delta$ values for a bending beam. It shows that the bending beam with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are visually undistinguished, which suggests that the simulation results are less sensitive to the parameter $\delta$.
 
-Note that peridynamics could converge to the classical continuum mechanics when $\delta$ approaching 0 according to \cite{Weckner2005705}. So we use a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amount to that we consider only the 1-ring neighbors similar to FEM.
+Note that peridynamics could converge to the classical continuum mechanics when $\delta$ approaching 0 according to \cite{Weckner2005705}. So we use a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amounts to that we consider only the 1-ring neighbors similar to FEM. Finetuning the $\delta$ value is also viable to get a better result. For example, in Figure 13, we adjust it to $1.38\lambda$ to achieve our best result.
 
 As for the selection of $\delta$, we recommend a value range from $1.0\lambda$ to $2.0\lambda$.
 A grater $\delta$ could result in inadequate family members for those particles close to boundary, thus causing the material behave more softer due to the insufficient force contribution from its family, which can be seen from a bending beam of a $\delta$ value $3.0\lambda$ in the right-bottom of supplement video.
