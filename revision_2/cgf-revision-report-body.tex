@@ -51,9 +51,9 @@ Here we respond to the comments made by each reviewer.
 
 \noindent{}\textbf{Reviewer \#1:}
 
-\noindent{Q: }\emph{More explicit discussion on damping in the paper is preferred.}
+\noindent{Q: }\emph{More explicit discussion on damping is preferred. Particularly, it is very discouraging to know the proposed method needs 'air damping' to stabilize the simulation.}
 
-Blablabla.
+We apologize for the imprecise description in prior revision note that causes the misunderstanding that we need damping forces to stabilize the simulation, which is not as a matter of fact. We used air damping to slow the motion of objects down so that the length of the video would not be too long, which is indeed a bad idea. However, we only used it in very few of our examples, namely Figure~1(c)(d) and Figure~3. We submitted a video of the example in Figure~3 to support our point, where the settings were identical as before but the damping forces were removed. The simulation is still stable, only that it takes more time for the armadillo to reach rest. We also applied Laplacian smoothing of velocity to a few examples, where the smoothed velocity of a particle is computed as $\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}+\lambda \mathbf{L}(\mathbf{v}_{\mathrm{old}})$. The smoothing is almost negligible since we set $\lambda$ to very small value of $0.001$. We admit that the use of damping forces in our experiment is quite casual, but we argue it is not a necessity for our method. Please refer to the undamped example in the supplementary video.
 
 \noindent{}\textbf{Reviewer \#2:}
 

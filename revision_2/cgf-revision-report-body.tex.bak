@@ -42,10 +42,7 @@
 
 We have carefully revised our submission according to the suggestions of the reviewers. The major changes include (but not limited to):
 \begin{enumerate}
-\item{Add examples that demonstrate the benefits of our method compared with existing fracture algorithms.}
-\item{Add more complex comparisons against FEM along with quantitative error analysis.}
-\item{Provide a supplementary technical document that derives the constitutive model in the paper.}
-\item{Address other main issues in the review comments by adding corresponding detailed explanations in the manuscript.}
+\item{Blablabla.}
 \end{enumerate}
 
 \section{Answers to Reviewers' Comments}
@@ -54,88 +51,78 @@ Here we respond to the comments made by each reviewer.
 
 \noindent{}\textbf{Reviewer \#1:}
 
-\noindent{Q: }\emph{Lack examples that show handling of crack tips.}
+\noindent{Q: }\emph{More explicit discussion on damping is preferred.}
 
-We add two examples that involve complex propagations of crack tips in the revised manuscript (see Figure~14 and Figure~16). The results reveal that our approach could handle well the advancing, branching, and merging of crack tips.
-
-\noindent{Q: }\emph{The glass fracture example reveals fracture `dust' at the particle level. Is it due to the ``numerical fracture''?}
-
-No, the dust in the glass fracture example is not a result of numerical fracture. In fact, peridynamics is free from numerical fracture as the family of particles and corresponding weight function values are determined in the initial configuration. For instance, the arms of the armadillo in Figure~3 of the paper are overstretched and no fracture occurs. There are many dust in the glass fracture example probably because brittle materials tend to shatter into dust. Nevertheless, we could modify the fracture criterion in Equation 18 so that we could control the amount of dust during shattering process. The core idea is to increase the criterion value as the material gets more damaged. This 
-
-\noindent{Q: }\emph{Show compelling examples that demonstrate the benefits of the peridynamics approach.}
-
-We include more examples of deformation in the manuscript and the comparisons against FEM show that our method could achieve accuracy that is as good as corotated linear FEM. This demonstrates the benefits of our peridynamics constitutive model compared with linear elastic model, from which it is derived. We provide analysis of this in the results section. Also, the additional fracture examples that emphasize on handling of crack tips are either impossible or challenging for existing algorithms. In the contrast, it is trivially handled by our peridynamics approach.
+Blablabla.
 
 \noindent{}\textbf{Reviewer \#2:}
 
-\noindent{Q: }\emph{More explanation of Equation 1 is required. What does the ``volume of $\mathbf{x}$'' mean? Is $\mathbf{x}'$ the variable being integrated over? Why it's not a finite sum in Equation~1?}
+\noindent{Q: }\emph{Limitations for meshing and explicit fracture comparison to other methods.}
 
-The volume of $\mathbf{x}$ means volume of the material region occupied by material point $\mathbf{x}$. Yes, it is $\mathbf{x}'$ the variable being integrated over instead of $\mathbf{x}$. We have removed this typo in the revised manuscript. Equation 1 is the governing equation for a continuum body and each material point may has infinite number of material points within its horizon. Therefore it's a integral in Equation 1, not a finite sum. The integral would be replaced by a finite sum after the body is discretized into particles. We explained this issue in the supplementary document.
-
-\noindent{Q: }\emph{More motivation for why the different terms (equations 3-15) have the form that they do is required.}
-
-We provide derivation for each equation of the constitutive model in the supplementary technical document, which should explains why the different terms appear in the form as they are.
-
-\noindent{Q: }\emph{More explanation of the parameter that controls the amount of maximum plasticity is required.}
-
-We define the plasticity control parameter $\gamma$ in Equation~15 in light of the paper by O'Brien et al. \cite{O'Brien:2002:GMA:566654.566579}. It is indeed an artificial parameter that lack rigorous physical meaning, whereas it is a flexible parameter that allows more control over the effects of plasticity (see Figure~5). Thus we consider it as a practical parameter for animation. O'Brien et al. \cite{O'Brien:2002:GMA:566654.566579} provided a graphical illustration of this parameter, please refer to their paper.
-
-\noindent{Q: }\emph{Justification of Equation 18 is required.}
-
-blabla.
-
-\noindent{Q: }\emph{More comparisons against FEM are preferred.}
-
-We've included more complex examples in the revised manuscript that demonstrate visual and quantitative comparisons against FEM.
+Blablabla.
 
 \noindent{}\textbf{Reviewer \#3:}
 
-\noindent{Q: }\emph{Use shorter notations for $A_{deviatoric}$ and $A_{dilatational}$.}
+\noindent{Q: }\emph{How much does the interaction radius parameter $\delta$ affect the simulation quality? Do the comparisons hold up for any value of $\delta$? Or does it need to be tuned? How sensitive is the range of values for which peridynamics gives good result, and are there rules of thumb for how $\delta$ should be selected?}
 
-We have shortened the notations as $A_{dev}$ and $A_{dil}$ respectively.
+We provide a supplement video that compares four different $\delta$ values for a bending beam. It shows that the bending beam with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are visually undistinguished, which suggests that the simulation results are less sensitive to the parameter $\delta$.
 
-\noindent{Q: }\emph{Provide a step overview of the computations performed in each time step.}
+Note that peridynamics could converge to the classical continuum mechanics when $\delta$ approaching 0 according to \cite{Weckner2005705}. So we use a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amounts to that we consider only the 1-ring neighbors similar to FEM. Finetuning the $\delta$ value is also viable to get a better result. For example, in Figure 13, we adjust it to $1.38\lambda$ to achieve our best result.
 
-The computations of our method in each time step follow standard simulation pipeline. We employ explicit time integration, therefore in each time step the forces (internal \&\& external) are evaluated according to current state of particles and then they are plugged into the governing equation for time integration. No special procedure is required, which also reveals the simplicity of our approach.
+As for the selection of $\delta$, we recommend a value range from $1.0\lambda$ to $2.0\lambda$.
+A grater $\delta$ could result in inadequate family members for those particles close to boundary, thus causing the material behave more softer due to the insufficient force contribution from its family, which can be seen from a bending beam of a $\delta$ value $3.0\lambda$ in the right-bottom of supplement video.
+In this case, a correction for boundary particle could be taken into account.
 
-\noindent{Q: }\emph{A supplementary document or appendix is required that shows one can derive the peridynamics constitutive model from a classic hyperelastic energy density.}
+\noindent{Q: }\emph{There are missing steps for discretization. How do we go from equation 1 to discrete equations of motion, where $\mathbf{x}$ and $\mathbf{x'}$ are particles rather than arbitrary points in the material? }
 
-We have provide a supplementary document in the revised submission. In the document, we present detailed derivation of the constitutive model that we proposed in the paper. We also introduce the common procedures for deriving the peridynamics form of a general hyperelastic material in continuum mechanics.
+Blablabla.
 
-\noindent{Q: }\emph{Provide a discussion on the choice motivations for linear elastic model. Why not more general nonlinear models? Is there any technical difficulty?}
+\noindent{Q: }\emph{Can't the use of the weights defined in equation 4 be interpreted as just a discretization of divergence, except over the entire horizon rather than over an element neighborhood?}
 
-We choose linear elastic model as the basis of our peridynamics constitutive model due to its simplicity. The results (see Figure~9$\sim$12) show that our model does not suffer from the artifacts of linear model and is as good as corotated linear model. We believe this model is adequate for a lot of animations. Please refer to the paper for explanations. However, we emphasize that general nonlinear models apply as well. We present common procedures for deriving peridynamics constitutive model from general hyperelastic materials in the supplementary document.
+To our minds, we do not think the weight function in Peridynamics amounts to a discretization of divergence in FEM.
+In fact, by comparing the governing equations in both theories, we could easily derive that
+the divergence of stress in FEM is equivalent to integration of force density over horizon, which is
+\begin{equation}
+\nabla\cdot\sigma = \int_{H_\mathbf{x}}[\mathbf{T}\langle\mathbf{x}',\mathbf{x}\rangle - \mathbf{T}\langle\mathbf{x},\mathbf{x}'\rangle]dV_{\mathbf{x}'}
+\end{equation}
+From discretization, we could naturally have
+\begin{equation}
+\nabla\cdot\sigma = \sum_{H_\mathbf{x}}[\mathbf{T}\langle\mathbf{x}',\mathbf{x}\rangle - \mathbf{T}\langle\mathbf{x},\mathbf{x}'\rangle]V_{\mathbf{x}'}
+\end{equation}
+We note that it is the force summation over horizon that should be interpreted as a discretization of divergence.
+Although weight functions are encoded in force density, $\omega$ is used only to compute the force summation in a weighted way, which is inherently different from other methods such as SPH where weight functions are simutaneously used to calculate quantities' first-order or second-order derivatives
+(e.g. $\nabla\cdot\mathbf{A_i} = -\frac{1}{\rho_i}\sum_j(\mathbf{A_i - A_j})\cdot\nabla\omega_{ij}$)
 
-\noindent{Q: }\emph{In a lot of the elastic examples the motion is significantly damped. Why?}
+That is, in our formulation, what involved here are just displacements of material points,
+instead of the spatial derivative of the displacements, which consequently lead to the biggest difference between Peridynamic and other mesh(FEM) or meshless method.
 
-We add damping forces for stable simulations since we use explicit time integration. These simple damping forces are either laplacian damping or air damping, which are probably the reasons for the damped motion.
+In addition, $\omega$ is only associated with positions in reference space, rather than positions in deformed space,
+so we could pre-gurantee its value rationality by appropriately populating our material points in advance.
 
-\noindent{Q: }\emph{How is the time integration of the governing equation discretized.}
+\noindent{Q: }\emph{Correction for typos.}
 
-We use explicit time integration for simplicity. In each time step, the internal forces and external forces are evaluated at current state of particles according to the constitutive relation, then velocities of the particles are update, and finally the positions. These are the standard procedures for simulation methods.
+Blablabla.
 
-\noindent{Q: }\emph{A discussion on element inversion is preferred.}
+\noindent{Q: }\emph{Lack discussion for XFEM-based methods in the related work.}
 
-Peridynamics does not naturally handle element inversion, therefore neither does our method. We conducted an experiment that involves element inversion, please refer to the corresponding video clip in the revised submission.
+Blablaba.
 
-\noindent{}\textbf{Reviewer \#4:}
+\noindent{Q: }\emph{How is equation 17 used, exactly? what are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
 
-\noindent{Q: }\emph{The exposition can be improved by providing examples/comparisons that show the advantage of peridynamics over existing methods.}
+Equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded, then we further improve it to Equation 18 by incorporating the weight function and increasing critical value through $\phi$ as fracture proceeding. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have modify this part of statements in the paper to eliminate the ambiguities.
 
-We provide more comparisons with FEM to demonstrate the advantage of our peridynamics constitutive model. We also present examples that show handling of complicated crack propagations, which is impossible for some existing methods and challenging for others. We believe these additional examples should show the benefits of our approach.
+\noindent{Q: }\emph{Unreasonable statements about the relationship between rotation artifacts, geometric linearity and stress-strain linearity.}
 
-\noindent{Q: }\emph{Comparisons against FEM with more complex examples are required.}
+Blablabla.
 
-We add more complex comparisons against FEM with error analysis in the revised manuscript.
+\noindent{Q: }\emph{How many elements were used for each example? How did the performance compare to the performance of peridynamics?}
 
-\noindent{Q: }\emph{Do the FEM simulations use the same material parameters as the peridynamics simulations for achieving the same effiect?}
+Since we position our particles to the center of elements, the elements and the particles are of the same size in our simulations.
+We did't detailly compare the performance between FEM and Peridynamics, considering it could be affected by a lof of factors such as integration method and implementation, but we found in our experiments that the efficients of these two method are comparable.
 
-Yes, we use the same material parameters for the FEM comparisons. Moreover, we initialize particles at vertices of the FEM mesh and the horizon values for these peridynamics simulations are chosen so that the family of particles are their immediate neighbors.
+\noindent{Q: }\emph{Question on the supplemental video (random cube)?}
 
-\noindent{Q: }\emph{Crack surfaces are jagged, why not smooth these surfaces or alternatively use a finer mesh?}
-
-We didn't smooth the crack surfaces because this issue could be considered as orthogonal to the peridynamics model itself. Nevertheless, smoothing the surfaces could indeed improve the visual results when our method is applied to practical animations.
-
+Blablabla.
 
 %-------------------------------------------------------------------------
 \bibliographystyle{eg-alpha}

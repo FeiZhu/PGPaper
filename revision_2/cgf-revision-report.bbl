@@ -1,8 +1,9 @@
-\begin{thebibliography}{\uppercase{OBH02}}
+\begin{thebibliography}{\uppercase{WA05}}
 
-\bibitem[OBH02]{O'Brien:2002:GMA:566654.566579}
-\textsc{O'Brien J.~F., Bargteil A.~W., Hodgins J.~K.}:
-\newblock Graphical modeling and animation of ductile fracture.
-\newblock \emph{ACM Trans. Graph. 21}, 3 (July 2002), 291--294.
+\bibitem[WA05]{Weckner2005705}
+\textsc{Weckner O., Abeyaratne R.}:
+\newblock The effect of long-range forces on the dynamics of a bar.
+\newblock \emph{Journal of the Mechanics and Physics of Solids 53}, 3 (2005),
+  705 -- 728.
 
 \end{thebibliography}

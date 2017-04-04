@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.10)  9 NOV 2016 23:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.10)  4 APR 2017 17:07
 entering extended mode
-**D:/fei/code/PGPaper/revision/cgf-revision-report.tex
-(D:/fei/code/PGPaper/revision/cgf-revision-report.tex
+**D:/fei/code/PGPaper/revision_2/cgf-revision-report.tex
+(D:/fei/code/PGPaper/revision_2/cgf-revision-report.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(D:\fei\code\PGPaper\revision\egpubl.cls
+(D:\fei\code\PGPaper\revision_2\egpubl.cls
 Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 \c@table=\count79
 \c@figure=\count80
@@ -24,7 +24,7 @@ Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(D:\fei\code\PGPaper\revision\cgf-revision-report.lbl))
+(D:\fei\code\PGPaper\revision_2\cgf-revision-report.lbl))
 (C:\CTEX\MiKTeX\tex\latex\caption\caption.sty
 Package: caption 2011/11/10 v3.2e Customizing captions (AR)
 
@@ -355,7 +355,7 @@ File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
 (C:\CTEX\MiKTeX\tex\latex\base\t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
-(D:\fei\code\PGPaper\revision\dfadobe.sty
+(D:\fei\code\PGPaper\revision_2\dfadobe.sty
 Package: dfadobe 2000/03/05 v1.4 T1-encoded Times (except symbols), Courier, He
 lvetica (at 90\%) + math package
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
@@ -382,17 +382,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 20.
 
-(D:\fei\code\PGPaper\revision\dfT1ptm.fd
+(D:\fei\code\PGPaper\revision_2\dfT1ptm.fd
 File: dfT1ptm.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/ptm.
 )
-(D:\fei\code\PGPaper\revision\dfT1phv.fd
+(D:\fei\code\PGPaper\revision_2\dfT1phv.fd
 File: dfT1phv.fd 1997/12/02 Fontinst v1.6 font definitions for T1/phv scaled to
  90\%.
 )
-(D:\fei\code\PGPaper\revision\dfT1pcr.fd
+(D:\fei\code\PGPaper\revision_2\dfT1pcr.fd
 File: dfT1pcr.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/pcr.
 ))
-(D:\fei\code\PGPaper\revision\egweblnk.sty
+(D:\fei\code\PGPaper\revision_2\egweblnk.sty
 Package: egweblnk 2004/10/29 v2.2 DF's support for http web links in class egpu
 bl
 )
@@ -401,8 +401,8 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-(D:\fei\code\PGPaper\revision\cgf-revision-report-body.tex
-(D:\fei\code\PGPaper\revision\cgf-revision-report.aux)
+(D:\fei\code\PGPaper\revision_2\cgf-revision-report-body.tex
+(D:\fei\code\PGPaper\revision_2\cgf-revision-report.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
@@ -491,63 +491,61 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 41.
-
-Underfull \hbox (badness 1540) in paragraph at lines 45--46
-[]\T1/ptm/m/n/9 Add ex-am-ples that demon-strate the ben-e-fit-s of our
- []
-
-
-Underfull \hbox (badness 1320) in paragraph at lines 48--49
-[]\T1/ptm/m/n/9 Address oth-er main is-sues in the re-view com-ments
- []
-
-
-Underfull \hbox (badness 3482) in paragraph at lines 67--68
-[]\T1/ptm/m/n/9 We in-clude more ex-am-ples of de-for-ma-tion in the
- []
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
-[1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
 
+Underfull \vbox (badness 1259) has occurred while \output is active []
 
-] [2]
-(D:\fei\code\PGPaper\revision\cgf-revision-report.bbl
-(D:\fei\code\PGPaper\revision\cgf-revision-report.brf)
-\tf@brf=\write3
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
- [3
+ [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+Underfull \hbox (badness 1019) in paragraph at lines 96--98
+\T1/ptm/m/n/9 dis-place-ments of ma-te-ri-al points, in-stead of the s-pa-tial
+ []
 
-(D:\fei\code\PGPaper\revision\cgf-revision-report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+\T1/ptm/m/n/9 Q: \T1/ptm/m/it/9 How is e-qua-tion 17 used, ex-act-ly? what are
+ []
+
+(D:\fei\code\PGPaper\revision_2\cgf-revision-report.bbl
+(D:\fei\code\PGPaper\revision_2\cgf-revision-report.brf)
+\tf@brf=\write3
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
+
+(D:\fei\code\PGPaper\revision_2\cgf-revision-report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
 Package rerunfilecheck Info: File `cgf-revision-report.brf' has not changed.
-(rerunfilecheck)             Checksum: 3E85C78B96DF8987E829A7DE3D1F92FA;126.
+(rerunfilecheck)             Checksum: E967330F10CBA68DF4D4256E3442BA75;47.
  ) ) 
 Here is how much of TeX's memory you used:
- 7904 strings out of 495354
- 116397 string characters out of 3183858
- 211259 words of memory out of 3000000
+ 7913 strings out of 495354
+ 116431 string characters out of 3183858
+ 208259 words of memory out of 3000000
  10912 multiletter control sequences out of 15000+200000
- 46306 words of font info for 65 fonts, out of 3000000 for 9000
+ 52802 words of font info for 76 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,8n,38p,1067b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,38p,1277b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy9.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/t
-ype1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/
-CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on cgf-revision-report.pdf (3 pages, 81269 bytes).
+/public/amsfonts/cmextra/cmex9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9
+.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type
+1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTE
+X/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on cgf-revision-report.pdf (2 pages, 111655 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
+ 66 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
