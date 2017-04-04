@@ -53,25 +53,28 @@ Here we respond to the comments made by each reviewer.
 
 \noindent{Q: }\emph{More explicit discussion on damping is preferred. Particularly, it is very discouraging to know the proposed method needs 'air damping' to stabilize the simulation.}
 
-We apologize for the imprecise description in prior revision note that causes the misunderstanding that we need damping forces to stabilize the simulation, which is not as a matter of fact. We used air damping to slow the motion of objects down so that the length of the video would not be too long, which is indeed a bad idea. However, we only used it in very few of our examples, namely Figure~1(c)(d) and Figure~3. We submitted a video of the example in Figure~3 to support our point, where the settings were identical as before but the damping forces were removed. The simulation is still stable, only that it takes more time for the armadillo to reach rest. We also applied Laplacian smoothing of velocity to a few examples, where the smoothed velocity of a particle is computed as $\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}+\lambda \mathbf{L}(\mathbf{v}_{\mathrm{old}})$. The smoothing is almost negligible since we set $\lambda$ to very small value of $0.001$. We admit that the use of damping forces in our experiment is quite casual, but we argue it is not a necessity for our method. Please refer to the undamped example in the supplementary video.
+We apologize for the imprecise description in prior revision note that causes the misunderstanding that we need damping forces to stabilize the simulation, which is not as a matter of fact. We used air damping to slow the motion of objects down so that the length of the video would not be too long, which is indeed a bad idea. However, we only used it in very few of our examples, namely Figure~1(c)(d) and Figure~3. We submitted a video of the example in Figure~3 to support our point, where the settings were identical as before but the damping forces were removed. The simulation is still stable, only that it takes more time for the armadillo to reach rest. We also applied Laplacian smoothing of velocity to a few examples, where the smoothed velocity of a particle is computed as $\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}+\lambda \mathbf{L}(\mathbf{v}_{\mathrm{old}})$. The smoothing is almost negligible since we set $\lambda$ to a very small value of $0.001$. We admit that the use of damping forces in our experiment is quite casual, but we argue it is not a necessity for our method. Please refer to the undamped example in the supplementary video.
 
 \noindent{}\textbf{Reviewer \#2:}
 
-\noindent{Q: }\emph{Limitations for meshing and explicit fracture comparison to other methods.}
+\noindent{Q: }\emph{The authors need to be aware of the limitations of mesh embedding strategy.}
 
-Blablabla.
+Using pre-generated tetrahedral mesh for crack surface representation is not an optimal solution, since the quality of the crack surfaces highly depends on that of the tetrahedral mesh. For instance, there may be lack of smoothness and fine details. We could address these issues in the future by applying smoothing and dynamical remeshing to the tetrahedral mesh. We could also explore other crack surface representation strategy. It is an interesting future work which we believe is beneficial to other meshless methods as well.
+
+\noindent{Q: }\emph{Explicit comparisons to other methods (i.e., tet-based fracture following O'Brien's work and MLS fracture following M$\ddot{u}$ller's or Pauly's work) is missing. Some simple scenarios showing explicit comparisons would definitely highlight the issues that other methods have trouble with and that are apparently simpler with the peridynamics method}
+
+blabla.
 
 \noindent{}\textbf{Reviewer \#3:}
 
-\noindent{Q: }\emph{How much does the interaction radius parameter $\delta$ affect the simulation quality? Do the comparisons hold up for any value of $\delta$? Or does it need to be tuned? How sensitive is the range of values for which peridynamics gives good result, and are there rules of thumb for how $\delta$ should be selected?}
+\noindent{Q: }\emph{How much does the interaction radius parameter $\delta$ affect the simulation quality? Do the comparisons with FEM hold up for any value of $\delta$? Or does it need to be tuned? How sensitive is the range of values for which peridynamics gives good result, and are there rules of thumb for how $\delta$ should be selected?}
 
-We provide a supplemental video that compares four different $\delta$ values for a bending beam. It shows that the bending beam with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are visually undistinguished, which suggests that the simulation results are less sensitive to the parameter $\delta$.
+We provide a supplementary video that compares the simulation of a bending beam using four different $\delta$ values. The results are all physically plausible, which shows that the value of $\delta$ does not affect the simulation quality. We also find that the bending beams with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are hardly distinguishable. Therefore the simulation results are not very sensitive to the parameter $\delta$.
 
-Note that peridynamics could converge to the classical continuum mechanics when $\delta$ approaching 0 according to \cite{Weckner2005705}. So we use a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amounts to that we consider only the 1-ring neighbors similar to FEM. Finetuning the $\delta$ value is also viable to get a better result. For example, in Figure 13, we adjust it to $1.38\lambda$ to achieve our best result.
+Peridynamics converges to the classical continuum mechanics while $\delta$ approaches zero\cite{Weckner2005705}. Therefore we used a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amounts to the nodal force computation of FEM using the 1-ring neighbors of mesh nodes. Although not always necessary, fine-tuning the $\delta$ value is a viable way of getting well-synchronized results. For instance, in Figure 13, we adjust it to $1.38\lambda$ to achieve our best result.
 
-As for the selection of $\delta$, we recommend a value range from $1.0\lambda$ to $2.0\lambda$.
-A grater $\delta$ could result in inadequate family members for those particles close to boundary, thus causing the material behave more softer due to the insufficient force contribution from its family, which can be seen from a bending beam of a $\delta$ value $3.0\lambda$ in the right-bottom of supplemental video.
-In this case, a correction for boundary particle could be taken into account.
+In practice, we recommend a $\delta$ value in the range between $1.0\lambda$ and $2.0\lambda$.
+Larger values could result in inadequate family members for particles close to object boundary, therefore causing the material to behave softer than it should be. Please refer to the bending beam with a $\delta$ value of $3.0\lambda$ in the right-bottom of the supplementary video. In this case, a correction for boundary particles needs to be taken into account.
 
 \noindent{Q: }\emph{There are missing steps for discretization. How do we go from equation 1 to discrete equations of motion, where $\mathbf{x}$ and $\mathbf{x'}$ are particles rather than arbitrary points in the material? }
 
@@ -101,28 +104,27 @@ so we could pre-gurantee its value rationality by appropriately populating our m
 
 \noindent{Q: }\emph{Correction for typos.}
 
-Blablabla.
+We have fixed as many typos as we could with several passes of thorough editing. Please refer to the revised manuscript.
 
 \noindent{Q: }\emph{Lack discussion for XFEM-based methods in the related work.}
 
 Blablaba.
 
-\noindent{Q: }\emph{How is equation 17 used, exactly? what are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
+\noindent{Q: }\emph{How is equation 17 used, exactly? It is compared against some fixed user-specified threshold? What are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
 
 Equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded, then we further improve it to Equation 18 by incorporating the weight function and increasing critical value through $\phi$ as fracture proceeding. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have modify this part of statements in the paper to eliminate the ambiguities.
 
-\noindent{Q: }\emph{Unreasonable statements about the relationship between rotation artifacts, geometric linearity and stress-strain linearity.}
+\noindent{Q: }\emph{Imprecise statements about the relationship between rotation artifacts, geometric linearity, and stress-strain linearity.}
 
-Blablabla.
+We have removed the inappropriate statements from the revised manuscript.
 
-\noindent{Q: }\emph{How many elements were used for each example? How did the performance compare to the performance of peridynamics?}
+\noindent{Q: }\emph{For the FEM comparison examples: How many elements were used for each example? How did the performance compare to the performance of peridynamics?}
 
-Since we position our particles to the center of elements, the elements and the particles are of the same size in our simulations.
-We did't detailly compare the performance between FEM and Peridynamics, considering it could be affected by a lof of factors such as integration method and implementation, but we found in our experiments that the efficients of these two method are comparable.
+The number of elements used in FEM simulations are identical to the number of particles used in our peridynamics simulations. We initialized our particles in the centers of FEM elements. We did not measure the precise performance of the FEM simulations. In our implementation, the performance of FEM simulations is almost on a par with the peridynamics simulations.
 
-\noindent{Q: }\emph{Question on the supplemental video (random cube)?}
+\noindent{Q: }\emph{What conclusions should be drawn from the supplemental video(random cube) in prior submission?}
 
-Blablabla.
+The random cube video clip was meant to clarify that we did not take into account element inversions and thus our method failed to recover the cube from a randomly inverted configuration.
 
 %-------------------------------------------------------------------------
 \bibliographystyle{eg-alpha}
