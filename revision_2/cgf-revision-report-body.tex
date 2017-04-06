@@ -61,9 +61,11 @@ We apologize for the imprecise description in prior revision note that causes th
 
 Using pre-generated tetrahedral mesh for crack surface representation is not an optimal solution, since the quality of the crack surfaces highly depends on that of the tetrahedral mesh. For instance, there may be lack of smoothness and fine details. We could address these issues in the future by applying smoothing and dynamical remeshing to the tetrahedral mesh. We could also explore other crack surface representation strategy. It is an interesting future work which we believe is beneficial to other meshless methods as well.
 
-\noindent{Q: }\emph{Explicit comparisons to other methods (i.e., tet-based fracture following O'Brien's work and MLS fracture following M$\ddot{u}$ller's or Pauly's work) is missing. Some simple scenarios showing explicit comparisons would definitely highlight the issues that other methods have trouble with and that are apparently simpler with the peridynamics method}
+\noindent{Q: }\emph{Explicit comparisons to other methods(i.e., tet-based fracture following O'Brien's work and MLS fracture following M$\ddot{u}$ller's or Pauly's work) is missing.}
 
-blabla.
+O'Brien's seminal work \cite{O'Brien:1999:GMA:311535.311550,O'Brien:2002:GMA:566654.566579} requires element cutting and dynamical remeshing, which are somewhat complicated to implement. Methods based on the virtual node algorithm \cite{Molino2004} are simpler, but still not trivial. Other tet-based fracture work\cite{smith2001fast,Muller2001} cracks objects along element boundaries, which couples dynamics computation with surface representation. Crack propagation in these methods is not determined by stress analysis alone but by meshing as well, therefore accuracy is compromised. We also use embedded tet mesh for crack representation, but the physics is applied on the particles. The MLS fracture work of Pauly's\cite{Pauly:2005:MAF:1073204.1073296} is a great method, which generates detailed crack surfaces and allows arbitrary crack initiation/propagation. However, the MLS approximation fails to handle degenerated particle configuration where neighbors of a particle are colinear(NEED VERIFICATION). They used a series of techniques to handle the complex topology situations in crack propagation. In contrast, our method does not need any explicit handling.
+
+In summary, our approach is framework for fracture simulation parallel to existing methods. The benefits of our method include simplicity of implementation, trivial handling of discontinuities, and etc.
 
 \noindent{}\textbf{Reviewer \#3:}
 
@@ -78,7 +80,7 @@ Larger values could result in inadequate family members for particles close to o
 
 \noindent{Q: }\emph{There are missing steps for discretization. How do we go from equation 1 to discrete equations of motion, where $\mathbf{x}$ and $\mathbf{x'}$ are particles rather than arbitrary points in the material? }
 
-Blablabla.
+We have revised the manuscript to include some explanations on the discretization of equation 1. Please refer to the manuscript.
 
 \noindent{Q: }\emph{Can't the use of the weights defined in equation 4 be interpreted as just a discretization of divergence, except over the entire horizon rather than over an element neighborhood?}
 
@@ -108,7 +110,7 @@ We have fixed as many typos as we could with several passes of thorough editing.
 
 \noindent{Q: }\emph{Lack discussion for XFEM-based methods in the related work.}
 
-Blablaba.
+We have cited relevant XFEM-based fracture methods in the revised manuscript. Nevertheless, the discussion is limited to work in the graphics community. Discussion on the vast XFEM literature in engineer is beyond the scope of this paper.
 
 \noindent{Q: }\emph{How is equation 17 used, exactly? It is compared against some fixed user-specified threshold? What are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
 

@@ -1,4 +1,41 @@
-\begin{thebibliography}{\uppercase{WA05}}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{\uppercase{MMDJ01}}
+
+\bibitem[MBF04]{Molino2004}
+\textsc{Molino N., Bao Z., Fedkiw R.}:
+\newblock A virtual node algorithm for changing mesh topology during
+  simulation.
+\newblock \emph{ACM Trans. Graph. 23}, 3 (Aug. 2004), 385--392.
+
+\bibitem[MMDJ01]{Muller2001}
+\textsc{M\"{u}ller M., McMillan L., Dorsey J., Jagnow R.}:
+\newblock Real-time simulation of deformation and fracture of stiff materials.
+\newblock In \emph{Proceedings of the Eurographic Workshop on Computer
+  Animation and Simulation} (New York, NY, USA, 2001), Springer-Verlag New
+  York, Inc., pp.~113--124.
+
+\bibitem[OBH02]{O'Brien:2002:GMA:566654.566579}
+\textsc{O'Brien J.~F., Bargteil A.~W., Hodgins J.~K.}:
+\newblock Graphical modeling and animation of ductile fracture.
+\newblock \emph{ACM Trans. Graph. 21}, 3 (July 2002), 291--294.
+
+\bibitem[OH99]{O'Brien:1999:GMA:311535.311550}
+\textsc{O'Brien J.~F., Hodgins J.~K.}:
+\newblock Graphical modeling and animation of brittle fracture.
+\newblock In \emph{Proceedings of the 26th Annual Conference on Computer
+  Graphics and Interactive Techniques} (New York, NY, USA, 1999), SIGGRAPH '99,
+  ACM Press/Addison-Wesley Publishing Co., pp.~137--146.
+
+\bibitem[PKA{\etalchar{*}}05]{Pauly:2005:MAF:1073204.1073296}
+\textsc{Pauly M., Keiser R., Adams B., Dutr{\'e} P., Gross M., Guibas L.~J.}:
+\newblock Meshless animation of fracturing solids.
+\newblock \emph{ACM Trans. Graph. 24}, 3 (July 2005), 957--964.
+
+\bibitem[SWB01]{smith2001fast}
+\textsc{Smith J., Witkin A., Baraff D.}:
+\newblock Fast and controllable simulation of the shattering of brittle
+  objects.
+\newblock \emph{Comput. Graph. Forum 20}, 2 (2001), 81--90.
 
 \bibitem[WA05]{Weckner2005705}
 \textsc{Weckner O., Abeyaratne R.}:
