@@ -26,9 +26,10 @@
 \backcite {Molino2004}{{2}{2}{section.2}}
 \backcite {Bao:2007:FRM:1263129.1263275}{{2}{2}{section.2}}
 \backcite {Sifakis:2007:ACD:1272690.1272701,Wang:2015:AVN:2849517.2849531}{{2}{2}{section.2}}
+\backcite {Kaufmann:2009:ETD:1531326.1531356}{{2}{2}{section.2}}
 \backcite {glondu2013real}{{2}{2}{section.2}}
-\backcite {Muller:2013:RTD:2461912.2461934,Schvartzman:2014:FAB:2556700.2556713}{{2}{2}{section.2}}
-\backcite {Zhu:2015:SRB:2809654.2766942,Hahn:2015:HBF:2809654.2766896}{{2}{2}{section.2}}
+\backcite {Muller:2013:RTD:2461912.2461934,Schvartzman:2014:FAB:2556700.2556713}{{3}{2}{section.2}}
+\backcite {Zhu:2015:SRB:2809654.2766942,Hahn:2015:HBF:2809654.2766896}{{3}{2}{section.2}}
 \backcite {Muller:2004:PBA:1028523.1028542}{{3}{2}{section.2}}
 \backcite {Pauly:2005:MAF:1073204.1073296}{{3}{2}{section.2}}
 \backcite {Steinemann:2009:SMD:1651926.1652002}{{3}{2}{section.2}}
@@ -48,9 +49,9 @@
 \backcite {silling2007peridynamic}{{4}{3}{equation.3.1}}
 \backcite {silling2007peridynamic}{{4}{4.1}{subsection.4.1}}
 \backcite {madenci2014peridynamic}{{4}{4.1}{subsection.4.1}}
-\backcite {silling2007peridynamic}{{5}{4.2}{figure.caption.3}}
+\backcite {silling2007peridynamic}{{4}{4.2}{figure.caption.3}}
 \backcite {mitchell2011nonlocal}{{5}{4.2}{figure.caption.3}}
-\backcite {mitchell2011nonlocal}{{5}{4.2}{equation.4.15}}
+\backcite {mitchell2011nonlocal}{{5}{4.2}{equation.4.16}}
 \backcite {Silling2005}{{6}{5.1}{subsection.5.1}}
 \backcite {Levine:2015:PPS:2849517.2849526}{{6}{5.1}{subsection.5.1}}
 \backcite {Si:2015:TDQ:2732672.2629697}{{7}{6}{section.6}}

@@ -74,6 +74,11 @@
   on Computer Animation} (Aire-la-Ville, Switzerland, Switzerland, 2004), SCA
   '04, Eurographics Association, pp.~131--140.
 
+\bibitem[KMB{\etalchar{*}}09]{Kaufmann:2009:ETD:1531326.1531356}
+\textsc{Kaufmann P., Martin S., Botsch M., Grinspun E., Gross M.}:
+\newblock Enrichment textures for detailed cutting of shells.
+\newblock \emph{ACM Trans. Graph. 28}, 3 (July 2009), 50:1--50:10.
+
 \bibitem[LBC{\etalchar{*}}14]{Levine:2015:PPS:2849517.2849526}
 \textsc{Levine J.~A., Bargteil A.~W., Corsi C., Tessendorf J., Geist R.}:
 \newblock A peridynamic perspective on spring-mass fracture.
