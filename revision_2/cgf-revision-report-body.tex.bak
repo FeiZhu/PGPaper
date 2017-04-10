@@ -42,7 +42,8 @@
 
 We have carefully revised our submission according to the suggestions of the reviewers. The major changes include (but not limited to):
 \begin{enumerate}
-\item{Blablabla.}
+\item{Known typos are removed with thorough editing.}
+\item{TO DO: add more considering what's changed in the paper.}
 \end{enumerate}
 
 \section{Answers to Reviewers' Comments}
@@ -53,7 +54,7 @@ Here we respond to the comments made by each reviewer.
 
 \noindent{Q: }\emph{More explicit discussion on damping is preferred. Particularly, it is very discouraging to know the proposed method needs 'air damping' to stabilize the simulation.}
 
-We apologize for the imprecise description in prior revision note that causes the misunderstanding that we need damping forces to stabilize the simulation, which is not as a matter of fact. We used air damping to slow the motion of objects down so that the length of the video would not be too long, . However, we only used it in very few of our examples, namely Figure~1(c)(d) and Figure~3. We submitted a video of the example in Figure~3 to support our point, where the settings were identical as before but the damping forces were removed. The simulation is still stable, only that it takes more time for the armadillo to reach rest. We also applied Laplacian smoothing of velocity to a few examples, where the smoothed velocity of a particle is computed as $\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}+\lambda \mathbf{L}(\mathbf{v}_{\mathrm{old}})$. The smoothing is almost negligible since we set $\lambda$ to a very small value of $0.001$. We admit that the use of damping forces in our experiment is quite casual, but we argue it is not a necessity for our method. Please refer to the undamped example in the supplementary video.
+We apologize for the imprecise description in prior revision note that causes the misunderstanding of requiring damping forces to stabilize the simulation, which is not as a matter of fact. We used air damping to slow the motion of objects down so that the length of the video would not be too long, and self-collision handling would be easier (tricky idea). However, we only used it in very few of our examples, namely Figure~1(c)(d) and Figure~3. We submitted a video of the example in Figure~3 to support our point, where the settings were identical as before but the damping forces were removed. The simulation is still stable, only that our simple self-collision handling strategy fails to resolve self-penetrations completely and it takes more time for the armadillo to reach rest. We also applied Laplacian smoothing of velocity to a few examples, where the smoothed velocity of a particle is computed as $\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}+\lambda \mathbf{L}(\mathbf{v}_{\mathrm{old}})$. The smoothing is almost negligible since we set $\lambda$ to a very small value of $0.001$. We admit that the use of damping forces in our experiment is quite casual, but we argue it is not a necessity for our method. For instance, the issue of self-penetration could be addressed by superior detection and resolution strategies.
 
 \noindent{}\textbf{Reviewer \#2:}
 
@@ -63,7 +64,7 @@ Using pre-generated tetrahedral mesh for crack surface representation is not an 
 
 \noindent{Q: }\emph{Explicit comparisons to other methods(i.e., tet-based fracture following O'Brien's work and MLS fracture following M$\ddot{u}$ller's or Pauly's work) is missing.}
 
-O'Brien's seminal work \cite{O'Brien:1999:GMA:311535.311550,O'Brien:2002:GMA:566654.566579} requires element cutting and dynamical remeshing, which are somewhat complicated to implement. Methods based on the virtual node algorithm \cite{Molino2004} are simpler, but still not trivial. Other tet-based fracture work\cite{smith2001fast,Muller2001} cracks objects along element boundaries, which couples dynamics computation with surface representation. Crack propagation in these methods is not determined by stress analysis alone but by meshing as well, therefore accuracy is compromised. We also use embedded tet mesh for crack representation, but the physics is applied on the particles. The MLS fracture work of Pauly's\cite{Pauly:2005:MAF:1073204.1073296} is a great method, which generates detailed crack surfaces and allows arbitrary crack initiation/propagation. However, the MLS approximation fails to handle degenerated particle configuration where neighbors of a particle are colinear(NEED VERIFICATION). They used a series of techniques to handle the complex topology situations in crack propagation. In contrast, our method does not need any explicit handling.
+O'Brien's seminal work \cite{O'Brien:1999:GMA:311535.311550,O'Brien:2002:GMA:566654.566579} requires element cutting and dynamical remeshing, which are somewhat complicated to implement. Methods based on the virtual node algorithm \cite{Molino2004} are simpler, but still not trivial. Other tet-based fracture work\cite{smith2001fast,Muller2001} cracks objects along element boundaries, which couples dynamics computation with surface representation. Crack propagation in these methods is not determined by stress analysis alone but by meshing as well, therefore accuracy is compromised. We also use embedded tet mesh for crack representation, but the physics is applied on the particles. The MLS fracture work of Pauly's\cite{Pauly:2005:MAF:1073204.1073296} is a great method, which generates detailed crack surfaces and allows arbitrary crack initiation/propagation. However, the MLS approximation fails to handle degenerated particle configuration where neighbors of a particle are colinear. Besides, they used a series of techniques to handle the complex topology situations in crack propagation. In contrast, our method does not need any explicit handling.
 
 In summary, our approach is framework for fracture simulation parallel to existing methods. The benefits of our method include simplicity of implementation, trivial handling of discontinuities, and etc.
 
@@ -71,7 +72,7 @@ In summary, our approach is framework for fracture simulation parallel to existi
 
 \noindent{Q: }\emph{How much does the interaction radius parameter $\delta$ affect the simulation quality? Do the comparisons with FEM hold up for any value of $\delta$? Or does it need to be tuned? How sensitive is the range of values for which peridynamics gives good result, and are there rules of thumb for how $\delta$ should be selected?}
 
-We provide a supplementary video that compares the simulation of a bending beam using four different $\delta$ values. The results are all physically plausible, which shows that the value of $\delta$ does not affect the simulation quality. We also find that the bending beams with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are hardly distinguishable. Therefore the simulation results are not very sensitive to the parameter $\delta$.
+We provide a supplementary video that compares the simulation of a bending beam using four different $\delta$ values. The results are all physically plausible, which shows that the value of $\delta$ does not affect the simulation quality. We also find that the results with $\delta$ values of $1.0\lambda$ and $1.5\lambda$ are hardly distinguishable. Therefore the simulation results are not very sensitive to the parameter $\delta$.
 
 Peridynamics converges to the classical continuum mechanics while $\delta$ approaches zero\cite{Weckner2005705}. Therefore we used a $\delta$ value of $1.0\lambda$ for most FEM comparisons, which amounts to the nodal force computation of FEM using the 1-ring neighbors of mesh nodes. Although not always necessary, fine-tuning the $\delta$ value is a viable way of getting well-synchronized results. For instance, in Figure 13, we adjust it to $1.38\lambda$ to achieve our best result.
 
@@ -80,29 +81,26 @@ Larger values could result in inadequate family members for particles close to o
 
 \noindent{Q: }\emph{There are missing steps for discretization. How do we go from equation 1 to discrete equations of motion, where $\mathbf{x}$ and $\mathbf{x'}$ are particles rather than arbitrary points in the material? }
 
-We have revised the manuscript to include some explanations on the discretization of equation 1. Please refer to the manuscript.
+We have revised the descriptions in section 3 to better clarify the issue of discretization. Please refer to the manuscript.
 
 \noindent{Q: }\emph{Can't the use of the weights defined in equation 4 be interpreted as just a discretization of divergence, except over the entire horizon rather than over an element neighborhood?}
 
-To our minds, we do not think the weight function in Peridynamics amounts to a discretization of divergence in FEM.
+We do not think the weight function in Peridynamics could be regarded as a discretization of divergence in FEM.
 In fact, by comparing the governing equations in both theories, we could easily derive that
-the divergence of stress in FEM is equivalent to integration of force density over horizon, which is
-\begin{equation}
+the divergence of stress in FEM is equivalent to the integration of force density over the horizon, which is
+\begin{equation*}
 \nabla\cdot\sigma = \int_{H_\mathbf{x}}[\mathbf{T}\langle\mathbf{x}',\mathbf{x}\rangle - \mathbf{T}\langle\mathbf{x},\mathbf{x}'\rangle]dV_{\mathbf{x}'}
-\end{equation}
-From discretization, we could naturally have
-\begin{equation}
+\end{equation*}
+From discretization, the integration on the right hand side is replaced by summation
+\begin{equation*}
 \nabla\cdot\sigma = \sum_{H_\mathbf{x}}[\mathbf{T}\langle\mathbf{x}',\mathbf{x}\rangle - \mathbf{T}\langle\mathbf{x},\mathbf{x}'\rangle]V_{\mathbf{x}'}
-\end{equation}
-We note that it is the force summation over horizon that should be interpreted as a discretization of divergence.
-Although weight functions are encoded in force density, $\omega$ is used only to compute the force summation in a weighted way, which is inherently different from other methods such as SPH where weight functions are simutaneously used to calculate quantities' first-order or second-order derivatives
-(e.g. $\nabla\cdot\mathbf{A_i} = -\frac{1}{\rho_i}\sum_j(\mathbf{A_i - A_j})\cdot\nabla\omega_{ij}$)
+\end{equation*}
+We note that it is the force summation over the horizon that should be interpreted as a discretization of divergence.
+Although weight functions are encoded in force density, $\omega$ is used only to compute the force summation in a weighted way, which is inherently different from other methods like FEM and SPH where weight functions are simutaneously used to calculate quantities' first-order or second-order derivatives
+(e.g. in SPH, $\nabla\cdot\mathbf{A_i} = -\frac{1}{\rho_i}\sum_j(\mathbf{A_i - A_j})\cdot\nabla\omega_{ij}$).
 
-That is, in our formulation, what involved here are just displacements of material points,
-instead of the spatial derivative of the displacements, which consequently lead to the biggest difference between Peridynamic and other mesh(FEM) or meshless methods.
-
-In addition, $\omega$ is only associated with positions in reference space, rather than positions in deformed space,
-so we could pre-gurantee its value rationality by appropriately populating our material points in advance.
+That is, in our formulation, it is only the displacements of material points that are involved,
+instead of their spatial derivatives, which consequently lead to the most significant difference between Peridynamic and other mesh (FEM) or meshless methods.
 
 \noindent{Q: }\emph{Correction for typos.}
 
@@ -114,7 +112,8 @@ We have cited relevant XFEM-based fracture methods in the revised manuscript. Ne
 
 \noindent{Q: }\emph{How is equation 17 used, exactly? It is compared against some fixed user-specified threshold? What are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
 
-Equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded, then we further improve it to Equation 18 by incorporating the weight function and increasing critical value through $\phi$ as fracture proceeding. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have modify this part of statements in the paper to eliminate the ambiguities.
+Equation 17 is the critical value of bond stretch for fracture. At run-time, the stretch of bonds between particles are computed via equation 6 and then compared against the critical value to determine whether fracture occurs.
+ In fact, equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded. We further improve it to equation 18 by incorporating the weight function and increasing the critical value through $\phi$ as fracture proceeds. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have revised the description of this part in the manuscript.
 
 \noindent{Q: }\emph{Imprecise statements about the relationship between rotation artifacts, geometric linearity, and stress-strain linearity.}
 

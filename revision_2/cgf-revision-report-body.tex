@@ -40,21 +40,22 @@
 %-------------------------------------------------------------------------
 \section{Revision Summary}
 
-We have carefully revised our submission according to the suggestions of the reviewers. The major changes include (but not limited to):
+We have carefully revised our submission according to the suggestions of the reviewers. The major changes to the manuscript include (but not limited to):
 \begin{enumerate}
 \item{Known typos are removed with thorough editing.}
-\item{TO DO: add more considering what's changed in the paper.}
+\item{More information about the discretization of equations of motion is included.}
+\item{XFEM related citation is included.}
+\item{Revised description of fracture criteria (section 5.1).}
 \end{enumerate}
 
+In addition, we respond to the comments of each reviewer in this revision report. We try to answer the questions with clear clarification and detailed discussion.
 \section{Answers to Reviewers' Comments}
-
-Here we respond to the comments made by each reviewer.
 
 \noindent{}\textbf{Reviewer \#1:}
 
-\noindent{Q: }\emph{More explicit discussion on damping is preferred. Particularly, it is very discouraging to know the proposed method needs 'air damping' to stabilize the simulation.}
+\noindent{Q: }\emph{More explicit discussion on damping is preferred. Particularly, it is very discouraging to know the proposed method needs `air damping' to stabilize the simulation.}
 
-We apologize for the imprecise description in prior revision note that causes the misunderstanding of requiring damping forces to stabilize the simulation, which is not as a matter of fact. We used air damping to slow the motion of objects down so that the length of the video would not be too long, and self-collision handling would be easier (tricky idea). However, we only used it in very few of our examples, namely Figure~1(c)(d) and Figure~3. We submitted a video of the example in Figure~3 to support our point, where the settings were identical as before but the damping forces were removed. The simulation is still stable, only that our simple self-collision handling strategy fails to resolve self-penetrations completely and it takes more time for the armadillo to reach rest. We also applied Laplacian smoothing of velocity to a few examples, where the smoothed velocity of a particle is computed as $\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}+\lambda \mathbf{L}(\mathbf{v}_{\mathrm{old}})$. The smoothing is almost negligible since we set $\lambda$ to a very small value of $0.001$. We admit that the use of damping forces in our experiment is quite casual, but we argue it is not a necessity for our method. For instance, the issue of self-penetration could be addressed by superior detection and resolution strategies.
+We apologize for the imprecise description in prior revision note that causes the misunderstanding of requiring damping forces to stabilize the simulation, which is not as a matter of fact. We used air damping to slow the motion of objects down so that the length of the video would not be too long, and self-collision handling would be easier (tricky idea). However, we only used it in very few of our examples, namely Figure~1(c)(d) and Figure~3. We submitted a video of the example in Figure~3 to support our point, where the settings were identical as before but the damping forces were removed. The simulation is still stable, only that our simple self-collision handling strategy fails to fully resolve the self-penetrations and it takes more time for the armadillo to reach rest. We also applied Laplacian smoothing of velocity to a few examples, where the smoothed velocity of a particle is computed as $\mathbf{v}_{\mathrm{new}}=\mathbf{v}_{\mathrm{old}}+\lambda \mathbf{L}(\mathbf{v}_{\mathrm{old}})$. The smoothing is almost negligible since we set $\lambda$ to a very small value of $0.001$. We admit that the use of damping forces in our experiment is quite casual, but we argue it is not a necessity for our method. For instance, the issue of self-penetration could be addressed by superior detection and resolution strategies.
 
 \noindent{}\textbf{Reviewer \#2:}
 
@@ -81,9 +82,9 @@ Larger values could result in inadequate family members for particles close to o
 
 \noindent{Q: }\emph{There are missing steps for discretization. How do we go from equation 1 to discrete equations of motion, where $\mathbf{x}$ and $\mathbf{x'}$ are particles rather than arbitrary points in the material? }
 
-We have revised the manuscript to include some explanations on the discretization of equation 1. Please refer to the manuscript.
+We have revised the descriptions in section 3 to better clarify the issue of discretization, and the discrete form of equation 1 is added to the manuscript (equation 2). Please refer to the manuscript.
 
-\noindent{Q: }\emph{Can't the use of the weights defined in equation 4 be interpreted as just a discretization of divergence, except over the entire horizon rather than over an element neighborhood?}
+\noindent{Q: }\emph{Can't the use of the weights defined in equation 4 (equation 5 in revised manuscript) be interpreted as just a discretization of divergence, except over the entire horizon rather than over an element neighborhood?}
 
 We do not think the weight function in Peridynamics could be regarded as a discretization of divergence in FEM.
 In fact, by comparing the governing equations in both theories, we could easily derive that
@@ -110,10 +111,10 @@ We have fixed as many typos as we could with several passes of thorough editing.
 
 We have cited relevant XFEM-based fracture methods in the revised manuscript. Nevertheless, the discussion is limited to work in the graphics community. Discussion on the vast XFEM literature in engineer is beyond the scope of this paper.
 
-\noindent{Q: }\emph{How is equation 17 used, exactly? It is compared against some fixed user-specified threshold? What are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
+\noindent{Q: }\emph{How is equation 17 (equation 18 in revised manuscript) used, exactly? It is compared against some fixed user-specified threshold? What are "rest\_bond\_num" and "initial\_bond\_num" in the definition of $\phi$?}
 
-Equation 17 is the critical value of bond stretch for fracture. At run-time, the stretch of bonds between particles are computed via equation 6 and then compared against the critical value to determine whether fracture occurs.
- In fact, equation 17 amounts to the cauchy stretch with plastic deformation reasonably excluded. We further improve it to equation 18 by incorporating the weight function and increasing the critical value through $\phi$ as fracture proceeds. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have revised the description of this part in the manuscript.
+Equation 18 is the critical value of bond stretch for fracture. At run-time, the stretch of bonds between particles are computed via equation 7 and then compared against the critical value to determine whether fracture occurs.
+ In fact, equation 18 amounts to the cauchy stretch with plastic deformation reasonably excluded. We further improve it to equation 19 by incorporating the weight function and increasing the critical value through $\phi$ as fracture proceeds. "rest\_bond\_num" is the rest active bonds during fracture and "initial\_bond\_num" is the initial total bonds before fracture. We have revised the description of this part in the manuscript.
 
 \noindent{Q: }\emph{Imprecise statements about the relationship between rotation artifacts, geometric linearity, and stress-strain linearity.}
 
