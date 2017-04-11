@@ -37,12 +37,12 @@ This document presents the derivation of the constitutive model proposed in the 
 
 As is introduced in the paper, the peridynamics governing equation for any material point located at $\mb{x}$ is formulated as below:
 \begin{equation}
-\rho\ddot{\mb{u}}(\mb{x}) = \int_{H_\mb{x}}[\mb{T}<\mb{x}'-\mb{x}> - \mb{T}<\mb{x}-\mb{x}'>]dV_{\mb{x}'}+\mb{b}(\mb{x}).
+\rho\ddot{\mb{u}}(\mb{x}) = \int_{H_\mb{x}}[\mb{T}\langle\mb{x}',\mb{x}\rangle - \mb{T}\langle\mb{x},\mb{x}'\rangle]dV_{\mb{x}'}+\mb{b}(\mb{x}).
 \label{eq:1}
 \end{equation}
 The state of material point at $\mb{x}$ is influenced by the possibly infinite number of material points $\mb{x}'$ that belong to its family $H_\mb{x}$. When the continuum is discretized into particles, the integral in Equation \blue{\ref{eq:1}} is replaced with the summations of particles within the horizon $\delta_\mb{x}$:
 \begin{equation}
-\rho\ddot{\mb{u}}(\mb{x}) = \sum_{\mb{x}',\mb{x}'\in H_\mb{x}}[\mb{T}<\mb{x}'-\mb{x}> - \mb{T}<\mb{x}-\mb{x}'>]V_{\mb{x}'}+\mb{b}(\mb{x}),
+\rho\ddot{\mb{u}}(\mb{x}) = \sum_{\mb{x}',\mb{x}'\in H_\mb{x}}[\mb{T}\langle\mb{x}',\mb{x}\rangle - \mb{T}\langle\mb{x},\mb{x}'\rangle]V_{\mb{x}'}+\mb{b}(\mb{x}),
 \label{eq:2}
 \end{equation}
 where $V_{\mb{x}'}$ is the volume of the discrete particle and its value depends on the distribution of particles.
