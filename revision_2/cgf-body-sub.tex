@@ -286,7 +286,7 @@ To accommodate the topology changes resulted from fracture, we propose a simple 
 We achieve this by maintaining a crack face set and continuously adding the shared triangles to it for fracture happened between immediate elements.
 At each time step, we investigate merely those vertices that involved in crack face set and determine whether its connected tetrahedra have been separated by crack faces.
 If this is the case, we split the vertex, assign corresponding tetrahedra to each of them, and make a topological change on the embedded mesh.
-After spliting, we could safely remove only those crack faces that directly results in our vertex splitting.
+After splitting, we could safely remove only those crack faces that directly results in our vertex splitting.
 If the connected tetrahedra are separated into more than two groups, we accordingly split vertex into multiple copies.
 Simultaneous splitting of multiple vertices at one crack face are also compatible in our method.
 Figure~\ref{fig:7} shows an example of using our strategy to produce complex crack surfaces.
