@@ -1,0 +1,321 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{\uppercase{BWHT07}}
+
+\bibitem[ABL{\etalchar{*}}08]{askari2008peridynamics}
+\textsc{Askari E., Bobaru F., Lehoucq R., Parks M., Silling S., Weckner O.}:
+\newblock Peridynamics for multiscale materials modeling.
+\newblock In \emph{Journal of Physics: Conference Series} (2008), vol.~125, IOP
+  Publishing, p.~012078.
+
+\bibitem[AXS06]{askari2006peridynamic}
+\textsc{Askari E., Xu J., Silling S.}:
+\newblock Peridynamic analysis of damage and failure in composites.
+\newblock In \emph{44th AIAA Aerospace Sciences Meeting and Exhibit, Reno,
+  Nevada. Reston, VA: AIAA} (2006).
+
+\bibitem[BG00]{Bielser:2000:ISS:826029.826523}
+\textsc{Bielser D., Gross M.~H.}:
+\newblock Interactive simulation of surgical cuts.
+\newblock In \emph{Proceedings of the 8th Pacific Conference on Computer
+  Graphics and Applications} (Washington, DC, USA, 2000), PG '00, IEEE Computer
+  Society, pp.~116--.
+
+\bibitem[BHTF07]{Bao:2007:FRM:1263129.1263275}
+\textsc{Bao Z., Hong J.-M., Teran J., Fedkiw R.}:
+\newblock Fracturing rigid materials.
+\newblock \emph{IEEE Transactions on Visualization and Computer Graphics 13}, 2
+  (Mar. 2007), 370--378.
+
+\bibitem[BWHT07]{Bargteil:2007:FEM:1276377.1276397}
+\textsc{Bargteil A.~W., Wojtan C., Hodgins J.~K., Turk G.}:
+\newblock A finite element method for animating large viscoplastic flow.
+\newblock \emph{ACM Trans. Graph. 26}, 3 (July 2007).
+
+\bibitem[ELP13]{emmrich2013peridynamics}
+\textsc{Emmrich E., Lehoucq R.~B., Puhst D.}:
+\newblock Peridynamics: a nonlocal continuum theory.
+\newblock In \emph{Meshfree Methods for Partial Differential Equations VI}.
+  Springer, 2013, pp.~45--65.
+
+\bibitem[FDA02]{forest2002removing}
+\textsc{Forest C., Delingette H., Ayache N.}:
+\newblock Removing tetrahedra from a manifold mesh.
+\newblock In \emph{Computer Animation, 2002. Proceedings of} (2002), IEEE,
+  pp.~225--229.
+
+\bibitem[GBB09]{Gerszewski:2009:PMA:1599470.1599488}
+\textsc{Gerszewski D., Bhattacharya H., Bargteil A.~W.}:
+\newblock A point-based method for animating elastoplastic solids.
+\newblock In \emph{Proceedings of the 2009 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (New York, NY, USA, 2009), SCA '09, ACM, pp.~133--138.
+
+\bibitem[GMD13]{glondu2013real}
+\textsc{Glondu L., Marchal M., Dumont G.}:
+\newblock Real-time simulation of brittle fracture using modal analysis.
+\newblock \emph{Visualization and Computer Graphics, IEEE Transactions on 19},
+  2 (2013), 201--209.
+
+\bibitem[HJST13]{Hegemann:2013:LSM:2485895.2485908}
+\textsc{Hegemann J., Jiang C., Schroeder C., Teran J.~M.}:
+\newblock A level set method for ductile fracture.
+\newblock In \emph{Proceedings of the 12th ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (New York, NY, USA, 2013), SCA '13, ACM, pp.~193--201.
+
+\bibitem[HW15]{Hahn:2015:HBF:2809654.2766896}
+\textsc{Hahn D., Wojtan C.}:
+\newblock High-resolution brittle fracture simulation with boundary elements.
+\newblock \emph{ACM Trans. Graph. 34}, 4 (July 2015), 151:1--151:12.
+
+\bibitem[ITF04]{Irving:2004:IFE:1028523.1028541}
+\textsc{Irving G., Teran J., Fedkiw R.}:
+\newblock Invertible finite elements for robust simulation of large
+  deformation.
+\newblock In \emph{Proceedings of the 2004 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (Aire-la-Ville, Switzerland, Switzerland, 2004), SCA
+  '04, Eurographics Association, pp.~131--140.
+
+\bibitem[KMB{\etalchar{*}}09]{Kaufmann:2009:ETD:1531326.1531356}
+\textsc{Kaufmann P., Martin S., Botsch M., Grinspun E., Gross M.}:
+\newblock Enrichment textures for detailed cutting of shells.
+\newblock \emph{ACM Trans. Graph. 28}, 3 (July 2009), 50:1--50:10.
+
+\bibitem[LBC{\etalchar{*}}14]{Levine:2015:PPS:2849517.2849526}
+\textsc{Levine J.~A., Bargteil A.~W., Corsi C., Tessendorf J., Geist R.}:
+\newblock A peridynamic perspective on spring-mass fracture.
+\newblock In \emph{Proceedings of the ACM SIGGRAPH/Eurographics Symposium on
+  Computer Animation} (Aire-la-Ville, Switzerland, Switzerland, 2014), SCA '14,
+  Eurographics Association, pp.~47--55.
+
+\bibitem[LHLW11]{Liu:2011:MSB:1970281.1970303}
+\textsc{Liu N., He X., Li S., Wang G.}:
+\newblock Meshless simulation of brittle fracture.
+\newblock \emph{Comput. Animat. Virtual Worlds 22}, 2-3 (Apr. 2011), 115--124.
+
+\bibitem[LZLW11]{Liu:2011:AKM:2065362.2066108}
+\textsc{Liu N., Zhu F., Li S., Wang G.}:
+\newblock Anisotropic kernels for meshless elastic solids.
+\newblock In \emph{Proceedings of the 2011 12th International Conference on
+  Computer-Aided Design and Computer Graphics} (Washington, DC, USA, 2011),
+  CADGRAPHICS '11, IEEE Computer Society, pp.~349--356.
+
+\bibitem[MBF04]{Molino2004}
+\textsc{Molino N., Bao Z., Fedkiw R.}:
+\newblock A virtual node algorithm for changing mesh topology during
+  simulation.
+\newblock \emph{ACM Trans. Graph. 23}, 3 (Aug. 2004), 385--392.
+
+\bibitem[MBP14]{muguercia2014fracture}
+\textsc{Muguercia L., Bosch C., Patow G.}:
+\newblock Fracture modeling in computer graphics.
+\newblock \emph{Computers \& Graphics 45} (2014), 86--100.
+
+\bibitem[MCG03]{Muller:2003:PFS:846276.846298}
+\textsc{M\"{u}ller M., Charypar D., Gross M.}:
+\newblock Particle-based fluid simulation for interactive applications.
+\newblock In \emph{Proceedings of the 2003 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (Aire-la-Ville, Switzerland, Switzerland, 2003), SCA
+  '03, Eurographics Association, pp.~154--159.
+
+\bibitem[MCK13]{Muller:2013:RTD:2461912.2461934}
+\textsc{M\"{u}ller M., Chentanez N., Kim T.-Y.}:
+\newblock Real time dynamic fracture with volumetric approximate convex
+  decompositions.
+\newblock \emph{ACM Trans. Graph. 32}, 4 (July 2013), 115:1--115:10.
+
+\bibitem[MG04]{Muller:2004:IVM:1006058.1006087}
+\textsc{M\"{u}ller M., Gross M.}:
+\newblock Interactive virtual materials.
+\newblock In \emph{Proceedings of Graphics Interface 2004} (School of Computer
+  Science, University of Waterloo, Waterloo, Ontario, Canada, 2004), GI '04,
+  Canadian Human-Computer Communications Society, pp.~239--246.
+
+\bibitem[Mit11]{mitchell2011nonlocal}
+\textsc{Mitchell J.~A.}:
+\newblock A nonlocal, ordinary, state-based plasticity model for peridynamics.
+\newblock \emph{SAND report 7597} (2011).
+
+\bibitem[MK00]{Mor:2000:MST:646923.710372}
+\textsc{Mor A.~B., Kanade T.}:
+\newblock Modifying soft tissue models: Progressive cutting with minimal new
+  element creation.
+\newblock In \emph{Proceedings of the Third International Conference on Medical
+  Image Computing and Computer-Assisted Intervention} (London, UK, UK, 2000),
+  MICCAI '00, Springer-Verlag, pp.~598--607.
+
+\bibitem[MKN{\etalchar{*}}04]{Muller:2004:PBA:1028523.1028542}
+\textsc{M\"{u}ller M., Keiser R., Nealen A., Pauly M., Gross M., Alexa M.}:
+\newblock Point based animation of elastic, plastic and melting objects.
+\newblock In \emph{Proceedings of the 2004 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (Aire-la-Ville, Switzerland, Switzerland, 2004), SCA
+  '04, Eurographics Association, pp.~141--151.
+
+\bibitem[MMA99]{Mazarak:1999:AEO:351631.351688}
+\textsc{Mazarak O., Martins C., Amanatides J.}:
+\newblock Animating exploding objects.
+\newblock In \emph{Proceedings of the 1999 Conference on Graphics Interface
+  '99} (San Francisco, CA, USA, 1999), Morgan Kaufmann Publishers Inc.,
+  pp.~211--218.
+
+\bibitem[MMDJ01]{Muller2001}
+\textsc{M\"{u}ller M., McMillan L., Dorsey J., Jagnow R.}:
+\newblock Real-time simulation of deformation and fracture of stiff materials.
+\newblock In \emph{Proceedings of the Eurographic Workshop on Computer
+  Animation and Simulation} (New York, NY, USA, 2001), Springer-Verlag New
+  York, Inc., pp.~113--124.
+
+\bibitem[MO14]{madenci2014peridynamic}
+\textsc{Madenci E., Oterkus E.}:
+\newblock \emph{Peridynamic theory and its applications}.
+\newblock Springer, 2014.
+
+\bibitem[NF99]{Neff:1999:VMB:351631.351686}
+\textsc{Neff M., Fiume E.}:
+\newblock A visual model for blast waves and fracture.
+\newblock In \emph{Proceedings of the 1999 Conference on Graphics Interface
+  '99} (San Francisco, CA, USA, 1999), Morgan Kaufmann Publishers Inc.,
+  pp.~193--202.
+
+\bibitem[NTB{\etalchar{*}}91]{Norton:1991:AFP:115244.115248}
+\textsc{Norton A., Turk G., Bacon B., Gerth J., Sweeney P.}:
+\newblock Animation of fracture by physical modeling.
+\newblock \emph{Vis. Comput. 7}, 4 (July 1991), 210--219.
+
+\bibitem[OBH02]{O'Brien:2002:GMA:566654.566579}
+\textsc{O'Brien J.~F., Bargteil A.~W., Hodgins J.~K.}:
+\newblock Graphical modeling and animation of ductile fracture.
+\newblock \emph{ACM Trans. Graph. 21}, 3 (July 2002), 291--294.
+
+\bibitem[OH99]{O'Brien:1999:GMA:311535.311550}
+\textsc{O'Brien J.~F., Hodgins J.~K.}:
+\newblock Graphical modeling and animation of brittle fracture.
+\newblock In \emph{Proceedings of the 26th Annual Conference on Computer
+  Graphics and Interactive Techniques} (New York, NY, USA, 1999), SIGGRAPH '99,
+  ACM Press/Addison-Wesley Publishing Co., pp.~137--146.
+
+\bibitem[PKA{\etalchar{*}}05]{Pauly:2005:MAF:1073204.1073296}
+\textsc{Pauly M., Keiser R., Adams B., Dutr{\'e} P., Gross M., Guibas L.~J.}:
+\newblock Meshless animation of fracturing solids.
+\newblock \emph{ACM Trans. Graph. 24}, 3 (July 2005), 957--964.
+
+\bibitem[PO09]{Parker:2009:RDF:1599470.1599492}
+\textsc{Parker E.~G., O'Brien J.~F.}:
+\newblock Real-time deformation and fracture in a game environment.
+\newblock In \emph{Proceedings of the 2009 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (New York, NY, USA, 2009), SCA '09, ACM, pp.~165--175.
+
+\bibitem[SA05]{Silling2005}
+\textsc{Silling S.~A., Askari E.}:
+\newblock A meshfree method based on the peridynamic model of solid mechanics.
+\newblock \emph{Comput. Struct. 83}, 17-18 (June 2005), 1526--1535.
+
+\bibitem[SA14]{silling2014peridynamic}
+\textsc{Silling S.~A., Askari A.}:
+\newblock \emph{Peridynamic model for fatigue cracking.}
+\newblock Tech. rep., Sandia National Laboratories (SNL-NM), Albuquerque, NM
+  (United States), 2014.
+
+\bibitem[SB12]{Sifakis:2012:FSD:2343483.2343501}
+\textsc{Sifakis E., Barbic J.}:
+\newblock Fem simulation of 3d deformable solids: A practitioner's guide to
+  theory, discretization and model reduction.
+\newblock In \emph{ACM SIGGRAPH 2012 Courses} (New York, NY, USA, 2012),
+  SIGGRAPH '12, ACM, pp.~20:1--20:50.
+
+\bibitem[SC14]{silling2014hierarchical}
+\textsc{Silling S.~A., Cox J.~V.}:
+\newblock Hierarchical multiscale method development for peridynamics.
+\newblock \emph{SAND Report 18565} (2014).
+
+\bibitem[SDF07]{Sifakis:2007:ACD:1272690.1272701}
+\textsc{Sifakis E., Der K.~G., Fedkiw R.}:
+\newblock Arbitrary cutting of deformable tetrahedralized objects.
+\newblock In \emph{Proceedings of the 2007 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (Aire-la-Ville, Switzerland, Switzerland, 2007), SCA
+  '07, Eurographics Association, pp.~73--80.
+
+\bibitem[SEW{\etalchar{*}}07]{silling2007peridynamic}
+\textsc{Silling S.~A., Epton M., Weckner O., Xu J., Askari E.}:
+\newblock Peridynamic states and constitutive modeling.
+\newblock \emph{Journal of Elasticity 88}, 2 (2007), 151--184.
+
+\bibitem[Si15]{Si:2015:TDQ:2732672.2629697}
+\textsc{Si H.}:
+\newblock Tetgen, a delaunay-based quality tetrahedral mesh generator.
+\newblock \emph{ACM Trans. Math. Softw. 41}, 2 (Feb. 2015), 11:1--11:36.
+
+\bibitem[Sil00]{Silling2000}
+\textsc{Silling S.}:
+\newblock Reformulation of elasticity theory for discontinuities and long-range
+  forces.
+\newblock \emph{Journal of the Mechanics and Physics of Solids 48}, 1 (2000),
+  175 -- 209.
+
+\bibitem[SO14]{Schvartzman:2014:FAB:2556700.2556713}
+\textsc{Schvartzman S.~C., Otaduy M.~A.}:
+\newblock Fracture animation based on high-dimensional voronoi diagrams.
+\newblock In \emph{Proceedings of the 18th Meeting of the ACM SIGGRAPH
+  Symposium on Interactive 3D Graphics and Games} (New York, NY, USA, 2014),
+  I3D '14, ACM, pp.~15--22.
+
+\bibitem[SOG09]{Steinemann:2009:SMD:1651926.1652002}
+\textsc{Steinemann D., Otaduy M.~A., Gross M.}:
+\newblock Splitting meshless deforming objects with explicit surface tracking.
+\newblock \emph{Graph. Models 71}, 6 (Nov. 2009), 209--220.
+
+\bibitem[SSC{\etalchar{*}}13]{Stomakhin:2013:MPM:2461912.2461948}
+\textsc{Stomakhin A., Schroeder C., Chai L., Teran J., Selle A.}:
+\newblock A material point method for snow simulation.
+\newblock \emph{ACM Trans. Graph. 32}, 4 (July 2013), 102:1--102:10.
+
+\bibitem[SWAB10]{silling2010crack}
+\textsc{Silling S., Weckner O., Askari E., Bobaru F.}:
+\newblock Crack nucleation in a peridynamic solid.
+\newblock \emph{International Journal of Fracture 162}, 1-2 (2010), 219--227.
+
+\bibitem[SWB01]{smith2001fast}
+\textsc{Smith J., Witkin A., Baraff D.}:
+\newblock Fast and controllable simulation of the shattering of brittle
+  objects.
+\newblock \emph{Comput. Graph. Forum 20}, 2 (2001), 81--90.
+
+\bibitem[TF88]{Terzopoulos:1988:MID:378456.378522}
+\textsc{Terzopoulos D., Fleischer K.}:
+\newblock Modeling inelastic deformation: Viscolelasticity, plasticity,
+  fracture.
+\newblock \emph{SIGGRAPH Comput. Graph. 22}, 4 (June 1988), 269--278.
+
+\bibitem[TPBF87]{Terzopoulos:1987:EDM:37402.37427}
+\textsc{Terzopoulos D., Platt J., Barr A., Fleischer K.}:
+\newblock Elastically deformable models.
+\newblock \emph{SIGGRAPH Comput. Graph. 21}, 4 (Aug. 1987), 205--214.
+
+\bibitem[TSIF05]{Teran:2005:RQF:1073368.1073394}
+\textsc{Teran J., Sifakis E., Irving G., Fedkiw R.}:
+\newblock Robust quasistatic finite elements and flesh simulation.
+\newblock In \emph{Proceedings of the 2005 ACM SIGGRAPH/Eurographics Symposium
+  on Computer Animation} (New York, NY, USA, 2005), SCA '05, ACM, pp.~181--190.
+
+\bibitem[WJST14]{Wang:2015:AVN:2849517.2849531}
+\textsc{Wang Y., Jiang C., Schroeder C., Teran J.}:
+\newblock An adaptive virtual node algorithm with robust mesh cutting.
+\newblock In \emph{Proceedings of the ACM SIGGRAPH/Eurographics Symposium on
+  Computer Animation} (Aire-la-Ville, Switzerland, Switzerland, 2014), SCA '14,
+  Eurographics Association, pp.~77--85.
+
+\bibitem[WWD15]{Wu:2015:SPB:2858852.2858866}
+\textsc{Wu J., Westermann R., Dick C.}:
+\newblock A survey of physically based simulation of cuts in deformable bodies.
+\newblock \emph{Comput. Graph. Forum 34}, 6 (Sept. 2015), 161--187.
+
+\bibitem[ZBG15]{Zhu:2015:SRB:2809654.2766942}
+\textsc{Zhu Y., Bridson R., Greif C.}:
+\newblock Simulating rigid body fracture with surface meshes.
+\newblock \emph{ACM Trans. Graph. 34}, 4 (July 2015), 150:1--150:11.
+
+\bibitem[ZZL{\etalchar{*}}16]{Zhu:2016MPM}
+\textsc{Zhu F., Zhao J., Li S., Tang Y., Wang G.}:
+\newblock Dynamically enriched mpm for invertible elasticity.
+\newblock \emph{Comput. Graph. Forum} (2016).
+\newblock In Press.
+
+\end{thebibliography}
