@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.10)  11 APR 2017 07:27
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.10)  13 MAY 2017 08:07
 entering extended mode
-**D:/fei/code/PGPaper/revision_2/cgf-sub.tex
-(D:/fei/code/PGPaper/revision_2/cgf-sub.tex
+**D:/fei/code/PGPaper/revision_3/cgf-sub.tex
+(D:/fei/code/PGPaper/revision_3/cgf-sub.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(D:\fei\code\PGPaper\revision_2\egpubl.cls
+(D:\fei\code\PGPaper\revision_3\egpubl.cls
 Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 \c@table=\count79
 \c@figure=\count80
@@ -24,7 +24,7 @@ Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(D:\fei\code\PGPaper\revision_2\cgf-sub.lbl))
+(D:\fei\code\PGPaper\revision_3\cgf-sub.lbl))
 (C:\CTEX\MiKTeX\tex\latex\caption\caption.sty
 Package: caption 2011/11/10 v3.2e Customizing captions (AR)
 
@@ -355,7 +355,7 @@ File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
 (C:\CTEX\MiKTeX\tex\latex\base\t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
-(D:\fei\code\PGPaper\revision_2\dfadobe.sty
+(D:\fei\code\PGPaper\revision_3\dfadobe.sty
 Package: dfadobe 2000/03/05 v1.4 T1-encoded Times (except symbols), Courier, He
 lvetica (at 90\%) + math package
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
@@ -382,17 +382,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 20.
 
-(D:\fei\code\PGPaper\revision_2\dfT1ptm.fd
+(D:\fei\code\PGPaper\revision_3\dfT1ptm.fd
 File: dfT1ptm.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/ptm.
 )
-(D:\fei\code\PGPaper\revision_2\dfT1phv.fd
+(D:\fei\code\PGPaper\revision_3\dfT1phv.fd
 File: dfT1phv.fd 1997/12/02 Fontinst v1.6 font definitions for T1/phv scaled to
  90\%.
 )
-(D:\fei\code\PGPaper\revision_2\dfT1pcr.fd
+(D:\fei\code\PGPaper\revision_3\dfT1pcr.fd
 File: dfT1pcr.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/pcr.
 ))
-(D:\fei\code\PGPaper\revision_2\egweblnk.sty
+(D:\fei\code\PGPaper\revision_3\egweblnk.sty
 Package: egweblnk 2004/10/29 v2.2 DF's support for http web links in class egpu
 bl
 )
@@ -401,8 +401,8 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-(D:\fei\code\PGPaper\revision_2\cgf-body-sub.tex
-(D:\fei\code\PGPaper\revision_2\cgf-sub.aux)
+(D:\fei\code\PGPaper\revision_3\cgf-body-sub.tex
+(D:\fei\code\PGPaper\revision_3\cgf-sub.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
@@ -653,7 +653,7 @@ Package pdftex.def Info: ../figs/demo_tear_armadillo.png used on input line 385
 revision/demo_bar_oscillate_vs_fem_2.png> <D:/fei/code/PGPaper/figs/revision/de
 mo_bar_twist_vs_fem.png> <D:/fei/code/PGPaper/figs/revision/demo_armadillo_vs_f
 em_2.png>]
-<../figs/revision/demo_brittle_fall.png, id=310, 1197.72469pt x 341.77687pt>
+<../figs/revision/demo_brittle_fall.png, id=311, 1197.72469pt x 341.77687pt>
 File: ../figs/revision/demo_brittle_fall.png Graphic file (type png)
 
 <use ../figs/revision/demo_brittle_fall.png>
@@ -661,21 +661,21 @@ Package pdftex.def Info: ../figs/revision/demo_brittle_fall.png used on input l
 ine 404.
 (pdftex.def)             Requested size: 456.0pt x 130.12166pt.
 
-<../figs/demo_fall_bunny.png, id=311, 2196.70688pt x 579.66562pt>
+<../figs/demo_fall_bunny.png, id=312, 2196.70688pt x 579.66562pt>
 File: ../figs/demo_fall_bunny.png Graphic file (type png)
 
 <use ../figs/demo_fall_bunny.png>
 Package pdftex.def Info: ../figs/demo_fall_bunny.png used on input line 412.
 (pdftex.def)             Requested size: 456.0pt x 120.32701pt.
 
-<../figs/revision/demo_tear_thin_sheet.png, id=312, 654.19406pt x 1056.94875pt>
+<../figs/revision/demo_tear_thin_sheet.png, id=313, 654.19406pt x 1056.94875pt>
 File: ../figs/revision/demo_tear_thin_sheet.png Graphic file (type png)
 <use ../figs/revision/demo_tear_thin_sheet.png>
 Package pdftex.def Info: ../figs/revision/demo_tear_thin_sheet.png used on inpu
 t line 420.
 (pdftex.def)             Requested size: 216.0pt x 348.97157pt.
 
-<../figs/demo_tear_armadillo_close_view.png, id=313, 770.88pt x 1035.87pt>
+<../figs/demo_tear_armadillo_close_view.png, id=314, 770.88pt x 1035.87pt>
 File: ../figs/demo_tear_armadillo_close_view.png Graphic file (type png)
 
 <use ../figs/demo_tear_armadillo_close_view.png>
@@ -683,8 +683,8 @@ Package pdftex.def Info: ../figs/demo_tear_armadillo_close_view.png used on inp
 ut line 428.
 (pdftex.def)             Requested size: 216.0pt x 290.2471pt.
 
-(D:\fei\code\PGPaper\revision_2\cgf-sub.bbl
-(D:\fei\code\PGPaper\revision_2\cgf-sub.brf)
+(D:\fei\code\PGPaper\revision_3\cgf-sub.bbl
+(D:\fei\code\PGPaper\revision_3\cgf-sub.brf)
 \tf@brf=\write3
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
@@ -696,7 +696,10 @@ Underfull \hbox (badness 1303) in paragraph at lines 9--9
 l-ti-scale
  []
 
-[9 <D:/fei/code/PGPaper/figs/demo_tear_armadillo.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <D:/fei/code/PGPaper/figs/demo_tear_armadillo.png>]
 Underfull \hbox (badness 1496) in paragraph at lines 28--28
 []\T1/ptm/m/sc/8 Bao Z., Hong J.-M., Ter-an J., Fed-ki-w R.\T1/ptm/m/n/8 :
  []
@@ -734,7 +737,8 @@ Underfull \hbox (badness 4859) in paragraph at lines 88--88
 \T1/ptm/m/n/8 (Aire-la-Ville, Switzer-land, Switzer-land, 2014), S-CA '14,
  []
 
-
+[10 <D:/fei/code/PGPaper/figs/revision/demo_brittle_fall.png> <D:/fei/code/PGPa
+per/figs/demo_fall_bunny.png>]
 Underfull \hbox (badness 1354) in paragraph at lines 93--93
 []\T1/ptm/m/sc/8 Liu N., He X., Li S., Wang G.\T1/ptm/m/n/8 :  Mesh-less
  []
@@ -745,8 +749,7 @@ Underfull \hbox (badness 3758) in paragraph at lines 100--100
 o-ceed-ings of
  []
 
-[10 <D:/fei/code/PGPaper/figs/revision/demo_brittle_fall.png> <D:/fei/code/PGPa
-per/figs/demo_fall_bunny.png>]
+
 Underfull \hbox (badness 1275) in paragraph at lines 124--124
 \T1/ptm/m/n/8 time dy-nam-ic frac-ture with vol-u-met-ric ap-prox-i-mate con-ve
 x
@@ -768,14 +771,14 @@ Underfull \hbox (badness 3049) in paragraph at lines 158--158
 []\T1/ptm/m/sc/8 Mazarak O., Mar-tin-s C., A-ma-natides J.\T1/ptm/m/n/8 :
  []
 
-
+[11 <D:/fei/code/PGPaper/figs/revision/demo_tear_thin_sheet.png> <D:/fei/code/P
+GPaper/figs/demo_tear_armadillo_close_view.png>]
 Underfull \hbox (badness 1270) in paragraph at lines 177--177
 \T1/ptm/m/n/8 and frac-ture.  In \T1/ptm/m/it/8 Pro-ceed-ings of the 1999 Con-f
 er-ence on
  []
 
-[11 <D:/fei/code/PGPaper/figs/revision/demo_tear_thin_sheet.png> <D:/fei/code/P
-GPaper/figs/demo_tear_armadillo_close_view.png>]
+
 Underfull \hbox (badness 1389) in paragraph at lines 182--182
 []\T1/ptm/m/sc/8 Norton A., Turk G., Ba-con B., Gerth J.,
  []
@@ -860,7 +863,7 @@ Underfull \hbox (badness 1152) in paragraph at lines 320--320
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 442.
  [12]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 442.
- (D:\fei\code\PGPaper\revision_2\cgf-sub.aux)
+ (D:\fei\code\PGPaper\revision_3\cgf-sub.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 442.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 442.
 Package rerunfilecheck Info: File `cgf-sub.brf' has not changed.
@@ -869,11 +872,11 @@ Package rerunfilecheck Info: File `cgf-sub.brf' has not changed.
 Here is how much of TeX's memory you used:
  8407 strings out of 495354
  128927 string characters out of 3183858
- 238135 words of memory out of 3000000
+ 240135 words of memory out of 3000000
  11267 multiletter control sequences out of 15000+200000
  67063 words of font info for 100 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,12n,38p,2752b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,12n,38p,2752b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmex
 tra/cmex9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTE
@@ -885,9 +888,9 @@ ic/amsfonts/cm/cmsy9.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:
 /CTEX/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/ti
 mes/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on cgf-sub.pdf (12 pages, 5293626 bytes).
+Output written on cgf-sub.pdf (12 pages, 5294466 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
+ 480 PDF objects out of 1000 (max. 8388607)
  117 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
