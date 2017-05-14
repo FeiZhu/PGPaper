@@ -295,6 +295,12 @@
 \newblock In \emph{Proceedings of the 2005 ACM SIGGRAPH/Eurographics Symposium
   on Computer Animation} (New York, NY, USA, 2005), SCA '05, ACM, pp.~181--190.
 
+\bibitem[WA05]{Weckner2005705}
+\textsc{Weckner O., Abeyaratne R.}:
+\newblock The effect of long-range forces on the dynamics of a bar.
+\newblock \emph{Journal of the Mechanics and Physics of Solids 53}, 3 (2005),
+  705 -- 728.
+
 \bibitem[WJST14]{Wang:2015:AVN:2849517.2849531}
 \textsc{Wang Y., Jiang C., Schroeder C., Teran J.}:
 \newblock An adaptive virtual node algorithm with robust mesh cutting.
