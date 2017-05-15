@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.10)  14 MAY 2017 08:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.5.15)  15 MAY 2017 16:58
 entering extended mode
-**D:/fei/code/PGPaper/revision_3/cgf-revision-report.tex
-(D:/fei/code/PGPaper/revision_3/cgf-revision-report.tex
+**D:/fei/code/fei_personal/PGPaper/revision_3/cgf-revision-report.tex
+(D:/fei/code/fei_personal/PGPaper/revision_3/cgf-revision-report.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(D:\fei\code\PGPaper\revision_3\egpubl.cls
+(D:\fei\code\fei_personal\PGPaper\revision_3\egpubl.cls
 Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 \c@table=\count79
 \c@figure=\count80
@@ -24,7 +24,7 @@ Document Class: egpubl 2013/07/17 Document Style for EG Publications v3.56
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(D:\fei\code\PGPaper\revision_3\cgf-revision-report.lbl))
+(D:\fei\code\fei_personal\PGPaper\revision_3\cgf-revision-report.lbl))
 (C:\CTEX\MiKTeX\tex\latex\caption\caption.sty
 Package: caption 2011/11/10 v3.2e Customizing captions (AR)
 
@@ -355,7 +355,7 @@ File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
 (C:\CTEX\MiKTeX\tex\latex\base\t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
-(D:\fei\code\PGPaper\revision_3\dfadobe.sty
+(D:\fei\code\fei_personal\PGPaper\revision_3\dfadobe.sty
 Package: dfadobe 2000/03/05 v1.4 T1-encoded Times (except symbols), Courier, He
 lvetica (at 90\%) + math package
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
@@ -382,17 +382,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 20.
 
-(D:\fei\code\PGPaper\revision_3\dfT1ptm.fd
+(D:\fei\code\fei_personal\PGPaper\revision_3\dfT1ptm.fd
 File: dfT1ptm.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/ptm.
 )
-(D:\fei\code\PGPaper\revision_3\dfT1phv.fd
+(D:\fei\code\fei_personal\PGPaper\revision_3\dfT1phv.fd
 File: dfT1phv.fd 1997/12/02 Fontinst v1.6 font definitions for T1/phv scaled to
  90\%.
 )
-(D:\fei\code\PGPaper\revision_3\dfT1pcr.fd
+(D:\fei\code\fei_personal\PGPaper\revision_3\dfT1pcr.fd
 File: dfT1pcr.fd 2000/03/05 DF - Fontinst v1.6 font definitions for T1/pcr.
 ))
-(D:\fei\code\PGPaper\revision_3\egweblnk.sty
+(D:\fei\code\fei_personal\PGPaper\revision_3\egweblnk.sty
 Package: egweblnk 2004/10/29 v2.2 DF's support for http web links in class egpu
 bl
 )
@@ -401,8 +401,8 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-(D:\fei\code\PGPaper\revision_3\cgf-revision-report-body.tex
-(D:\fei\code\PGPaper\revision_3\cgf-revision-report.aux)
+(D:\fei\code\fei_personal\PGPaper\revision_3\cgf-revision-report-body.tex
+(D:\fei\code\fei_personal\PGPaper\revision_3\cgf-revision-report.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
@@ -491,77 +491,47 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 41.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
- [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
-
-] [2]
-(D:\fei\code\PGPaper\revision_3\cgf-revision-report.bbl
-(D:\fei\code\PGPaper\revision_3\cgf-revision-report.brf)
+(D:\fei\code\fei_personal\PGPaper\revision_3\cgf-revision-report.bbl
+(D:\fei\code\fei_personal\PGPaper\revision_3\cgf-revision-report.brf)
 \tf@brf=\write3
 
-Underfull \hbox (badness 1681) in paragraph at lines 28--28
-\T1/ptm/m/n/8 and an-i-ma-tion of brit-tle frac-ture.  In \T1/ptm/m/it/8 Pro-ce
-ed-ings of the
- []
-
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
-
-Underfull \hbox (badness 1087) in paragraph at lines 33--33
+Underfull \hbox (badness 1087) in paragraph at lines 8--8
 []\T1/ptm/m/sc/8 Pauly M., Keis-er R., Adams B., Dutré P.,
  []
 
-
-Underfull \hbox (badness 1838) in paragraph at lines 39--39
-[]\T1/ptm/m/sc/8 Smith J., Witkin A., Baraf-f D.\T1/ptm/m/n/8 :  Fast and
- []
-
-
-Underfull \hbox (badness 1874) in paragraph at lines 39--39
-\T1/ptm/m/n/8 con-trol-lable sim-u-la-tion of the shat-ter-ing of brit-tle ob-j
-ect-s.
- []
-
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
- [3
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
+ [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
- (D:\fei\code\PGPaper\revision_3\cgf-revision-report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 140.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+
+(D:\fei\code\fei_personal\PGPaper\revision_3\cgf-revision-report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `cgf-revision-report.brf' has not changed.
-(rerunfilecheck)             Checksum: F8F7BAC8A6947DC908F7D5CAAD0BEAC0;304.
+(rerunfilecheck)             Checksum: 49F948CA74E685FD1FDC3D1C98E977E2;61.
  ) ) 
 Here is how much of TeX's memory you used:
- 7974 strings out of 495354
- 117498 string characters out of 3183858
- 212259 words of memory out of 3000000
- 10957 multiletter control sequences out of 15000+200000
- 59762 words of font info for 94 fonts, out of 3000000 for 9000
+ 7921 strings out of 495354
+ 117018 string characters out of 3183859
+ 201259 words of memory out of 3000000
+ 10927 multiletter control sequences out of 15000+200000
+ 50029 words of font info for 80 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,9n,38p,1450b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,9n,38p,535b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1
-/public/amsfonts/cmextra/cmex9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/CTEX/MiKTeX/f
-onts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb
-><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on cgf-revision-report.pdf (3 pages, 129926 bytes).
+/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/c
+msy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKT
+eX/fonts/type1/urw/symbol/usyr.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a
+.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on cgf-revision-report.pdf (1 page, 71421 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 49 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
